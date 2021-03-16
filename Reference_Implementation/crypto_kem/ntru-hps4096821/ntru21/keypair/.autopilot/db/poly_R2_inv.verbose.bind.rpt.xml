@@ -1,0 +1,60 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'poly_R2_inv'" level="0">
+<item name = "Date">Tue Aug 25 23:03:35 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">ntru21</item>
+<item name = "Solution">keypair</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200tfbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.341, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">21726141, 21726141, 21726141, 21726141, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">820, 820, 1, -, -, 820, no</column>
+<column name="- Loop 2">821, 821, 1, -, -, 821, no</column>
+<column name="- Loop 3">1642, 1642, 2, -, -, 821, no</column>
+<column name="- Loop 4">821, 821, 1, -, -, 821, no</column>
+<column name="- Loop 5">21539738, 21539738, 13142, -, -, 1639, no</column>
+<column name=" + Loop 5.1">1642, 1642, 2, -, -, 821, no</column>
+<column name=" + Loop 5.2">1642, 1642, 2, -, -, 821, no</column>
+<column name=" + Loop 5.3">3284, 3284, 4, -, -, 821, no</column>
+<column name=" + Loop 5.4">3284, 3284, 4, -, -, 821, no</column>
+<column name=" + Loop 5.5">1640, 1640, 2, -, -, 820, no</column>
+<column name=" + Loop 5.6">1640, 1640, 2, -, -, 820, no</column>
+<column name="- Loop 6">1642, 1642, 2, -, -, 821, no</column>
+<column name="- Loop 7">180650, 180650, 18065, -, -, 10, no</column>
+<column name=" + Loop 7.1">13136, 13136, 16, -, -, 821, no</column>
+<column name=" + Loop 7.2">4926, 4926, 3, -, -, 1642, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

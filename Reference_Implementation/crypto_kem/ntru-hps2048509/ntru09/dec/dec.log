@@ -1,0 +1,760 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a200t-fbg676-2'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a200t-fbg676-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'verify.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sample.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'rng.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'poly.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'packq.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'pack3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'owcpa.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'kem.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'crypto_sort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 184.461 ; gain = 93.145
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:40 . Memory (MB): peak = 184.461 ; gain = 93.145
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:44 . Memory (MB): peak = 184.461 ; gain = 93.145
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'mod3' into 'poly_Rq_to_S3' (poly.c:163) automatically.
+INFO: [XFORM 203-602] Inlining function 'mod3' into 'poly_S3_mul' (poly.c:73) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Z3_to_Zq' into 'poly_lift' (poly.c:93) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Rq_sum_zero_frombytes' into 'owcpa_dec' (owcpa.c:144) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Z3_to_Zq' into 'owcpa_dec' (owcpa.c:146) automatically.
+INFO: [XFORM 203-602] Inlining function 'owcpa_check_m' into 'owcpa_dec' (owcpa.c:161) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_lift' into 'owcpa_dec' (owcpa.c:165) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Sq_mul' into 'owcpa_dec' (owcpa.c:171) automatically.
+INFO: [XFORM 203-602] Inlining function 'owcpa_check_r' into 'owcpa_dec' (owcpa.c:184) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_trinary_Zq_to_Z3' into 'owcpa_dec' (owcpa.c:186) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64.2' into 'keccak_absorb' (fips202.c:386) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:400) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:426) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb.1' (fips202.c:386) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb.1' (fips202.c:400) automatically.
+INFO: [XFORM 203-602] Inlining function 'sha3_256.1' into 'crypto_kem_dec' (kem.c:47) automatically.
+INFO: [XFORM 203-602] Inlining function 'sha3_256' into 'crypto_kem_dec' (kem.c:54) automatically.
+INFO: [XFORM 203-602] Inlining function 'cmov' into 'crypto_kem_dec' (kem.c:56) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:10 ; elapsed = 00:00:48 . Memory (MB): peak = 184.461 ; gain = 93.145
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1' (fips202.c:421) in function 'keccak_squeezeblocks' automatically.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:421) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [XFORM 203-602] Inlining function 'mod3' into 'poly_Rq_to_S3' (poly.c:163) automatically.
+INFO: [XFORM 203-602] Inlining function 'mod3' into 'poly_S3_mul' (poly.c:73) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Z3_to_Zq' into 'poly_lift' (poly.c:93) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Rq_sum_zero_frombytes' into 'owcpa_dec' (owcpa.c:144) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Z3_to_Zq' into 'owcpa_dec' (owcpa.c:146) automatically.
+INFO: [XFORM 203-602] Inlining function 'owcpa_check_m' into 'owcpa_dec' (owcpa.c:161) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_lift' into 'owcpa_dec' (owcpa.c:165) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Sq_mul' into 'owcpa_dec' (owcpa.c:171) automatically.
+INFO: [XFORM 203-602] Inlining function 'owcpa_check_r' into 'owcpa_dec' (owcpa.c:184) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_trinary_Zq_to_Z3' into 'owcpa_dec' (owcpa.c:186) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64.2' into 'keccak_absorb' (fips202.c:386) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:400) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:426) automatically.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'sha3_256.1' (fips202.c:519) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb.1' (fips202.c:386) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb.1' (fips202.c:400) automatically.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'sha3_256' (fips202.c:519) automatically.
+INFO: [XFORM 203-602] Inlining function 'cmov' into 'crypto_kem_dec' (kem.c:56) automatically.
+WARNING: [XFORM 203-561] Updating loop upper bound from 135 to 51 for loop 'Loop-3' in function 'keccak_absorb.1'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 51 for loop 'Loop-3' in function 'keccak_absorb.1'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 135 to 68 for loop 'Loop-3' in function 'keccak_absorb'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 68 for loop 'Loop-3' in function 'keccak_absorb'.
+INFO: [XFORM 203-11] Balancing expressions in function 'keccak_absorb.1' (fips202.c:28:22)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:88)...70 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:00:54 . Memory (MB): peak = 184.461 ; gain = 93.145
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:88:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:01:00 . Memory (MB): peak = 304.094 ; gain = 212.777
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'crypto_kem_dec' ...
+WARNING: [SYN 201-103] Legalizing function name 'poly_Sq_frombytes.1' to 'poly_Sq_frombytes_1'.
+WARNING: [SYN 201-103] Legalizing function name 'sha3_256.1' to 'sha3_256_1'.
+WARNING: [SYN 201-103] Legalizing function name 'keccak_absorb.1' to 'keccak_absorb_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_Sq_frombytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 59.735 seconds; current allocated memory: 250.632 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.207 seconds; current allocated memory: 251.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mod3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 251.248 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.105 seconds; current allocated memory: 251.352 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_S3_frombytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.158 seconds; current allocated memory: 251.704 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.152 seconds; current allocated memory: 251.959 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_Rq_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.122ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'poly_Rq_mul' consists of the following:
+	'mul' operation of DSP[36] ('mul_ln45', poly.c:45) [34]  (2.82 ns)
+	'add' operation of DSP[36] ('add_ln45_1', poly.c:45) [36]  (3.53 ns)
+	'store' operation ('r_coeffs_addr_write_ln45', poly.c:45) of variable 'add_ln45_1', poly.c:45 on array 'r_coeffs' [37]  (2.77 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.224 seconds; current allocated memory: 252.184 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.139 seconds; current allocated memory: 252.368 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_Rq_to_S3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.185 seconds; current allocated memory: 252.685 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.166 seconds; current allocated memory: 253.033 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_S3_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.122ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'poly_S3_mul' consists of the following:
+	'mul' operation of DSP[36] ('mul_ln68', poly.c:68) [34]  (2.82 ns)
+	'add' operation of DSP[36] ('add_ln68_1', poly.c:68) [36]  (3.53 ns)
+	'store' operation ('r_coeffs_addr_13_write_ln68', poly.c:68) of variable 'add_ln68_1', poly.c:68 on array 'r_coeffs' [37]  (2.77 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.249 seconds; current allocated memory: 253.367 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.185 seconds; current allocated memory: 253.715 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_S3_tobytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.216 seconds; current allocated memory: 253.941 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.142 seconds; current allocated memory: 254.170 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_Sq_frombytes_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.205 seconds; current allocated memory: 254.554 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 255.028 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'owcpa_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.286 seconds; current allocated memory: 255.561 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.525 seconds; current allocated memory: 256.436 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.632 seconds; current allocated memory: 257.865 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.449 seconds; current allocated memory: 259.514 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.554 seconds; current allocated memory: 260.050 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.227 seconds; current allocated memory: 260.488 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha3_256_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.342 seconds; current allocated memory: 260.876 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.423 seconds; current allocated memory: 261.516 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.474 seconds; current allocated memory: 262.333 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.231 seconds; current allocated memory: 262.743 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.346 seconds; current allocated memory: 263.147 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.441 seconds; current allocated memory: 263.823 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_kem_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 264.459 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.776 seconds; current allocated memory: 265.606 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_Sq_frombytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_Sq_frombytes'.
+INFO: [HLS 200-111]  Elapsed time: 1.008 seconds; current allocated memory: 267.582 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mod3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mod3'.
+INFO: [HLS 200-111]  Elapsed time: 0.701 seconds; current allocated memory: 268.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_S3_frombytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_S3_frombytes'.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 268.558 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_Rq_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'crypto_kem_dec_mac_muladd_16s_16s_16ns_16_1_1' to 'crypto_kem_dec_mabkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'crypto_kem_dec_mabkb': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_Rq_mul'.
+INFO: [HLS 200-111]  Elapsed time: 0.505 seconds; current allocated memory: 269.042 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_Rq_to_S3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_Rq_to_S3'.
+INFO: [HLS 200-111]  Elapsed time: 0.405 seconds; current allocated memory: 269.787 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_S3_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'crypto_kem_dec_mabkb': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_S3_mul'.
+INFO: [HLS 200-111]  Elapsed time: 0.638 seconds; current allocated memory: 270.608 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_S3_tobytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_S3_tobytes'.
+INFO: [HLS 200-111]  Elapsed time: 0.615 seconds; current allocated memory: 271.173 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_Sq_frombytes_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_Sq_frombytes_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.483 seconds; current allocated memory: 272.024 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'owcpa_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'owcpa_dec'.
+INFO: [HLS 200-111]  Elapsed time: 0.787 seconds; current allocated memory: 273.681 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'KeccakF1600_StatePer_KeccakF_RoundConstan' to 'KeccakF1600_Statecud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeccakF1600_StatePer'.
+INFO: [HLS 200-111]  Elapsed time: 1.218 seconds; current allocated memory: 277.022 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 2.138 seconds; current allocated memory: 278.815 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha3_256_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha3_256_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.796 seconds; current allocated memory: 279.614 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.733 seconds; current allocated memory: 280.863 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha3_256'.
+INFO: [HLS 200-111]  Elapsed time: 0.82 seconds; current allocated memory: 281.692 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'crypto_kem_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_kem_dec/k' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_kem_dec/c' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'crypto_kem_dec/sk' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'crypto_kem_dec' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'crypto_kem_dec'.
+INFO: [HLS 200-111]  Elapsed time: 0.793 seconds; current allocated memory: 282.767 MB.
+INFO: [RTMG 210-278] Implementing memory 'owcpa_dec_x1_coeffs_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'owcpa_dec_x3_coeffs_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-279] Implementing memory 'KeccakF1600_Statecud_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'keccak_absorb_t_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sha3_256_1_s_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'sha3_256_1_h_assign_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'crypto_kem_dec_rm_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'crypto_kem_dec_buf_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:36 ; elapsed = 00:01:25 . Memory (MB): peak = 378.754 ; gain = 287.438
+INFO: [VHDL 208-304] Generating VHDL RTL for crypto_kem_dec.
+INFO: [VLOG 209-307] Generating Verilog RTL for crypto_kem_dec.
+INFO: [HLS 200-112] Total elapsed time: 85.292 seconds; peak allocated memory: 282.767 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a200t-fbg676-2'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a200t-fbg676-2'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+File generated on Mon Aug 24 18:51:19 EDT 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Mon Aug 24 18:53:47 EDT 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+File generated on Mon Aug 24 18:54:34 EDT 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a200tfbg676-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'aes.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'crypto_sort.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'fips202.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'kem.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'owcpa.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'pack3.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'packq.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'poly.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'rng.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'sample.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'verify.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 539.344 ; gain = 4.203 ; free physical = 14345 ; free virtual = 613628
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:57 ; elapsed = 00:00:59 . Memory (MB): peak = 539.344 ; gain = 4.203 ; free physical = 14345 ; free virtual = 613628
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 539.344 ; gain = 4.203 ; free physical = 14345 ; free virtual = 613628
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'mod3' into 'poly_Rq_to_S3' (poly.c:163) automatically.
+INFO: [XFORM 203-602] Inlining function 'mod3' into 'poly_S3_mul' (poly.c:73) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Z3_to_Zq' into 'poly_lift' (poly.c:93) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Rq_sum_zero_frombytes' into 'owcpa_dec' (owcpa.c:144) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Z3_to_Zq' into 'owcpa_dec' (owcpa.c:146) automatically.
+INFO: [XFORM 203-602] Inlining function 'owcpa_check_m' into 'owcpa_dec' (owcpa.c:161) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_lift' into 'owcpa_dec' (owcpa.c:165) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Sq_mul' into 'owcpa_dec' (owcpa.c:171) automatically.
+INFO: [XFORM 203-602] Inlining function 'owcpa_check_r' into 'owcpa_dec' (owcpa.c:184) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_trinary_Zq_to_Z3' into 'owcpa_dec' (owcpa.c:186) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64.2' into 'keccak_absorb' (fips202.c:386) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:400) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:426) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb.1' (fips202.c:386) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb.1' (fips202.c:400) automatically.
+INFO: [XFORM 203-602] Inlining function 'sha3_256.1' into 'crypto_kem_dec' (kem.c:47) automatically.
+INFO: [XFORM 203-602] Inlining function 'sha3_256' into 'crypto_kem_dec' (kem.c:54) automatically.
+INFO: [XFORM 203-602] Inlining function 'cmov' into 'crypto_kem_dec' (kem.c:56) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:05 ; elapsed = 00:01:08 . Memory (MB): peak = 539.344 ; gain = 4.203 ; free physical = 14343 ; free virtual = 613627
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-1' (fips202.c:421) in function 'keccak_squeezeblocks' automatically.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (fips202.c:421) in function 'keccak_squeezeblocks' completely with a factor of 1.
+INFO: [XFORM 203-602] Inlining function 'mod3' into 'poly_Rq_to_S3' (poly.c:163) automatically.
+INFO: [XFORM 203-602] Inlining function 'mod3' into 'poly_S3_mul' (poly.c:73) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Z3_to_Zq' into 'poly_lift' (poly.c:93) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Rq_sum_zero_frombytes' into 'owcpa_dec' (owcpa.c:144) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Z3_to_Zq' into 'owcpa_dec' (owcpa.c:146) automatically.
+INFO: [XFORM 203-602] Inlining function 'owcpa_check_m' into 'owcpa_dec' (owcpa.c:161) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_lift' into 'owcpa_dec' (owcpa.c:165) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_Sq_mul' into 'owcpa_dec' (owcpa.c:171) automatically.
+INFO: [XFORM 203-602] Inlining function 'owcpa_check_r' into 'owcpa_dec' (owcpa.c:184) automatically.
+INFO: [XFORM 203-602] Inlining function 'poly_trinary_Zq_to_Z3' into 'owcpa_dec' (owcpa.c:186) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64.2' into 'keccak_absorb' (fips202.c:386) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb' (fips202.c:400) automatically.
+INFO: [XFORM 203-602] Inlining function 'store64' into 'keccak_squeezeblocks' (fips202.c:426) automatically.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'sha3_256.1' (fips202.c:519) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64.1' into 'keccak_absorb.1' (fips202.c:386) automatically.
+INFO: [XFORM 203-602] Inlining function 'load64' into 'keccak_absorb.1' (fips202.c:400) automatically.
+INFO: [XFORM 203-602] Inlining function 'keccak_squeezeblocks' into 'sha3_256' (fips202.c:519) automatically.
+INFO: [XFORM 203-602] Inlining function 'cmov' into 'crypto_kem_dec' (kem.c:56) automatically.
+WARNING: [XFORM 203-561] Updating loop upper bound from 135 to 51 for loop 'Loop-3' in function 'keccak_absorb.1'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 51 for loop 'Loop-3' in function 'keccak_absorb.1'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 135 to 68 for loop 'Loop-3' in function 'keccak_absorb'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 68 for loop 'Loop-3' in function 'keccak_absorb'.
+INFO: [XFORM 203-11] Balancing expressions in function 'keccak_absorb.1' (fips202.c:28:22)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'KeccakF1600_StatePermute' (fips202.c:88)...70 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:10 ; elapsed = 00:01:13 . Memory (MB): peak = 667.270 ; gain = 132.129 ; free physical = 14295 ; free virtual = 613579
+WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:88:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:14 ; elapsed = 00:01:17 . Memory (MB): peak = 731.270 ; gain = 196.129 ; free physical = 14309 ; free virtual = 613472
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'crypto_kem_dec' ...
+WARNING: [SYN 201-103] Legalizing function name 'poly_Sq_frombytes.1' to 'poly_Sq_frombytes_1'.
+WARNING: [SYN 201-103] Legalizing function name 'sha3_256.1' to 'sha3_256_1'.
+WARNING: [SYN 201-103] Legalizing function name 'keccak_absorb.1' to 'keccak_absorb_1'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_Sq_frombytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 77.06 seconds; current allocated memory: 215.797 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 216.377 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mod3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 216.536 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 216.657 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_S3_frombytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 217.050 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 217.356 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_Rq_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.122ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'poly_Rq_mul' consists of the following:
+	'mul' operation of DSP[36] ('tmp_190', poly.c:45) [34]  (2.82 ns)
+	'add' operation of DSP[36] ('tmp_191', poly.c:45) [36]  (3.53 ns)
+	'store' operation (poly.c:45) of variable 'tmp_191', poly.c:45 on array 'r_coeffs' [37]  (2.77 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 217.643 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 217.861 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_Rq_to_S3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 218.242 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 218.659 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_S3_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.122ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'poly_S3_mul' consists of the following:
+	'mul' operation of DSP[36] ('tmp_149', poly.c:68) [34]  (2.82 ns)
+	'add' operation of DSP[36] ('tmp_150', poly.c:68) [36]  (3.53 ns)
+	'store' operation (poly.c:68) of variable 'tmp_150', poly.c:68 on array 'r_coeffs' [37]  (2.77 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 219.009 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.12 seconds; current allocated memory: 219.425 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_S3_tobytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 219.654 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 219.967 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poly_Sq_frombytes_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 220.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 220.987 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'owcpa_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 221.605 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.15 seconds; current allocated memory: 222.595 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.13 seconds; current allocated memory: 224.202 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.57 seconds; current allocated memory: 226.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.88 seconds; current allocated memory: 226.810 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 227.264 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha3_256_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 227.699 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.76 seconds; current allocated memory: 228.186 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'keccak_absorb_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.18 seconds; current allocated memory: 229.032 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 229.497 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sha3_256' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.64 seconds; current allocated memory: 229.954 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.76 seconds; current allocated memory: 230.434 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'crypto_kem_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.16 seconds; current allocated memory: 231.105 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.86 seconds; current allocated memory: 232.530 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_Sq_frombytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_Sq_frombytes'.
+INFO: [HLS 200-111]  Elapsed time: 2.92 seconds; current allocated memory: 234.592 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mod3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mod3'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 237.183 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_S3_frombytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_S3_frombytes'.
+INFO: [HLS 200-111]  Elapsed time: 0.15 seconds; current allocated memory: 238.213 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_Rq_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'crypto_kem_dec_mac_muladd_16s_16s_16ns_16_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_Rq_mul'.
+INFO: [HLS 200-111]  Elapsed time: 0.35 seconds; current allocated memory: 239.980 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_Rq_to_S3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_Rq_to_S3'.
+INFO: [HLS 200-111]  Elapsed time: 0.25 seconds; current allocated memory: 241.624 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_S3_mul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'crypto_kem_dec_mac_muladd_16s_16s_16ns_16_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_S3_mul'.
+INFO: [HLS 200-111]  Elapsed time: 0.46 seconds; current allocated memory: 244.209 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_S3_tobytes' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_S3_tobytes'.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 246.486 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poly_Sq_frombytes_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poly_Sq_frombytes_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 248.557 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'owcpa_dec' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'owcpa_dec'.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 252.430 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'KeccakF1600_StatePer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'KeccakF1600_StatePer'.
+INFO: [HLS 200-111]  Elapsed time: 1.32 seconds; current allocated memory: 258.986 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'keccak_absorb' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'keccak_absorb'.
+INFO: [HLS 200-111]  Elapsed time: 2.12 seconds; current allocated memory: 268.284 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sha3_256_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sha3_256_1'.
+INFO: [HLS 200-111]  Elapsed time: 1.1 seconds; current allocated memory: 270.947 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+File generated on Mon Aug 24 18:57:12 EDT 2020
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================

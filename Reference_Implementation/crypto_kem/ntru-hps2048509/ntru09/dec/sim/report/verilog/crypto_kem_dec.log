@@ -1,0 +1,270 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "/opt/Xilinx2018/Vivado/2018.3/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_crypto_kem_dec.cpp
+   Compiling (apcc) aes.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:57:44 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/307321598309864082904
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crypto_sort.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:57:50 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/308541598309870552429
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) fips202.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:57:56 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/309741598309876455525
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) kem.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:03 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/311001598309883613127
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) owcpa.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:09 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/312201598309889473544
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) pack3.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:15 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/313421598309895425354
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) packq.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:21 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/314641598309901430895
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) poly.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:27 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/315851598309907640668
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) PQCgenKAT_kem.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:34 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/317071598309914085128
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) rng.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:40 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/320601598309920202503
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sample.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:46 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/321811598309926580174
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) verify.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:52 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/323031598309932728293
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_crypto_kem_dec_top glbl -prj crypto_kem_dec.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s crypto_kem_dec 
+Multi-threading is on. Using 126 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/crypto_kem_dec.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_crypto_kem_dec_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/AESL_automem_k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_k
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/AESL_automem_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/AESL_automem_sk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_sk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/poly_Sq_frombytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_frombytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/mod3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mod3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/poly_S3_frombytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_frombytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/poly_Rq_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Rq_mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/poly_Rq_to_S3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Rq_to_S3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/poly_S3_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/poly_S3_tobytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_tobytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/poly_Sq_frombytes_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_frombytes_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/owcpa_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_dec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/KeccakF1600_StatePer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeccakF1600_StatePer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/keccak_absorb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keccak_absorb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/sha3_256_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/keccak_absorb_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keccak_absorb_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/sha3_256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/crypto_kem_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/crypto_kem_dec_mac_muladd_16s_16s_16ns_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_mac_muladd_16s_16s_16ns_16_1_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_mac_muladd_16s_16s_16ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/owcpa_dec_x1_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_dec_x1_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_dec_x1_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/owcpa_dec_x3_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_dec_x3_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_dec_x3_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/KeccakF1600_StatePer_KeccakF_RoundConstan.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeccakF1600_StatePer_KeccakF_RoundConstan_rom
+INFO: [VRFC 10-311] analyzing module KeccakF1600_StatePer_KeccakF_RoundConstan
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/keccak_absorb_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keccak_absorb_t_ram
+INFO: [VRFC 10-311] analyzing module keccak_absorb_t
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/sha3_256_1_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256_1_s_ram
+INFO: [VRFC 10-311] analyzing module sha3_256_1_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/sha3_256_1_h_assign.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256_1_h_assign_ram
+INFO: [VRFC 10-311] analyzing module sha3_256_1_h_assign
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/crypto_kem_dec_rm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_rm_ram
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_rm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/crypto_kem_dec_buf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_buf_ram
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_buf
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.crypto_kem_dec_rm_ram
+Compiling module xil_defaultlib.crypto_kem_dec_rm(DataWidth=8,Ad...
+Compiling module xil_defaultlib.crypto_kem_dec_buf_ram
+Compiling module xil_defaultlib.crypto_kem_dec_buf(DataWidth=8,A...
+Compiling module xil_defaultlib.sha3_256_1_s_ram
+Compiling module xil_defaultlib.sha3_256_1_s(DataWidth=64,Addres...
+Compiling module xil_defaultlib.sha3_256_1_h_assign_ram
+Compiling module xil_defaultlib.sha3_256_1_h_assign(DataWidth=8,...
+Compiling module xil_defaultlib.keccak_absorb_t_ram
+Compiling module xil_defaultlib.keccak_absorb_t(DataWidth=8,Addr...
+Compiling module xil_defaultlib.KeccakF1600_StatePer_KeccakF_Rou...
+Compiling module xil_defaultlib.KeccakF1600_StatePer_KeccakF_Rou...
+Compiling module xil_defaultlib.KeccakF1600_StatePer
+Compiling module xil_defaultlib.keccak_absorb_1
+Compiling module xil_defaultlib.sha3_256
+Compiling module xil_defaultlib.keccak_absorb
+Compiling module xil_defaultlib.sha3_256_1
+Compiling module xil_defaultlib.owcpa_dec_x1_coeffs_ram
+Compiling module xil_defaultlib.owcpa_dec_x1_coeffs(DataWidth=16...
+Compiling module xil_defaultlib.owcpa_dec_x3_coeffs_ram
+Compiling module xil_defaultlib.owcpa_dec_x3_coeffs(DataWidth=16...
+Compiling module xil_defaultlib.poly_Sq_frombytes_1
+Compiling module xil_defaultlib.poly_Sq_frombytes
+Compiling module xil_defaultlib.mod3
+Compiling module xil_defaultlib.poly_S3_frombytes
+Compiling module xil_defaultlib.crypto_kem_dec_mac_muladd_16s_16...
+Compiling module xil_defaultlib.crypto_kem_dec_mac_muladd_16s_16...
+Compiling module xil_defaultlib.poly_S3_mul
+Compiling module xil_defaultlib.poly_Rq_to_S3
+Compiling module xil_defaultlib.poly_S3_tobytes
+Compiling module xil_defaultlib.poly_Rq_mul
+Compiling module xil_defaultlib.owcpa_dec
+Compiling module xil_defaultlib.crypto_kem_dec
+Compiling module xil_defaultlib.AESL_automem_k
+Compiling module xil_defaultlib.AESL_automem_c
+Compiling module xil_defaultlib.AESL_automem_sk
+Compiling module xil_defaultlib.apatb_crypto_kem_dec_top
+Compiling module work.glbl
+Built simulation snapshot crypto_kem_dec
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/xsim.dir/crypto_kem_dec/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 24 18:59:06 2020...
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/crypto_kem_dec/xsim_script.tcl
+# xsim {crypto_kem_dec} -autoloadwcfg -tclbatch {crypto_kem_dec.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source crypto_kem_dec.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [0.00%] @ "125000"
+// RTL Simulation : 1 / 2 [100.00%] @ "23593735000"
+// RTL Simulation : 2 / 2 [100.00%] @ "47187335000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 47187375 ns : File "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/verilog/crypto_kem_dec.autotb.v" Line 380
+run: Time (s): cpu = 00:00:00.04 ; elapsed = 00:03:23 . Memory (MB): peak = 1375.590 ; gain = 0.000 ; free physical = 14289 ; free virtual = 613542
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Aug 24 19:02:38 2020...
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

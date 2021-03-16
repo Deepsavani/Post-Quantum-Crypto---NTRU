@@ -1,0 +1,315 @@
+
+C:\Users\deeps\OneDrive\Desktop\NTRU\NTRU\Reference_Implementation\crypto_kem\ntru-hrss701\ntru01\dec\sim\verilog>set PATH= 
+
+C:\Users\deeps\OneDrive\Desktop\NTRU\NTRU\Reference_Implementation\crypto_kem\ntru-hrss701\ntru01\dec\sim\verilog>call D:/xilinx/Vivado/2019.1/bin/xelab xil_defaultlib.apatb_crypto_kem_dec_top glbl -prj crypto_kem_dec.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile "D:/xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s crypto_kem_dec  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_crypto_kem_dec_top glbl -prj crypto_kem_dec.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile D:/xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s crypto_kem_dec 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/AESL_automem_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/AESL_automem_k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_k
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/AESL_automem_sk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_sk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_crypto_kem_dec_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_amdEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_amdEe_DSP48_2
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_amdEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_buf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_buf_ram
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_buf
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_mabkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_mabkb_DSP48_0
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_mabkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_macud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_macud_DSP48_1
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_macud
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_maeOg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_maeOg_DSP48_3
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_maeOg
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_rm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_rm_ram
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_rm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/KeccakF1600_StatefYi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeccakF1600_StatefYi_rom
+INFO: [VRFC 10-311] analyzing module KeccakF1600_StatefYi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/KeccakF1600_StatePer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeccakF1600_StatePer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/keccak_absorb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keccak_absorb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/keccak_absorb_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keccak_absorb_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/keccak_absorb_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keccak_absorb_t_ram
+INFO: [VRFC 10-311] analyzing module keccak_absorb_t
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/mod3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mod3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/owcpa_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_dec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/owcpa_dec_x3_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_dec_x3_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_dec_x3_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_lift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_lift
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_lift_b_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_lift_b_coeffs_ram
+INFO: [VRFC 10-311] analyzing module poly_lift_b_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_Rq_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Rq_mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_Rq_to_S3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Rq_to_S3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_S3_frombytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_frombytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_S3_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_S3_tobytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_tobytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_Sq_frombytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_frombytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_Sq_frombytes_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_frombytes_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/sha3_256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/sha3_256_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/sha3_256_1_h_assign.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256_1_h_assign_ram
+INFO: [VRFC 10-311] analyzing module sha3_256_1_h_assign
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/sha3_256_1_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256_1_s_ram
+INFO: [VRFC 10-311] analyzing module sha3_256_1_s
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.crypto_kem_dec_rm_ram
+Compiling module xil_defaultlib.crypto_kem_dec_rm(DataWidth=8,Ad...
+Compiling module xil_defaultlib.crypto_kem_dec_buf_ram
+Compiling module xil_defaultlib.crypto_kem_dec_buf(DataWidth=8,A...
+Compiling module xil_defaultlib.sha3_256_1_s_ram
+Compiling module xil_defaultlib.sha3_256_1_s(DataWidth=64,Addres...
+Compiling module xil_defaultlib.sha3_256_1_h_assign_ram
+Compiling module xil_defaultlib.sha3_256_1_h_assign(DataWidth=8,...
+Compiling module xil_defaultlib.keccak_absorb_t_ram
+Compiling module xil_defaultlib.keccak_absorb_t(DataWidth=8,Addr...
+Compiling module xil_defaultlib.KeccakF1600_StatefYi_rom
+Compiling module xil_defaultlib.KeccakF1600_StatefYi(DataWidth=6...
+Compiling module xil_defaultlib.KeccakF1600_StatePer
+Compiling module xil_defaultlib.keccak_absorb_1
+Compiling module xil_defaultlib.sha3_256
+Compiling module xil_defaultlib.keccak_absorb
+Compiling module xil_defaultlib.sha3_256_1
+Compiling module xil_defaultlib.poly_lift_b_coeffs_ram
+Compiling module xil_defaultlib.poly_lift_b_coeffs(DataWidth=16,...
+Compiling module xil_defaultlib.owcpa_dec_x3_coeffs_ram
+Compiling module xil_defaultlib.owcpa_dec_x3_coeffs(DataWidth=16...
+Compiling module xil_defaultlib.crypto_kem_dec_macud_DSP48_1
+Compiling module xil_defaultlib.crypto_kem_dec_macud(ID=1,NUM_ST...
+Compiling module xil_defaultlib.crypto_kem_dec_amdEe_DSP48_2
+Compiling module xil_defaultlib.crypto_kem_dec_amdEe(ID=1,NUM_ST...
+Compiling module xil_defaultlib.crypto_kem_dec_maeOg_DSP48_3
+Compiling module xil_defaultlib.crypto_kem_dec_maeOg(ID=1,NUM_ST...
+Compiling module xil_defaultlib.poly_lift
+Compiling module xil_defaultlib.poly_Sq_frombytes_1
+Compiling module xil_defaultlib.poly_Sq_frombytes
+Compiling module xil_defaultlib.crypto_kem_dec_mabkb_DSP48_0
+Compiling module xil_defaultlib.crypto_kem_dec_mabkb(ID=1,NUM_ST...
+Compiling module xil_defaultlib.poly_S3_mul
+Compiling module xil_defaultlib.mod3
+Compiling module xil_defaultlib.poly_S3_frombytes
+Compiling module xil_defaultlib.poly_Rq_to_S3
+Compiling module xil_defaultlib.poly_Rq_mul
+Compiling module xil_defaultlib.poly_S3_tobytes
+Compiling module xil_defaultlib.owcpa_dec
+Compiling module xil_defaultlib.crypto_kem_dec
+Compiling module xil_defaultlib.AESL_automem_k
+Compiling module xil_defaultlib.AESL_automem_c
+Compiling module xil_defaultlib.AESL_automem_sk
+Compiling module xil_defaultlib.apatb_crypto_kem_dec_top
+Compiling module work.glbl
+Built simulation snapshot crypto_kem_dec
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/xsim.dir/crypto_kem_dec/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/xsim.dir/crypto_kem_dec/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Aug 22 14:25:30 2020. For additional details about this file, please refer to the WebTalk help file at D:/xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Aug 22 14:25:30 2020...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_crypto_kem_dec_top glbl -prj crypto_kem_dec.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s crypto_kem_dec 
+Multi-threading is on. Using 126 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_crypto_kem_dec_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/AESL_automem_k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_k
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/AESL_automem_c.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_c
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/AESL_automem_sk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_sk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_Sq_frombytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_frombytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/mod3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mod3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_S3_frombytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_frombytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_Rq_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Rq_mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_Rq_to_S3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Rq_to_S3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_S3_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_S3_tobytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_tobytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_lift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_lift
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_Sq_frombytes_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_frombytes_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/owcpa_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_dec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/KeccakF1600_StatePer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeccakF1600_StatePer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/keccak_absorb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keccak_absorb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/sha3_256_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/keccak_absorb_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keccak_absorb_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/sha3_256.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_mac_muladd_16s_16s_16ns_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_mac_muladd_16s_16s_16ns_16_1_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_mac_muladd_16s_16s_16ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_mac_muladd_16s_2ns_16ns_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_mac_muladd_16s_2ns_16ns_16_1_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_mac_muladd_16s_2ns_16ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_ama_addmuladd_2ns_3ns_16s_16ns_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_ama_addmuladd_2ns_3ns_16s_16ns_16_1_1_DSP48_2
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_ama_addmuladd_2ns_3ns_16s_16ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_mac_muladd_2ns_16s_16ns_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_mac_muladd_2ns_16s_16ns_16_1_1_DSP48_3
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_mac_muladd_2ns_16s_16ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/poly_lift_b_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_lift_b_coeffs_ram
+INFO: [VRFC 10-311] analyzing module poly_lift_b_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/owcpa_dec_x3_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_dec_x3_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_dec_x3_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/KeccakF1600_StatePer_KeccakF_RoundConstan.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeccakF1600_StatePer_KeccakF_RoundConstan_rom
+INFO: [VRFC 10-311] analyzing module KeccakF1600_StatePer_KeccakF_RoundConstan
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/keccak_absorb_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module keccak_absorb_t_ram
+INFO: [VRFC 10-311] analyzing module keccak_absorb_t
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/sha3_256_1_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256_1_s_ram
+INFO: [VRFC 10-311] analyzing module sha3_256_1_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/sha3_256_1_h_assign.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha3_256_1_h_assign_ram
+INFO: [VRFC 10-311] analyzing module sha3_256_1_h_assign
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_rm.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_rm_ram
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_rm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec_buf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_buf_ram
+INFO: [VRFC 10-311] analyzing module crypto_kem_dec_buf
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.crypto_kem_dec_rm_ram
+Compiling module xil_defaultlib.crypto_kem_dec_rm(DataWidth=8,Ad...
+Compiling module xil_defaultlib.crypto_kem_dec_buf_ram
+Compiling module xil_defaultlib.crypto_kem_dec_buf(DataWidth=8,A...
+Compiling module xil_defaultlib.sha3_256_1_s_ram
+Compiling module xil_defaultlib.sha3_256_1_s(DataWidth=64,Addres...
+Compiling module xil_defaultlib.sha3_256_1_h_assign_ram
+Compiling module xil_defaultlib.sha3_256_1_h_assign(DataWidth=8,...
+Compiling module xil_defaultlib.keccak_absorb_t_ram
+Compiling module xil_defaultlib.keccak_absorb_t(DataWidth=8,Addr...
+Compiling module xil_defaultlib.KeccakF1600_StatePer_KeccakF_Rou...
+Compiling module xil_defaultlib.KeccakF1600_StatePer_KeccakF_Rou...
+Compiling module xil_defaultlib.KeccakF1600_StatePer
+Compiling module xil_defaultlib.keccak_absorb_1
+Compiling module xil_defaultlib.sha3_256
+Compiling module xil_defaultlib.keccak_absorb
+Compiling module xil_defaultlib.sha3_256_1
+Compiling module xil_defaultlib.poly_lift_b_coeffs_ram
+Compiling module xil_defaultlib.poly_lift_b_coeffs(DataWidth=16,...
+Compiling module xil_defaultlib.owcpa_dec_x3_coeffs_ram
+Compiling module xil_defaultlib.owcpa_dec_x3_coeffs(DataWidth=16...
+Compiling module xil_defaultlib.crypto_kem_dec_mac_muladd_16s_2n...
+Compiling module xil_defaultlib.crypto_kem_dec_mac_muladd_16s_2n...
+Compiling module xil_defaultlib.crypto_kem_dec_ama_addmuladd_2ns...
+Compiling module xil_defaultlib.crypto_kem_dec_ama_addmuladd_2ns...
+Compiling module xil_defaultlib.crypto_kem_dec_mac_muladd_2ns_16...
+Compiling module xil_defaultlib.crypto_kem_dec_mac_muladd_2ns_16...
+Compiling module xil_defaultlib.poly_lift
+Compiling module xil_defaultlib.poly_Sq_frombytes_1
+Compiling module xil_defaultlib.poly_Sq_frombytes
+Compiling module xil_defaultlib.crypto_kem_dec_mac_muladd_16s_16...
+Compiling module xil_defaultlib.crypto_kem_dec_mac_muladd_16s_16...
+Compiling module xil_defaultlib.poly_S3_mul
+Compiling module xil_defaultlib.mod3
+Compiling module xil_defaultlib.poly_S3_frombytes
+Compiling module xil_defaultlib.poly_Rq_to_S3
+Compiling module xil_defaultlib.poly_Rq_mul
+Compiling module xil_defaultlib.poly_S3_tobytes
+Compiling module xil_defaultlib.owcpa_dec
+Compiling module xil_defaultlib.crypto_kem_dec
+Compiling module xil_defaultlib.AESL_automem_k
+Compiling module xil_defaultlib.AESL_automem_c
+Compiling module xil_defaultlib.AESL_automem_sk
+Compiling module xil_defaultlib.apatb_crypto_kem_dec_top
+Compiling module work.glbl
+Built simulation snapshot crypto_kem_dec
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/xsim.dir/crypto_kem_dec/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Aug 23 20:15:46 2020...
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/crypto_kem_dec/xsim_script.tcl
+# xsim {crypto_kem_dec} -autoloadwcfg -tclbatch {crypto_kem_dec.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source crypto_kem_dec.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [0.00%] @ "125000"
+// RTL Simulation : 1 / 2 [100.00%] @ "44673135000"
+// RTL Simulation : 2 / 2 [100.00%] @ "89346135000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 89346175 ns : File "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hrss701/ntru01/dec/sim/verilog/crypto_kem_dec.autotb.v" Line 380
+run: Time (s): cpu = 00:00:00.13 ; elapsed = 00:07:04 . Memory (MB): peak = 1375.590 ; gain = 0.000 ; free physical = 80004 ; free virtual = 606418
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Aug 23 20:23:00 2020...

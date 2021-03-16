@@ -1,0 +1,557 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "/opt/Xilinx2018/Vivado/2018.3/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_crypto_kem_keypair.cpp
+   Compiling (apcc) aes.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:18:10 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/634381598314690875030
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crypto_sort.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:18:17 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/635591598314697205803
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) fips202.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:18:22 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/636771598314703046883
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) kem.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:18:30 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/638011598314710125401
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) owcpa.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:18:35 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/639261598314716004806
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) pack3.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:18:42 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/640441598314722094432
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) packq.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:18:48 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/642131598314728169151
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) poly.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:18:54 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/643311598314734268600
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) PQCgenKAT_kem.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:19:00 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/644521598314740670722
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) rng.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:19:06 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/645741598314746578037
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sample.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:19:12 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/646931598314752642636
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) verify.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 20:19:18 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/648151598314758984720
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_crypto_kem_keypair_top glbl -prj crypto_kem_keypair.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s crypto_kem_keypair 
+Multi-threading is on. Using 126 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_crypto_kem_keypair_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AESL_automem_pk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_pk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AESL_automem_sk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_sk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AESL_automem_DRBG_ctx_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_DRBG_ctx_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AESL_automem_DRBG_ctx_Key.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_DRBG_ctx_Key
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/KeyExpansion.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AddRoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddRoundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/SubBytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SubBytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/Cipher.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_ECB_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_ECB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_CTR_DRBG_Upda.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_CTR_DRBG_Upda
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/randombytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_sort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_sort
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/sample_fixed_type.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_fixed_type
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/mod3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mod3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_S3_inv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_inv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_S3_tobytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_tobytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_Rq_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Rq_mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_R2_inv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_R2_inv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_Sq_tobytes_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_tobytes_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_Sq_tobytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_tobytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/owcpa_keypair.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_keypair
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/randombytes_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/KeyExpansion_sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/KeyExpansion_Rcon.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/SubBytes_sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SubBytes_sbox_rom
+INFO: [VRFC 10-311] analyzing module SubBytes_sbox
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_ECB_1_ctx_RoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_ctx_RoundKey_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_ctx_RoundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_ECB_1_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_test_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_ECB_ctx_RoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_ctx_RoundKey_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_ctx_RoundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_CTR_DRBG_Upda_temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_CTR_DRBG_Upda_temp_ram
+INFO: [VRFC 10-311] analyzing module AES256_CTR_DRBG_Upda_temp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/randombytes_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes_block_ram
+INFO: [VRFC 10-311] analyzing module randombytes_block
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/sample_fixed_type_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_fixed_type_s_ram
+INFO: [VRFC 10-311] analyzing module sample_fixed_type_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair_urem_10ns_10ns_10_14_seq_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_urem_10ns_10ns_10_14_seq_1_div_u
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_urem_10ns_10ns_10_14_seq_1_div
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_urem_10ns_10ns_10_14_seq_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair_mul_mul_16s_16s_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_mul_mul_16s_16s_16_1_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_mul_mul_16s_16s_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair_mac_muladd_16s_16s_16ns_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_mac_muladd_16s_16s_16ns_16_1_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_mac_muladd_16s_16s_16ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_S3_inv_b_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_inv_b_coeffs_ram
+INFO: [VRFC 10-311] analyzing module poly_S3_inv_b_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_Sq_tobytes_1_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_tobytes_1_t_ram
+INFO: [VRFC 10-311] analyzing module poly_Sq_tobytes_1_t
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/owcpa_keypair_ai2_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_ai2_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_ai2_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/owcpa_keypair_x1_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x1_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x1_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/owcpa_keypair_x2_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x2_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x2_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/owcpa_keypair_x3_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x3_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x3_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair_seed.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_seed_ram
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_seed
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.crypto_kem_keypair_seed_ram
+Compiling module xil_defaultlib.crypto_kem_keypair_seed(DataWidt...
+Compiling module xil_defaultlib.poly_S3_inv_b_coeffs_ram
+Compiling module xil_defaultlib.poly_S3_inv_b_coeffs(DataWidth=1...
+Compiling module xil_defaultlib.owcpa_keypair_ai2_coeffs_ram_def...
+Compiling module xil_defaultlib.owcpa_keypair_ai2_coeffs(DataWid...
+Compiling module xil_defaultlib.owcpa_keypair_x1_coeffs_ram
+Compiling module xil_defaultlib.owcpa_keypair_x1_coeffs(DataWidt...
+Compiling module xil_defaultlib.owcpa_keypair_x2_coeffs_ram_defa...
+Compiling module xil_defaultlib.owcpa_keypair_x2_coeffs(DataWidt...
+Compiling module xil_defaultlib.owcpa_keypair_x3_coeffs_ram
+Compiling module xil_defaultlib.owcpa_keypair_x3_coeffs(DataWidt...
+Compiling module xil_defaultlib.sample_fixed_type_s_ram
+Compiling module xil_defaultlib.sample_fixed_type_s(DataWidth=32...
+Compiling module xil_defaultlib.crypto_sort
+Compiling module xil_defaultlib.sample_fixed_type
+Compiling module xil_defaultlib.mod3
+Compiling module xil_defaultlib.crypto_kem_keypair_urem_10ns_10n...
+Compiling module xil_defaultlib.crypto_kem_keypair_urem_10ns_10n...
+Compiling module xil_defaultlib.crypto_kem_keypair_urem_10ns_10n...
+Compiling module xil_defaultlib.crypto_kem_keypair_mul_mul_16s_1...
+Compiling module xil_defaultlib.crypto_kem_keypair_mul_mul_16s_1...
+Compiling module xil_defaultlib.crypto_kem_keypair_mac_muladd_16...
+Compiling module xil_defaultlib.crypto_kem_keypair_mac_muladd_16...
+Compiling module xil_defaultlib.poly_S3_inv
+Compiling module xil_defaultlib.poly_R2_inv
+Compiling module xil_defaultlib.poly_Sq_tobytes_1_t_ram
+Compiling module xil_defaultlib.poly_Sq_tobytes_1_t(DataWidth=16...
+Compiling module xil_defaultlib.poly_Sq_tobytes_1
+Compiling module xil_defaultlib.poly_Sq_tobytes
+Compiling module xil_defaultlib.poly_S3_tobytes
+Compiling module xil_defaultlib.poly_Rq_mul
+Compiling module xil_defaultlib.owcpa_keypair
+Compiling module xil_defaultlib.randombytes_block_ram
+Compiling module xil_defaultlib.randombytes_block(DataWidth=8,Ad...
+Compiling module xil_defaultlib.AES256_CTR_DRBG_Upda_temp_ram
+Compiling module xil_defaultlib.AES256_CTR_DRBG_Upda_temp(DataWi...
+Compiling module xil_defaultlib.AES256_ECB_ctx_RoundKey_ram
+Compiling module xil_defaultlib.AES256_ECB_ctx_RoundKey(DataWidt...
+Compiling module xil_defaultlib.AES256_ECB_1_test_ram
+Compiling module xil_defaultlib.AES256_ECB_1_test(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion_sbox_rom
+Compiling module xil_defaultlib.KeyExpansion_sbox(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion_Rcon_rom
+Compiling module xil_defaultlib.KeyExpansion_Rcon(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion
+Compiling module xil_defaultlib.AddRoundKey
+Compiling module xil_defaultlib.SubBytes_sbox_rom
+Compiling module xil_defaultlib.SubBytes_sbox(DataWidth=8,Addres...
+Compiling module xil_defaultlib.SubBytes
+Compiling module xil_defaultlib.Cipher
+Compiling module xil_defaultlib.AES256_ECB
+Compiling module xil_defaultlib.AES256_CTR_DRBG_Upda
+Compiling module xil_defaultlib.AES256_ECB_1_ctx_RoundKey_ram
+Compiling module xil_defaultlib.AES256_ECB_1_ctx_RoundKey(DataWi...
+Compiling module xil_defaultlib.AES256_ECB_1
+Compiling module xil_defaultlib.randombytes
+Compiling module xil_defaultlib.randombytes_1
+Compiling module xil_defaultlib.crypto_kem_keypair
+Compiling module xil_defaultlib.AESL_automem_pk
+Compiling module xil_defaultlib.AESL_automem_sk
+Compiling module xil_defaultlib.AESL_automem_DRBG_ctx_V
+Compiling module xil_defaultlib.AESL_automem_DRBG_ctx_Key
+Compiling module xil_defaultlib.apatb_crypto_kem_keypair_top
+Compiling module work.glbl
+Built simulation snapshot crypto_kem_keypair
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/xsim.dir/crypto_kem_keypair/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 24 20:15:08 2020...
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/crypto_kem_keypair/xsim_script.tcl
+# xsim {crypto_kem_keypair} -autoloadwcfg -tclbatch {crypto_kem_keypair.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source crypto_kem_keypair.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [n/a] @ "125000"
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_crypto_kem_keypair_top glbl -prj crypto_kem_keypair.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx2018/Vivado/2018.3/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s crypto_kem_keypair 
+Multi-threading is on. Using 126 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_crypto_kem_keypair_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AESL_automem_pk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_pk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AESL_automem_sk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_sk
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AESL_automem_DRBG_ctx_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_DRBG_ctx_V
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AESL_automem_DRBG_ctx_Key.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_automem_DRBG_ctx_Key
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/KeyExpansion.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AddRoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AddRoundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/SubBytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SubBytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/Cipher.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Cipher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_ECB_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_ECB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_CTR_DRBG_Upda.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_CTR_DRBG_Upda
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/randombytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_sort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_sort
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/sample_fixed_type.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_fixed_type
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/mod3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mod3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_S3_inv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_inv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_S3_tobytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_tobytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_Rq_mul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Rq_mul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_R2_inv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_R2_inv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_Sq_tobytes_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_tobytes_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_Sq_tobytes.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_tobytes
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/owcpa_keypair.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_keypair
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/randombytes_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/KeyExpansion_sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_sbox
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/KeyExpansion_Rcon.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon_rom
+INFO: [VRFC 10-311] analyzing module KeyExpansion_Rcon
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/SubBytes_sbox.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SubBytes_sbox_rom
+INFO: [VRFC 10-311] analyzing module SubBytes_sbox
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_ECB_1_ctx_RoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_ctx_RoundKey_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_ctx_RoundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_ECB_1_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_test_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_1_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_ECB_ctx_RoundKey.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_ECB_ctx_RoundKey_ram
+INFO: [VRFC 10-311] analyzing module AES256_ECB_ctx_RoundKey
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/AES256_CTR_DRBG_Upda_temp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AES256_CTR_DRBG_Upda_temp_ram
+INFO: [VRFC 10-311] analyzing module AES256_CTR_DRBG_Upda_temp
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/randombytes_block.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module randombytes_block_ram
+INFO: [VRFC 10-311] analyzing module randombytes_block
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/sample_fixed_type_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sample_fixed_type_s_ram
+INFO: [VRFC 10-311] analyzing module sample_fixed_type_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair_urem_10ns_10ns_10_14_seq_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_urem_10ns_10ns_10_14_seq_1_div_u
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_urem_10ns_10ns_10_14_seq_1_div
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_urem_10ns_10ns_10_14_seq_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair_mul_mul_16s_16s_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_mul_mul_16s_16s_16_1_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_mul_mul_16s_16s_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair_mac_muladd_16s_16s_16ns_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_mac_muladd_16s_16s_16ns_16_1_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_mac_muladd_16s_16s_16ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_S3_inv_b_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_S3_inv_b_coeffs_ram
+INFO: [VRFC 10-311] analyzing module poly_S3_inv_b_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/poly_Sq_tobytes_1_t.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module poly_Sq_tobytes_1_t_ram
+INFO: [VRFC 10-311] analyzing module poly_Sq_tobytes_1_t
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/owcpa_keypair_ai2_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_ai2_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_ai2_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/owcpa_keypair_x1_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x1_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x1_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/owcpa_keypair_x2_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x2_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x2_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/owcpa_keypair_x3_coeffs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x3_coeffs_ram
+INFO: [VRFC 10-311] analyzing module owcpa_keypair_x3_coeffs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair_seed.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_seed_ram
+INFO: [VRFC 10-311] analyzing module crypto_kem_keypair_seed
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.crypto_kem_keypair_seed_ram
+Compiling module xil_defaultlib.crypto_kem_keypair_seed(DataWidt...
+Compiling module xil_defaultlib.poly_S3_inv_b_coeffs_ram
+Compiling module xil_defaultlib.poly_S3_inv_b_coeffs(DataWidth=1...
+Compiling module xil_defaultlib.owcpa_keypair_ai2_coeffs_ram_def...
+Compiling module xil_defaultlib.owcpa_keypair_ai2_coeffs(DataWid...
+Compiling module xil_defaultlib.owcpa_keypair_x1_coeffs_ram
+Compiling module xil_defaultlib.owcpa_keypair_x1_coeffs(DataWidt...
+Compiling module xil_defaultlib.owcpa_keypair_x2_coeffs_ram_defa...
+Compiling module xil_defaultlib.owcpa_keypair_x2_coeffs(DataWidt...
+Compiling module xil_defaultlib.owcpa_keypair_x3_coeffs_ram
+Compiling module xil_defaultlib.owcpa_keypair_x3_coeffs(DataWidt...
+Compiling module xil_defaultlib.sample_fixed_type_s_ram
+Compiling module xil_defaultlib.sample_fixed_type_s(DataWidth=32...
+Compiling module xil_defaultlib.crypto_sort
+Compiling module xil_defaultlib.sample_fixed_type
+Compiling module xil_defaultlib.mod3
+Compiling module xil_defaultlib.crypto_kem_keypair_urem_10ns_10n...
+Compiling module xil_defaultlib.crypto_kem_keypair_urem_10ns_10n...
+Compiling module xil_defaultlib.crypto_kem_keypair_urem_10ns_10n...
+Compiling module xil_defaultlib.crypto_kem_keypair_mul_mul_16s_1...
+Compiling module xil_defaultlib.crypto_kem_keypair_mul_mul_16s_1...
+Compiling module xil_defaultlib.crypto_kem_keypair_mac_muladd_16...
+Compiling module xil_defaultlib.crypto_kem_keypair_mac_muladd_16...
+Compiling module xil_defaultlib.poly_S3_inv
+Compiling module xil_defaultlib.poly_R2_inv
+Compiling module xil_defaultlib.poly_Sq_tobytes_1_t_ram
+Compiling module xil_defaultlib.poly_Sq_tobytes_1_t(DataWidth=16...
+Compiling module xil_defaultlib.poly_Sq_tobytes_1
+Compiling module xil_defaultlib.poly_Sq_tobytes
+Compiling module xil_defaultlib.poly_S3_tobytes
+Compiling module xil_defaultlib.poly_Rq_mul
+Compiling module xil_defaultlib.owcpa_keypair
+Compiling module xil_defaultlib.randombytes_block_ram
+Compiling module xil_defaultlib.randombytes_block(DataWidth=8,Ad...
+Compiling module xil_defaultlib.AES256_CTR_DRBG_Upda_temp_ram
+Compiling module xil_defaultlib.AES256_CTR_DRBG_Upda_temp(DataWi...
+Compiling module xil_defaultlib.AES256_ECB_ctx_RoundKey_ram
+Compiling module xil_defaultlib.AES256_ECB_ctx_RoundKey(DataWidt...
+Compiling module xil_defaultlib.AES256_ECB_1_test_ram
+Compiling module xil_defaultlib.AES256_ECB_1_test(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion_sbox_rom
+Compiling module xil_defaultlib.KeyExpansion_sbox(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion_Rcon_rom
+Compiling module xil_defaultlib.KeyExpansion_Rcon(DataWidth=8,Ad...
+Compiling module xil_defaultlib.KeyExpansion
+Compiling module xil_defaultlib.AddRoundKey
+Compiling module xil_defaultlib.SubBytes_sbox_rom
+Compiling module xil_defaultlib.SubBytes_sbox(DataWidth=8,Addres...
+Compiling module xil_defaultlib.SubBytes
+Compiling module xil_defaultlib.Cipher
+Compiling module xil_defaultlib.AES256_ECB
+Compiling module xil_defaultlib.AES256_CTR_DRBG_Upda
+Compiling module xil_defaultlib.AES256_ECB_1_ctx_RoundKey_ram
+Compiling module xil_defaultlib.AES256_ECB_1_ctx_RoundKey(DataWi...
+Compiling module xil_defaultlib.AES256_ECB_1
+Compiling module xil_defaultlib.randombytes
+Compiling module xil_defaultlib.randombytes_1
+Compiling module xil_defaultlib.crypto_kem_keypair
+Compiling module xil_defaultlib.AESL_automem_pk
+Compiling module xil_defaultlib.AESL_automem_sk
+Compiling module xil_defaultlib.AESL_automem_DRBG_ctx_V
+Compiling module xil_defaultlib.AESL_automem_DRBG_ctx_Key
+Compiling module xil_defaultlib.apatb_crypto_kem_keypair_top
+Compiling module work.glbl
+Built simulation snapshot crypto_kem_keypair
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/xsim.dir/crypto_kem_keypair/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 24 20:19:33 2020...
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/crypto_kem_keypair/xsim_script.tcl
+# xsim {crypto_kem_keypair} -autoloadwcfg -tclbatch {crypto_kem_keypair.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source crypto_kem_keypair.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [n/a] @ "125000"
+// RTL Simulation : 0 / 2 [n/a] @ "100000145000"
+// RTL Simulation : 0 / 2 [n/a] @ "200000155000"
+// RTL Simulation : 1 / 2 [n/a] @ "283025715000"
+// RTL Simulation : 1 / 2 [n/a] @ "383025725000"
+// RTL Simulation : 1 / 2 [n/a] @ "483025735000"
+// RTL Simulation : 2 / 2 [n/a] @ "566051295000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 566051335 ns : File "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/crypto_kem_keypair.autotb.v" Line 587
+run: Time (s): cpu = 00:00:01 ; elapsed = 01:22:16 . Memory (MB): peak = 1375.594 ; gain = 0.000 ; free physical = 8265 ; free virtual = 606532
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Aug 24 21:42:02 2020...
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Aug 21 15:22:59 2020
+# Process ID: 5556
+# Current directory: C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/verilog
+# Command line: wbtcv.exe -mode batch -source C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/verilog/xsim.dir/crypto_kem_dec/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/verilog/webtalk.log
+# Journal file: C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/verilog\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/verilog/xsim.dir/crypto_kem_dec/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 109.277 ; gain = 17.867
+INFO: [Common 17-206] Exiting Webtalk at Fri Aug 21 15:23:07 2020...

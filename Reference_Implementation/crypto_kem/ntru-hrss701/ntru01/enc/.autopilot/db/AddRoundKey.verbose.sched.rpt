@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vivado HLS Report for 'AddRoundKey'
+================================================================
+* Date:           Sun Aug 23 21:46:11 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru01
+* Solution:       enc
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.327|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   41|   41|   41|   41|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                       |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- AddRoundKey_label0   |   40|   40|        10|          -|          -|     4|    no    |
+        | + AddRoundKey_label1  |    8|    8|         2|          -|          -|     4|    no    |
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!tmp_s)
+3 --> 
+	4  / (!tmp_469)
+	2  / (tmp_469)
+4 --> 
+	3  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%round_read = call i6 @_ssdm_op_Read.ap_auto.i6(i6 %round)" [aes.c:243]   --->   Operation 5 'read' 'round_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (1.35ns)   --->   "br label %1" [aes.c:246]   --->   Operation 6 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 1.35>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%i = phi i3 [ 0, %0 ], [ %i_24, %5 ]"   --->   Operation 7 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (1.00ns)   --->   "%tmp_s = icmp eq i3 %i, -4" [aes.c:246]   --->   Operation 8 'icmp' 'tmp_s' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 9 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (1.34ns)   --->   "%i_24 = add i3 %i, 1" [aes.c:246]   --->   Operation 10 'add' 'i_24' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %tmp_s, label %6, label %2" [aes.c:246]   --->   Operation 11 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str) nounwind" [aes.c:247]   --->   Operation 12 'specloopname' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_40 = call i32 (...)* @_ssdm_op_SpecRegionBegin([19 x i8]* @p_str)" [aes.c:247]   --->   Operation 13 'specregionbegin' 'tmp_40' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%tmp = trunc i3 %i to i2" [aes.c:246]   --->   Operation 14 'trunc' 'tmp' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_468 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %tmp, i2 0)" [aes.c:250]   --->   Operation 15 'bitconcatenate' 'tmp_468' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%tmp_311 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %i, i2 0)" [aes.c:246]   --->   Operation 16 'bitconcatenate' 'tmp_311' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_312_cast = zext i5 %tmp_311 to i6" [aes.c:248]   --->   Operation 17 'zext' 'tmp_312_cast' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.35ns)   --->   "br label %3" [aes.c:248]   --->   Operation 18 'br' <Predicate = (!tmp_s)> <Delay = 1.35>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "ret void" [aes.c:253]   --->   Operation 19 'ret' <Predicate = (tmp_s)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 4.26>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%j = phi i3 [ 0, %2 ], [ %j_6, %4 ]"   --->   Operation 20 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (1.00ns)   --->   "%tmp_469 = icmp eq i3 %j, -4" [aes.c:248]   --->   Operation 21 'icmp' 'tmp_469' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%empty_291 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4)"   --->   Operation 22 'speclooptripcount' 'empty_291' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (1.34ns)   --->   "%j_6 = add i3 %j, 1" [aes.c:248]   --->   Operation 23 'add' 'j_6' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "br i1 %tmp_469, label %5, label %4" [aes.c:248]   --->   Operation 24 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_626_cast = zext i3 %j to i4" [aes.c:250]   --->   Operation 25 'zext' 'tmp_626_cast' <Predicate = (!tmp_469)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (1.49ns)   --->   "%tmp1 = add i4 %tmp_626_cast, %tmp_468" [aes.c:250]   --->   Operation 26 'add' 'tmp1' <Predicate = (!tmp_469)> <Delay = 1.49> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_539 = trunc i6 %round_read to i4" [aes.c:243]   --->   Operation 27 'trunc' 'tmp_539' <Predicate = (!tmp_469)> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_470 = call i8 @_ssdm_op_BitConcatenate.i8.i4.i4(i4 %tmp_539, i4 %tmp1)" [aes.c:250]   --->   Operation 28 'bitconcatenate' 'tmp_470' <Predicate = (!tmp_469)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_471 = zext i8 %tmp_470 to i64" [aes.c:250]   --->   Operation 29 'zext' 'tmp_471' <Predicate = (!tmp_469)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%RoundKey_addr = getelementptr [240 x i8]* %RoundKey, i64 0, i64 %tmp_471" [aes.c:250]   --->   Operation 30 'getelementptr' 'RoundKey_addr' <Predicate = (!tmp_469)> <Delay = 0.00>
+ST_3 : Operation 31 [2/2] (2.77ns)   --->   "%RoundKey_load = load i8* %RoundKey_addr, align 1" [aes.c:250]   --->   Operation 31 'load' 'RoundKey_load' <Predicate = (!tmp_469)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%tmp_475_cast = zext i3 %j to i6" [aes.c:250]   --->   Operation 32 'zext' 'tmp_475_cast' <Predicate = (!tmp_469)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (1.54ns)   --->   "%tmp_313 = add i6 %tmp_475_cast, %tmp_312_cast" [aes.c:250]   --->   Operation 33 'add' 'tmp_313' <Predicate = (!tmp_469)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_313_cast = zext i6 %tmp_313 to i64" [aes.c:250]   --->   Operation 34 'zext' 'tmp_313_cast' <Predicate = (!tmp_469)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%state_addr = getelementptr [16 x i8]* %state, i64 0, i64 %tmp_313_cast" [aes.c:250]   --->   Operation 35 'getelementptr' 'state_addr' <Predicate = (!tmp_469)> <Delay = 0.00>
+ST_3 : Operation 36 [2/2] (1.75ns)   --->   "%state_load = load i8* %state_addr, align 1" [aes.c:250]   --->   Operation 36 'load' 'state_load' <Predicate = (!tmp_469)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%empty_292 = call i32 (...)* @_ssdm_op_SpecRegionEnd([19 x i8]* @p_str, i32 %tmp_40)" [aes.c:252]   --->   Operation 37 'specregionend' 'empty_292' <Predicate = (tmp_469)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "br label %1" [aes.c:246]   --->   Operation 38 'br' <Predicate = (tmp_469)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 5.32>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str1) nounwind" [aes.c:249]   --->   Operation 39 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [1/2] (2.77ns)   --->   "%RoundKey_load = load i8* %RoundKey_addr, align 1" [aes.c:250]   --->   Operation 40 'load' 'RoundKey_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 41 [1/2] (1.75ns)   --->   "%state_load = load i8* %state_addr, align 1" [aes.c:250]   --->   Operation 41 'load' 'state_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 42 [1/1] (0.80ns)   --->   "%tmp_472 = xor i8 %state_load, %RoundKey_load" [aes.c:250]   --->   Operation 42 'xor' 'tmp_472' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 43 [1/1] (1.75ns)   --->   "store i8 %tmp_472, i8* %state_addr, align 1" [aes.c:250]   --->   Operation 43 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "br label %3" [aes.c:248]   --->   Operation 44 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', aes.c:246) [7]  (1.35 ns)
+
+ <State 2>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', aes.c:248) [21]  (1.35 ns)
+
+ <State 3>: 4.26ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', aes.c:248) [21]  (0 ns)
+	'add' operation ('tmp1', aes.c:250) [29]  (1.49 ns)
+	'getelementptr' operation ('RoundKey_addr', aes.c:250) [33]  (0 ns)
+	'load' operation ('RoundKey_load', aes.c:250) on array 'RoundKey' [34]  (2.77 ns)
+
+ <State 4>: 5.33ns
+The critical path consists of the following:
+	'load' operation ('RoundKey_load', aes.c:250) on array 'RoundKey' [34]  (2.77 ns)
+	'xor' operation ('tmp_472', aes.c:250) [40]  (0.8 ns)
+	'store' operation (aes.c:250) of variable 'tmp_472', aes.c:250 on array 'state' [41]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

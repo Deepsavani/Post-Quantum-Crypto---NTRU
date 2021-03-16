@@ -1,0 +1,239 @@
+
+
+================================================================
+== Vivado HLS Report for 'sha3_256'
+================================================================
+* Date:           Tue Aug 25 11:15:06 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru77
+* Solution:       enc
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.812|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  1547|  1547|  1547|  1547|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |  187|  187|        11|          -|          -|    17|    no    |
+        | + Loop 1.1  |    8|    8|         1|          -|          -|     8|    no    |
+        |- Loop 2     |   64|   64|         2|          -|          -|    32|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 9
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / (!exitcond_i)
+	8  / (exitcond_i)
+6 --> 
+	7  / true
+7 --> 
+	7  / (!tmp_i_i)
+	5  / (tmp_i_i)
+8 --> 
+	9  / (!tmp)
+9 --> 
+	8  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%s = alloca [25 x i64], align 16" [fips202.c:511]   --->   Operation 10 'alloca' 's' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%h_assign = alloca [136 x i8], align 16"   --->   Operation 11 'alloca' 'h_assign' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_1 : Operation 12 [2/2] (0.00ns)   --->   "call fastcc void @keccak_absorb([25 x i64]* %s, [272 x i8]* %input_r)" [fips202.c:516]   --->   Operation 12 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 13 [1/2] (0.00ns)   --->   "call fastcc void @keccak_absorb([25 x i64]* %s, [272 x i8]* %input_r)" [fips202.c:516]   --->   Operation 13 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 14 [2/2] (0.00ns)   --->   "call fastcc void @KeccakF1600_StatePer([25 x i64]* %s)" [fips202.c:423->fips202.c:519]   --->   Operation 14 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.35>
+ST_4 : Operation 15 [1/2] (0.00ns)   --->   "call fastcc void @KeccakF1600_StatePer([25 x i64]* %s)" [fips202.c:423->fips202.c:519]   --->   Operation 15 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 16 [1/1] (1.35ns)   --->   "br label %store64.exit.i" [fips202.c:424->fips202.c:519]   --->   Operation 16 'br' <Predicate = true> <Delay = 1.35>
+
+State 5 <SV = 4> <Delay = 2.77>
+ST_5 : Operation 17 [1/1] (0.00ns)   --->   "%i_i = phi i5 [ 0, %0 ], [ %i_18_i, %store64.exit.i.loopexit ]" [fips202.c:424->fips202.c:519]   --->   Operation 17 'phi' 'i_i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 18 [1/1] (1.21ns)   --->   "%exitcond_i = icmp eq i5 %i_i, -15" [fips202.c:424->fips202.c:519]   --->   Operation 18 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 19 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 17, i64 17, i64 17)"   --->   Operation 19 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 20 [1/1] (1.54ns)   --->   "%i_18_i = add i5 %i_i, 1" [fips202.c:424->fips202.c:519]   --->   Operation 20 'add' 'i_18_i' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %keccak_squeezeblocks.exit.preheader, label %1" [fips202.c:424->fips202.c:519]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_404_i = zext i5 %i_i to i64" [fips202.c:426->fips202.c:519]   --->   Operation 22 'zext' 'tmp_404_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_5 : Operation 23 [1/1] (0.00ns)   --->   "%s_addr = getelementptr [25 x i64]* %s, i64 0, i64 %tmp_404_i" [fips202.c:426->fips202.c:519]   --->   Operation 23 'getelementptr' 's_addr' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_5 : Operation 24 [2/2] (2.77ns)   --->   "%s_load = load i64* %s_addr, align 8" [fips202.c:426->fips202.c:519]   --->   Operation 24 'load' 's_load' <Predicate = (!exitcond_i)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_5 : Operation 25 [1/1] (1.35ns)   --->   "br label %keccak_squeezeblocks.exit" [fips202.c:521]   --->   Operation 25 'br' <Predicate = (exitcond_i)> <Delay = 1.35>
+
+State 6 <SV = 5> <Delay = 2.77>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_i = call i8 @_ssdm_op_BitConcatenate.i8.i5.i3(i5 %i_i, i3 0)" [fips202.c:426->fips202.c:519]   --->   Operation 26 'bitconcatenate' 'tmp_i' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 27 [1/2] (2.77ns)   --->   "%s_load = load i64* %s_addr, align 8" [fips202.c:426->fips202.c:519]   --->   Operation 27 'load' 's_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_6 : Operation 28 [1/1] (1.35ns)   --->   "br label %2" [fips202.c:46->fips202.c:426->fips202.c:519]   --->   Operation 28 'br' <Predicate = true> <Delay = 1.35>
+
+State 7 <SV = 6> <Delay = 4.49>
+ST_7 : Operation 29 [1/1] (0.00ns)   --->   "%p_0_i_i = phi i64 [ %s_load, %1 ], [ %tmp_1, %3 ]" [fips202.c:426->fips202.c:519]   --->   Operation 29 'phi' 'p_0_i_i' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 30 [1/1] (0.00ns)   --->   "%i_i_i = phi i4 [ 0, %1 ], [ %i_2, %3 ]"   --->   Operation 30 'phi' 'i_i_i' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 31 [1/1] (1.21ns)   --->   "%tmp_i_i = icmp eq i4 %i_i_i, -8" [fips202.c:46->fips202.c:426->fips202.c:519]   --->   Operation 31 'icmp' 'tmp_i_i' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 32 [1/1] (0.00ns)   --->   "%empty_23 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"   --->   Operation 32 'speclooptripcount' 'empty_23' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 33 [1/1] (1.49ns)   --->   "%i_2 = add i4 %i_i_i, 1" [fips202.c:46->fips202.c:426->fips202.c:519]   --->   Operation 33 'add' 'i_2' <Predicate = true> <Delay = 1.49> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 34 [1/1] (0.00ns)   --->   "br i1 %tmp_i_i, label %store64.exit.i.loopexit, label %3" [fips202.c:46->fips202.c:426->fips202.c:519]   --->   Operation 34 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_2 = trunc i64 %p_0_i_i to i8" [fips202.c:47->fips202.c:426->fips202.c:519]   --->   Operation 35 'trunc' 'tmp_2' <Predicate = (!tmp_i_i)> <Delay = 0.00>
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_5_i_i_cast = zext i4 %i_i_i to i8" [fips202.c:47->fips202.c:426->fips202.c:519]   --->   Operation 36 'zext' 'tmp_5_i_i_cast' <Predicate = (!tmp_i_i)> <Delay = 0.00>
+ST_7 : Operation 37 [1/1] (1.71ns)   --->   "%sum_i_i = add i8 %tmp_i, %tmp_5_i_i_cast" [fips202.c:47->fips202.c:426->fips202.c:519]   --->   Operation 37 'add' 'sum_i_i' <Predicate = (!tmp_i_i)> <Delay = 1.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%sum_i_i_cast = zext i8 %sum_i_i to i64" [fips202.c:47->fips202.c:426->fips202.c:519]   --->   Operation 38 'zext' 'sum_i_i_cast' <Predicate = (!tmp_i_i)> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%h_assign_addr_1 = getelementptr [136 x i8]* %h_assign, i64 0, i64 %sum_i_i_cast" [fips202.c:47->fips202.c:426->fips202.c:519]   --->   Operation 39 'getelementptr' 'h_assign_addr_1' <Predicate = (!tmp_i_i)> <Delay = 0.00>
+ST_7 : Operation 40 [1/1] (2.77ns)   --->   "store i8 %tmp_2, i8* %h_assign_addr_1, align 1" [fips202.c:47->fips202.c:426->fips202.c:519]   --->   Operation 40 'store' <Predicate = (!tmp_i_i)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "%u_assign_1 = call i56 @_ssdm_op_PartSelect.i56.i64.i32.i32(i64 %p_0_i_i, i32 8, i32 63)" [fips202.c:48->fips202.c:426->fips202.c:519]   --->   Operation 41 'partselect' 'u_assign_1' <Predicate = (!tmp_i_i)> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_1 = zext i56 %u_assign_1 to i64" [fips202.c:48->fips202.c:426->fips202.c:519]   --->   Operation 42 'zext' 'tmp_1' <Predicate = (!tmp_i_i)> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "br label %2" [fips202.c:46->fips202.c:426->fips202.c:519]   --->   Operation 43 'br' <Predicate = (!tmp_i_i)> <Delay = 0.00>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "br label %store64.exit.i"   --->   Operation 44 'br' <Predicate = (tmp_i_i)> <Delay = 0.00>
+
+State 8 <SV = 5> <Delay = 2.77>
+ST_8 : Operation 45 [1/1] (0.00ns)   --->   "%i = phi i6 [ %i_1, %4 ], [ 0, %keccak_squeezeblocks.exit.preheader ]"   --->   Operation 45 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 46 [1/1] (0.00ns)   --->   "%i_cast1 = zext i6 %i to i64" [fips202.c:521]   --->   Operation 46 'zext' 'i_cast1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 47 [1/1] (1.22ns)   --->   "%tmp = icmp eq i6 %i, -32" [fips202.c:521]   --->   Operation 47 'icmp' 'tmp' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 48 [1/1] (0.00ns)   --->   "%empty_24 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 48 'speclooptripcount' 'empty_24' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 49 [1/1] (1.60ns)   --->   "%i_1 = add i6 %i, 1" [fips202.c:521]   --->   Operation 49 'add' 'i_1' <Predicate = true> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 50 [1/1] (0.00ns)   --->   "br i1 %tmp, label %5, label %4" [fips202.c:521]   --->   Operation 50 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 51 [1/1] (0.00ns)   --->   "%h_assign_addr = getelementptr inbounds [136 x i8]* %h_assign, i64 0, i64 %i_cast1" [fips202.c:522]   --->   Operation 51 'getelementptr' 'h_assign_addr' <Predicate = (!tmp)> <Delay = 0.00>
+ST_8 : Operation 52 [2/2] (2.77ns)   --->   "%h_assign_load = load i8* %h_assign_addr, align 1" [fips202.c:522]   --->   Operation 52 'load' 'h_assign_load' <Predicate = (!tmp)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 53 [1/1] (0.00ns)   --->   "ret void" [fips202.c:523]   --->   Operation 53 'ret' <Predicate = (tmp)> <Delay = 0.00>
+
+State 9 <SV = 6> <Delay = 4.52>
+ST_9 : Operation 54 [1/2] (2.77ns)   --->   "%h_assign_load = load i8* %h_assign_addr, align 1" [fips202.c:522]   --->   Operation 54 'load' 'h_assign_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 55 [1/1] (0.00ns)   --->   "%output_addr = getelementptr [32 x i8]* %output_r, i64 0, i64 %i_cast1" [fips202.c:522]   --->   Operation 55 'getelementptr' 'output_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 56 [1/1] (1.75ns)   --->   "store i8 %h_assign_load, i8* %output_addr, align 1" [fips202.c:522]   --->   Operation 56 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_9 : Operation 57 [1/1] (0.00ns)   --->   "br label %keccak_squeezeblocks.exit" [fips202.c:521]   --->   Operation 57 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i_i', fips202.c:424->fips202.c:519) with incoming values : ('i_18_i', fips202.c:424->fips202.c:519) [10]  (1.35 ns)
+
+ <State 5>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i_i', fips202.c:424->fips202.c:519) with incoming values : ('i_18_i', fips202.c:424->fips202.c:519) [10]  (0 ns)
+	'getelementptr' operation ('s_addr', fips202.c:426->fips202.c:519) [18]  (0 ns)
+	'load' operation ('u', fips202.c:426->fips202.c:519) on array 's', fips202.c:511 [19]  (2.77 ns)
+
+ <State 6>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('u', fips202.c:426->fips202.c:519) on array 's', fips202.c:511 [19]  (2.77 ns)
+
+ <State 7>: 4.49ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fips202.c:46->fips202.c:426->fips202.c:519) [23]  (0 ns)
+	'add' operation ('sum_i_i', fips202.c:47->fips202.c:426->fips202.c:519) [31]  (1.72 ns)
+	'getelementptr' operation ('h_assign_addr_1', fips202.c:47->fips202.c:426->fips202.c:519) [33]  (0 ns)
+	'store' operation (fips202.c:47->fips202.c:426->fips202.c:519) of variable 'tmp_2', fips202.c:47->fips202.c:426->fips202.c:519 on array 'h' [34]  (2.77 ns)
+
+ <State 8>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', fips202.c:521) [43]  (0 ns)
+	'getelementptr' operation ('h_assign_addr', fips202.c:522) [50]  (0 ns)
+	'load' operation ('h_assign_load', fips202.c:522) on array 'h' [51]  (2.77 ns)
+
+ <State 9>: 4.53ns
+The critical path consists of the following:
+	'load' operation ('h_assign_load', fips202.c:522) on array 'h' [51]  (2.77 ns)
+	'store' operation (fips202.c:522) of variable 'h_assign_load', fips202.c:522 on array 'output_r' [53]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

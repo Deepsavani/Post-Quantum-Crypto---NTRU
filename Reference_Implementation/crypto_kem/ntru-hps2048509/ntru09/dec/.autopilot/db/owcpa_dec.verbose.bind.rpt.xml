@@ -1,0 +1,61 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'owcpa_dec'" level="0">
+<item name = "Date">Mon Aug 24 18:55:55 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">ntru09</item>
+<item name = "Solution">dec</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200tfbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.122, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">26592, 4680888, 26592, 4680888, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_poly_Sq_frombytes_1_fu_395">poly_Sq_frombytes_1, 445, 445, 445, 445, none</column>
+<column name="grp_poly_Sq_frombytes_fu_402">poly_Sq_frombytes, 445, 445, 445, 445, none</column>
+<column name="grp_poly_S3_frombytes_fu_410">poly_S3_frombytes, 615, 615, 615, 615, none</column>
+<column name="grp_poly_S3_mul_fu_420">poly_S3_mul, 4583, 1556015, 4583, 1556015, none</column>
+<column name="grp_poly_Rq_to_S3_fu_427">poly_Rq_to_S3, 2549, 2549, 2549, 2549, none</column>
+<column name="grp_poly_S3_tobytes_fu_433">poly_S3_tobytes, 513, 513, 513, 513, none</column>
+<column name="grp_poly_Rq_mul_fu_443">poly_Rq_mul, 3564, 1554996, 3564, 1554996, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">1016, 1016, 2, -, -, 508, no</column>
+<column name="- Loop 2">1018, 1018, 2, -, -, 509, no</column>
+<column name="- Loop 3">1018, 1018, 2, -, -, 509, no</column>
+<column name="- Loop 4">1018, 1018, 2, -, -, 509, no</column>
+<column name="- Loop 5">1018, 1018, 2, -, -, 509, no</column>
+<column name="- Loop 6">1018, 1018, 2, -, -, 509, no</column>
+<column name="- Loop 7">1018, 1018, 2, -, -, 509, no</column>
+<column name="- Loop 8">1018, 1018, 2, -, -, 509, no</column>
+<column name="- Loop 9">1018, 1018, 2, -, -, 509, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

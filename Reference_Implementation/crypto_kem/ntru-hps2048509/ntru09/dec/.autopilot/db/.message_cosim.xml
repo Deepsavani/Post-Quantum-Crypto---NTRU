@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[COSIM 212-47]" key="COSIM_TCL_47_1115" tag="" content="Using XSIM for RTL simulation."/>
+	<Message severity="INFO" prefix="[COSIM 212-14]" key="COSIM_TCL_14_1084" tag="" content="Instrumenting C test bench ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:57:44 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/307321598309864082904"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:57:50 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/308541598309870552429"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:57:56 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/309741598309876455525"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:03 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/311001598309883613127"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:09 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/312201598309889473544"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:15 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/313421598309895425354"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:21 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/314641598309901430895"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:27 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/315851598309907640668"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:34 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/317071598309914085128"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:40 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/320601598309920202503"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:46 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/321811598309926580174"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1427" tag="" content="Running &apos;/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1428" tag="" content="For user &apos;dss545&apos; on host &apos;hansolo.poly.edu&apos; (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:52 EDT 2020"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1429" tag="" content="On os &quot;Red Hat Enterprise Linux Server release 7.7 (Maipo)&quot;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1430" tag="" content="In directory &apos;/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc&apos;"/>
+	<Message severity="INFO" prefix="[APCC 202-3]" key="APCC_3_1610" tag="" content="Tmp directory is /tmp/apcc_db_dss545/323031598309932728293"/>
+	<Message severity="INFO" prefix="[APCC 202-1]" key="APCC_1_1611" tag="" content="APCC is done."/>
+	<Message severity="INFO" prefix="[COSIM 212-302]" key="COSIM_TCL_302_1177" tag="" content="Starting C TB testing ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-333]" key="COSIM_TCL_333_1204" tag="" content="Generating C post check test bench ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-12]" key="COSIM_TCL_12_1082" tag="" content="Generating RTL test bench ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-323]" key="COSIM_TCL_323_1195" tag="" content="Starting verilog simulation."/>
+	<Message severity="INFO" prefix="[COSIM 212-15]" key="COSIM_TCL_15_1085" tag="" content="Starting XSIM ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-316]" key="COSIM_TCL_316_1188" tag="" content="Starting C post checking ..."/>
+	<Message severity="INFO" prefix="[COSIM 212-1000]" key="COSIM_TCL_1000_1070" tag="" content="*** C/RTL co-simulation finished: PASS ***"/>
+</Messages>

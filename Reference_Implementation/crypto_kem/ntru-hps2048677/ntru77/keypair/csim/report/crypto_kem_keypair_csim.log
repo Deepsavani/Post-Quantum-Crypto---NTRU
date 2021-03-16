@@ -1,0 +1,13 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../kem.c in debug mode
+   Compiling ../../../../owcpa.c in debug mode
+   Compiling ../../../../pack3.c in debug mode
+   Compiling ../../../../packq.c in debug mode
+   Compiling ../../../../poly.c in debug mode
+   Compiling ../../../../rng.c in debug mode
+   Compiling ../../../../sample.c in debug mode
+   Compiling ../../../../verify.c in debug mode
+   Generating csim.exe
+INFO: [SIM 1] CSim file generation done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,181 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'crypto_kem_dec'" level="0">
+<item name = "Date">Tue Aug 25 09:28:11 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">ntru77</item>
+<item name = "Solution">dec</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200tfbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.122, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">42330, 8280066, 42330, 8280066, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_sha3_256_fu_167">sha3_256, 3448, 3448, 3448, 3448, none</column>
+<column name="grp_sha3_256_1_fu_175">sha3_256_1, 1547, 1547, 1547, 1547, none</column>
+<column name="grp_owcpa_dec_fu_184">owcpa_dec, 35340, 8273076, 35340, 8273076, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">64, 64, 2, -, -, 32, no</column>
+<column name="- Loop 2">1860, 1860, 2, -, -, 930, no</column>
+<column name="- Loop 3">64, 64, 2, -, -, 32, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 143</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">24, 4, 14361, 76500</column>
+<column name="Memory">2, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 359</column>
+<column name="Register">-, -, 72, -</column>
+<specialColumn name="Available">730, 740, 269200, 129000</specialColumn>
+<specialColumn name="Utilization (%)">3, ~0, 5, 59</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_owcpa_dec_fu_184">owcpa_dec, 4, 4, 1167, 5862</column>
+<column name="grp_sha3_256_fu_167">sha3_256, 10, 0, 6613, 35376</column>
+<column name="grp_sha3_256_1_fu_175">sha3_256_1, 10, 0, 6581, 35262</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="buf_U">crypto_kem_dec_buf, 1, 0, 0, 962, 8, 1, 7696</column>
+<column name="rm_U">crypto_kem_dec_rm, 1, 0, 0, 272, 8, 1, 2176</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="cmp_0_sum_fu_243_p2">+, 0, 0, 17, 10, 6</column>
+<column name="i_30_fu_204_p2">+, 0, 0, 15, 6, 1</column>
+<column name="i_31_fu_232_p2">+, 0, 0, 17, 10, 1</column>
+<column name="i_32_fu_273_p2">+, 0, 0, 15, 6, 1</column>
+<column name="tmp_fu_210_p2">+, 0, 0, 18, 11, 11</column>
+<column name="tmp_i_63_fu_285_p2">and, 0, 0, 8, 8, 8</column>
+<column name="exitcond1_fu_198_p2">icmp, 0, 0, 11, 6, 7</column>
+<column name="exitcond_fu_226_p2">icmp, 0, 0, 13, 10, 8</column>
+<column name="exitcond_i_fu_267_p2">icmp, 0, 0, 11, 6, 7</column>
+<column name="b_assign_fu_254_p3">select, 0, 0, 2, 1, 2</column>
+<column name="tmp_248_i_fu_290_p2">xor, 0, 0, 8, 8, 8</column>
+<column name="tmp_i_fu_279_p2">xor, 0, 0, 8, 8, 8</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">53, 12, 1, 12</column>
+<column name="buf_address0">21, 4, 10, 40</column>
+<column name="buf_ce0">15, 3, 1, 3</column>
+<column name="buf_d0">15, 3, 8, 24</column>
+<column name="c_address0">15, 3, 10, 30</column>
+<column name="c_ce0">15, 3, 1, 3</column>
+<column name="c_ce1">9, 2, 1, 2</column>
+<column name="i_1_reg_144">9, 2, 10, 20</column>
+<column name="i_i_reg_156">9, 2, 6, 12</column>
+<column name="i_reg_132">9, 2, 6, 12</column>
+<column name="k_address0">21, 4, 5, 20</column>
+<column name="k_ce0">15, 3, 1, 3</column>
+<column name="k_d0">15, 3, 8, 24</column>
+<column name="k_we0">15, 3, 1, 3</column>
+<column name="rm_address0">27, 5, 9, 45</column>
+<column name="rm_ce0">27, 5, 1, 5</column>
+<column name="rm_d0">15, 3, 8, 24</column>
+<column name="rm_we0">15, 3, 1, 3</column>
+<column name="sk_address0">15, 3, 11, 33</column>
+<column name="sk_ce0">15, 3, 1, 3</column>
+<column name="sk_ce1">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">11, 0, 11, 0</column>
+<column name="b_assign_reg_328">8, 0, 8, 0</column>
+<column name="fail_reg_297">1, 0, 1, 0</column>
+<column name="grp_owcpa_dec_fu_184_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_sha3_256_1_fu_175_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_sha3_256_fu_167_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_1_reg_144">10, 0, 10, 0</column>
+<column name="i_30_reg_305">6, 0, 6, 0</column>
+<column name="i_31_reg_318">10, 0, 10, 0</column>
+<column name="i_32_reg_336">6, 0, 6, 0</column>
+<column name="i_i_reg_156">6, 0, 6, 0</column>
+<column name="i_reg_132">6, 0, 6, 0</column>
+<column name="k_addr_reg_346">5, 0, 5, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, crypto_kem_dec, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, crypto_kem_dec, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, crypto_kem_dec, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, crypto_kem_dec, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, crypto_kem_dec, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, crypto_kem_dec, return value</column>
+<column name="ap_return">out, 32, ap_ctrl_hs, crypto_kem_dec, return value</column>
+<column name="k_address0">out, 5, ap_memory, k, array</column>
+<column name="k_ce0">out, 1, ap_memory, k, array</column>
+<column name="k_we0">out, 1, ap_memory, k, array</column>
+<column name="k_d0">out, 8, ap_memory, k, array</column>
+<column name="k_q0">in, 8, ap_memory, k, array</column>
+<column name="c_address0">out, 10, ap_memory, c, array</column>
+<column name="c_ce0">out, 1, ap_memory, c, array</column>
+<column name="c_q0">in, 8, ap_memory, c, array</column>
+<column name="c_address1">out, 10, ap_memory, c, array</column>
+<column name="c_ce1">out, 1, ap_memory, c, array</column>
+<column name="c_q1">in, 8, ap_memory, c, array</column>
+<column name="sk_address0">out, 11, ap_memory, sk, array</column>
+<column name="sk_ce0">out, 1, ap_memory, sk, array</column>
+<column name="sk_q0">in, 8, ap_memory, sk, array</column>
+<column name="sk_address1">out, 11, ap_memory, sk, array</column>
+<column name="sk_ce1">out, 1, ap_memory, sk, array</column>
+<column name="sk_q1">in, 8, ap_memory, sk, array</column>
+</table>
+</item>
+</section>
+</profile>

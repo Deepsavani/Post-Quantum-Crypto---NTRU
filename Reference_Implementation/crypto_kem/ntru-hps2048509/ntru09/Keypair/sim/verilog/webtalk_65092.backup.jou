@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Aug 24 20:19:33 2020
+# Process ID: 65092
+# Current directory: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog
+# Command line: wbtcv -mode batch -source /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/xsim.dir/crypto_kem_keypair/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/webtalk.log
+# Journal file: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/webtalk.jou
+#-----------------------------------------------------------
+source /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/Keypair/sim/verilog/xsim.dir/crypto_kem_keypair/webtalk/xsim_webtalk.tcl -notrace

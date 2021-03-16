@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'poly_S3_mul'" level="0">
+<item name = "Date">Tue Aug 25 09:27:41 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">ntru77</item>
+<item name = "Solution">dec</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200tfbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.122, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">6095, 2752007, 6095, 2752007, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">4062, 2749974, 6 ~ 4062, -, -, 677, no</column>
+<column name=" + Loop 1.1">0, 2028, 3, -, -, 0 ~ 676, no</column>
+<column name=" + Loop 1.2">3, 2031, 3, -, -, 1 ~ 677, no</column>
+<column name="- Loop 2">2031, 2031, 3, -, -, 677, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

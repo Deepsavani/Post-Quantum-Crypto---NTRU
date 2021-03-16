@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Aug 25 12:33:21 2020
+# Process ID: 36777
+# Current directory: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/keypair/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/crypto_kem_keypair/xsim_script.tcl}
+# Log file: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/keypair/sim/verilog/xsim.log
+# Journal file: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/keypair/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/crypto_kem_keypair/xsim_script.tcl
+source crypto_kem_keypair.tcl

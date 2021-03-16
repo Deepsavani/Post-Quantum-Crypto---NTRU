@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"crypto_kem_enc": {
+			"proto_instances": {
+			}
+		}
+	}
+}

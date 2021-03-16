@@ -1,0 +1,362 @@
+
+
+================================================================
+== Vivado HLS Report for 'crypto_sort'
+================================================================
+* Date:           Tue Aug 25 11:15:03 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru77
+* Solution:       enc
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.574|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------+-----+------+----------+-----------+-----------+---------+----------+
+        |                     |   Latency  | Iteration|  Initiation Interval  |   Trip  |          |
+        |      Loop Name      | min |  max |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +---------------------+-----+------+----------+-----------+-----------+---------+----------+
+        |- Loop 1             |    ?|     ?|         ?|          -|          -|       10|    no    |
+        | + Loop 1.1          |    0|  3375|   2 ~ 5  |          -|          -| 0 ~ 675 |    no    |
+        | + Loop 1.2          |    ?|     ?|         ?|          -|          -|        ?|    no    |
+        |  ++ Loop 1.2.1      |    ?|     ?|         ?|          -|          -|        ?|    no    |
+        |   +++ Loop 1.2.1.1  |    ?|     ?|         3|          -|          -|        ?|    no    |
+        +---------------------+-----+------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 13
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!tmp)
+3 --> 
+	4  / (tmp_215 & tmp_218)
+	7  / (tmp_215 & !tmp_218)
+	8  / (!tmp_215)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	3  / true
+8 --> 
+	9  / (tmp_224)
+	2  / (!tmp_224)
+9 --> 
+	10  / (tmp_227 & tmp_229)
+	11  / (tmp_227 & !tmp_229)
+	8  / (!tmp_227)
+10 --> 
+	11  / true
+11 --> 
+	12  / (tmp_229 & tmp_230)
+	9  / (!tmp_230) | (!tmp_229)
+12 --> 
+	13  / true
+13 --> 
+	11  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 14 [1/1] (1.35ns)   --->   "br label %.preheader2" [crypto_sort.c:27]   --->   Operation 14 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 2.90>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%p = phi i60 [ %tmp_39, %10 ], [ 512, %.preheader2.preheader ]" [crypto_sort.c:27]   --->   Operation 15 'phi' 'p' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%p_cast1 = zext i60 %p to i61" [crypto_sort.c:27]   --->   Operation 16 'zext' 'p_cast1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%p_cast = zext i60 %p to i63" [crypto_sort.c:27]   --->   Operation 17 'zext' 'p_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%p_cast_cast9 = zext i60 %p to i62" [crypto_sort.c:27]   --->   Operation 18 'zext' 'p_cast_cast9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (2.34ns)   --->   "%tmp = icmp eq i60 %p, 0" [crypto_sort.c:27]   --->   Operation 19 'icmp' 'tmp' <Predicate = true> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 20 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %tmp, label %.loopexit, label %.preheader1.preheader" [crypto_sort.c:27]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (2.90ns)   --->   "%tmp_s = sub i61 676, %p_cast1" [crypto_sort.c:28]   --->   Operation 22 'sub' 'tmp_s' <Predicate = (!tmp)> <Delay = 2.90> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (1.35ns)   --->   "br label %.preheader1" [crypto_sort.c:28]   --->   Operation 23 'br' <Predicate = (!tmp)> <Delay = 1.35>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "ret void" [crypto_sort.c:43]   --->   Operation 24 'ret' <Predicate = (tmp)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 4.53>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%i = phi i10 [ %i_22, %._crit_edge ], [ 0, %.preheader1.preheader ]"   --->   Operation 25 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%i_cast4 = zext i10 %i to i11" [crypto_sort.c:28]   --->   Operation 26 'zext' 'i_cast4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%i_cast = zext i10 %i to i64" [crypto_sort.c:28]   --->   Operation 27 'zext' 'i_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%i_cast_cast_cast = zext i10 %i to i61" [crypto_sort.c:28]   --->   Operation 28 'zext' 'i_cast_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (2.34ns)   --->   "%tmp_215 = icmp slt i61 %i_cast_cast_cast, %tmp_s" [crypto_sort.c:28]   --->   Operation 29 'icmp' 'tmp_215' <Predicate = true> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%empty_47 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 0, i64 675, i64 0)"   --->   Operation 30 'speclooptripcount' 'empty_47' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (1.74ns)   --->   "%i_22 = add i10 %i, 1" [crypto_sort.c:28]   --->   Operation 31 'add' 'i_22' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "br i1 %tmp_215, label %0, label %.preheader.preheader" [crypto_sort.c:28]   --->   Operation 32 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node tmp_218)   --->   "%tmp_216 = trunc i60 %p to i10" [crypto_sort.c:27]   --->   Operation 33 'trunc' 'tmp_216' <Predicate = (tmp_215)> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node tmp_218)   --->   "%tmp_217 = and i10 %i, %tmp_216" [crypto_sort.c:29]   --->   Operation 34 'and' 'tmp_217' <Predicate = (tmp_215)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (1.43ns) (out node of the LUT)   --->   "%tmp_218 = icmp eq i10 %tmp_217, 0" [crypto_sort.c:29]   --->   Operation 35 'icmp' 'tmp_218' <Predicate = (tmp_215)> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "br i1 %tmp_218, label %1, label %._crit_edge" [crypto_sort.c:29]   --->   Operation 36 'br' <Predicate = (tmp_215)> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_219 = trunc i60 %p to i11" [crypto_sort.c:27]   --->   Operation 37 'trunc' 'tmp_219' <Predicate = (tmp_215 & tmp_218)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (1.76ns)   --->   "%sum = add i11 %tmp_219, %i_cast4" [crypto_sort.c:30]   --->   Operation 38 'add' 'sum' <Predicate = (tmp_215 & tmp_218)> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%sum_cast = sext i11 %sum to i64" [crypto_sort.c:30]   --->   Operation 39 'sext' 'sum_cast' <Predicate = (tmp_215 & tmp_218)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%array_addr = getelementptr [676 x i32]* %array_r, i64 0, i64 %sum_cast" [crypto_sort.c:30]   --->   Operation 40 'getelementptr' 'array_addr' <Predicate = (tmp_215 & tmp_218)> <Delay = 0.00>
+ST_3 : Operation 41 [2/2] (2.77ns)   --->   "%array_load = load i32* %array_addr, align 4" [crypto_sort.c:30]   --->   Operation 41 'load' 'array_load' <Predicate = (tmp_215 & tmp_218)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%array_addr_1 = getelementptr [676 x i32]* %array_r, i64 0, i64 %i_cast" [crypto_sort.c:30]   --->   Operation 42 'getelementptr' 'array_addr_1' <Predicate = (tmp_215 & tmp_218)> <Delay = 0.00>
+ST_3 : Operation 43 [2/2] (2.77ns)   --->   "%array_load_1 = load i32* %array_addr_1, align 4" [crypto_sort.c:30]   --->   Operation 43 'load' 'array_load_1' <Predicate = (tmp_215 & tmp_218)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_3 : Operation 44 [1/1] (1.35ns)   --->   "br label %.preheader" [crypto_sort.c:32]   --->   Operation 44 'br' <Predicate = (!tmp_215)> <Delay = 1.35>
+
+State 4 <SV = 3> <Delay = 2.77>
+ST_4 : Operation 45 [1/2] (2.77ns)   --->   "%array_load = load i32* %array_addr, align 4" [crypto_sort.c:30]   --->   Operation 45 'load' 'array_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_4 : Operation 46 [1/2] (2.77ns)   --->   "%array_load_1 = load i32* %array_addr_1, align 4" [crypto_sort.c:30]   --->   Operation 46 'load' 'array_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+
+State 5 <SV = 4> <Delay = 6.57>
+ST_5 : Operation 47 [1/1] (0.80ns)   --->   "%ab = xor i32 %array_load_1, %array_load" [crypto_sort.c:30]   --->   Operation 47 'xor' 'ab' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 48 [1/1] (2.18ns)   --->   "%c = sub nsw i32 %array_load, %array_load_1" [crypto_sort.c:30]   --->   Operation 48 'sub' 'c' <Predicate = true> <Delay = 2.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 49 [1/1] (0.00ns) (grouped into LUT with out node c_8)   --->   "%tmp_220 = xor i32 %array_load, %c" [crypto_sort.c:30]   --->   Operation 49 'xor' 'tmp_220' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 50 [1/1] (0.00ns) (grouped into LUT with out node c_8)   --->   "%tmp_221 = and i32 %tmp_220, %ab" [crypto_sort.c:30]   --->   Operation 50 'and' 'tmp_221' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node c_8)   --->   "%c_6 = xor i32 %tmp_221, %c" [crypto_sort.c:30]   --->   Operation 51 'xor' 'c_6' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 52 [1/1] (0.00ns) (grouped into LUT with out node c_8)   --->   "%tmp_235 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %c_6, i32 31)" [crypto_sort.c:30]   --->   Operation 52 'bitselect' 'tmp_235' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node c_8)   --->   "%c_7 = select i1 %tmp_235, i32 -1, i32 0" [crypto_sort.c:30]   --->   Operation 53 'select' 'c_7' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 54 [1/1] (0.81ns) (out node of the LUT)   --->   "%c_8 = and i32 %ab, %c_7" [crypto_sort.c:30]   --->   Operation 54 'and' 'c_8' <Predicate = true> <Delay = 0.81> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 55 [1/1] (0.80ns)   --->   "%tmp_222 = xor i32 %array_load_1, %c_8" [crypto_sort.c:30]   --->   Operation 55 'xor' 'tmp_222' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 56 [1/1] (2.77ns)   --->   "store i32 %tmp_222, i32* %array_addr_1, align 4" [crypto_sort.c:30]   --->   Operation 56 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+
+State 6 <SV = 5> <Delay = 2.77>
+ST_6 : Operation 57 [2/2] (2.77ns)   --->   "%array_load_2 = load i32* %array_addr, align 4" [crypto_sort.c:30]   --->   Operation 57 'load' 'array_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+
+State 7 <SV = 6> <Delay = 6.35>
+ST_7 : Operation 58 [1/2] (2.77ns)   --->   "%array_load_2 = load i32* %array_addr, align 4" [crypto_sort.c:30]   --->   Operation 58 'load' 'array_load_2' <Predicate = (tmp_218)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_7 : Operation 59 [1/1] (0.80ns)   --->   "%tmp_223 = xor i32 %array_load_2, %c_8" [crypto_sort.c:30]   --->   Operation 59 'xor' 'tmp_223' <Predicate = (tmp_218)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 60 [1/1] (2.77ns)   --->   "store i32 %tmp_223, i32* %array_addr, align 4" [crypto_sort.c:30]   --->   Operation 60 'store' <Predicate = (tmp_218)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "br label %._crit_edge" [crypto_sort.c:30]   --->   Operation 61 'br' <Predicate = (tmp_218)> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "br label %.preheader1" [crypto_sort.c:28]   --->   Operation 62 'br' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 3> <Delay = 6.12>
+ST_8 : Operation 63 [1/1] (0.00ns)   --->   "%r = phi i62 [ %tmp_40, %9 ], [ 512, %.preheader.preheader ]" [crypto_sort.c:32]   --->   Operation 63 'phi' 'r' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 64 [1/1] (0.00ns)   --->   "%i_1 = phi i64 [ %i_23, %9 ], [ 0, %.preheader.preheader ]"   --->   Operation 64 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 65 [1/1] (0.00ns)   --->   "%r_cast8 = zext i62 %r to i63" [crypto_sort.c:32]   --->   Operation 65 'zext' 'r_cast8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 66 [1/1] (2.34ns)   --->   "%tmp_224 = icmp ugt i62 %r, %p_cast_cast9" [crypto_sort.c:32]   --->   Operation 66 'icmp' 'tmp_224' <Predicate = true> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 67 [1/1] (0.00ns)   --->   "br i1 %tmp_224, label %2, label %10" [crypto_sort.c:32]   --->   Operation 67 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 68 [1/1] (2.94ns)   --->   "%tmp_225 = sub i63 676, %r_cast8" [crypto_sort.c:33]   --->   Operation 68 'sub' 'tmp_225' <Predicate = (tmp_224)> <Delay = 2.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 69 [1/1] (0.00ns)   --->   "%tmp_225_cast = sext i63 %tmp_225 to i64" [crypto_sort.c:33]   --->   Operation 69 'sext' 'tmp_225_cast' <Predicate = (tmp_224)> <Delay = 0.00>
+ST_8 : Operation 70 [1/1] (2.34ns)   --->   "%tmp_226 = icmp sgt i64 %i_1, %tmp_225_cast" [crypto_sort.c:33]   --->   Operation 70 'icmp' 'tmp_226' <Predicate = (tmp_224)> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 71 [1/1] (0.83ns)   --->   "%i_23 = select i1 %tmp_226, i64 %i_1, i64 %tmp_225_cast" [crypto_sort.c:33]   --->   Operation 71 'select' 'i_23' <Predicate = (tmp_224)> <Delay = 0.83> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_8 : Operation 72 [1/1] (1.35ns)   --->   "br label %3" [crypto_sort.c:33]   --->   Operation 72 'br' <Predicate = (tmp_224)> <Delay = 1.35>
+ST_8 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_236 = call i59 @_ssdm_op_PartSelect.i59.i60.i32.i32(i60 %p, i32 1, i32 59)" [crypto_sort.c:27]   --->   Operation 73 'partselect' 'tmp_236' <Predicate = (!tmp_224)> <Delay = 0.00>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_39 = zext i59 %tmp_236 to i60" [crypto_sort.c:27]   --->   Operation 74 'zext' 'tmp_39' <Predicate = (!tmp_224)> <Delay = 0.00>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "br label %.preheader2" [crypto_sort.c:27]   --->   Operation 75 'br' <Predicate = (!tmp_224)> <Delay = 0.00>
+
+State 9 <SV = 4> <Delay = 4.53>
+ST_9 : Operation 76 [1/1] (0.00ns)   --->   "%i_2 = phi i64 [ %i_1, %2 ], [ %tmp_234, %._crit_edge1 ]" [crypto_sort.c:33]   --->   Operation 76 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 77 [1/1] (2.34ns)   --->   "%tmp_227 = icmp slt i64 %i_2, %tmp_225_cast" [crypto_sort.c:33]   --->   Operation 77 'icmp' 'tmp_227' <Predicate = true> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "br i1 %tmp_227, label %4, label %9" [crypto_sort.c:33]   --->   Operation 78 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 79 [1/1] (0.00ns) (grouped into LUT with out node tmp_229)   --->   "%tmp_237 = trunc i64 %i_2 to i60" [crypto_sort.c:34]   --->   Operation 79 'trunc' 'tmp_237' <Predicate = (tmp_227)> <Delay = 0.00>
+ST_9 : Operation 80 [1/1] (0.00ns) (grouped into LUT with out node tmp_229)   --->   "%tmp_228 = and i60 %tmp_237, %p" [crypto_sort.c:34]   --->   Operation 80 'and' 'tmp_228' <Predicate = (tmp_227)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 81 [1/1] (2.34ns) (out node of the LUT)   --->   "%tmp_229 = icmp eq i60 %tmp_228, 0" [crypto_sort.c:34]   --->   Operation 81 'icmp' 'tmp_229' <Predicate = (tmp_227)> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 82 [1/1] (0.00ns)   --->   "br i1 %tmp_229, label %5, label %._crit_edge1" [crypto_sort.c:34]   --->   Operation 82 'br' <Predicate = (tmp_227)> <Delay = 0.00>
+ST_9 : Operation 83 [1/1] (0.00ns)   --->   "%tmp_239 = trunc i64 %i_2 to i11" [crypto_sort.c:33]   --->   Operation 83 'trunc' 'tmp_239' <Predicate = (tmp_227 & tmp_229)> <Delay = 0.00>
+ST_9 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_240 = trunc i60 %p to i11" [crypto_sort.c:27]   --->   Operation 84 'trunc' 'tmp_240' <Predicate = (tmp_227 & tmp_229)> <Delay = 0.00>
+ST_9 : Operation 85 [1/1] (1.76ns)   --->   "%sum4 = add i11 %tmp_239, %tmp_240" [crypto_sort.c:35]   --->   Operation 85 'add' 'sum4' <Predicate = (tmp_227 & tmp_229)> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 86 [1/1] (0.00ns)   --->   "%sum4_cast = zext i11 %sum4 to i64" [crypto_sort.c:35]   --->   Operation 86 'zext' 'sum4_cast' <Predicate = (tmp_227 & tmp_229)> <Delay = 0.00>
+ST_9 : Operation 87 [1/1] (0.00ns)   --->   "%array_addr_2 = getelementptr [676 x i32]* %array_r, i64 0, i64 %sum4_cast" [crypto_sort.c:35]   --->   Operation 87 'getelementptr' 'array_addr_2' <Predicate = (tmp_227 & tmp_229)> <Delay = 0.00>
+ST_9 : Operation 88 [2/2] (2.77ns)   --->   "%a = load i32* %array_addr_2, align 4" [crypto_sort.c:35]   --->   Operation 88 'load' 'a' <Predicate = (tmp_227 & tmp_229)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_9 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_238 = call i61 @_ssdm_op_PartSelect.i61.i62.i32.i32(i62 %r, i32 1, i32 61)" [crypto_sort.c:32]   --->   Operation 89 'partselect' 'tmp_238' <Predicate = (!tmp_227)> <Delay = 0.00>
+ST_9 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_40 = zext i61 %tmp_238 to i62" [crypto_sort.c:32]   --->   Operation 90 'zext' 'tmp_40' <Predicate = (!tmp_227)> <Delay = 0.00>
+ST_9 : Operation 91 [1/1] (0.00ns)   --->   "br label %.preheader" [crypto_sort.c:32]   --->   Operation 91 'br' <Predicate = (!tmp_227)> <Delay = 0.00>
+
+State 10 <SV = 5> <Delay = 2.77>
+ST_10 : Operation 92 [1/2] (2.77ns)   --->   "%a = load i32* %array_addr_2, align 4" [crypto_sort.c:35]   --->   Operation 92 'load' 'a' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_10 : Operation 93 [1/1] (1.35ns)   --->   "br label %6" [crypto_sort.c:36]   --->   Operation 93 'br' <Predicate = true> <Delay = 1.35>
+
+State 11 <SV = 6> <Delay = 4.53>
+ST_11 : Operation 94 [1/1] (0.00ns)   --->   "%r5 = phi i62 [ %r, %5 ], [ %tmp_44, %7 ]"   --->   Operation 94 'phi' 'r5' <Predicate = (tmp_229)> <Delay = 0.00>
+ST_11 : Operation 95 [1/1] (0.00ns)   --->   "%a1 = phi i32 [ %a, %5 ], [ %a_1, %7 ]"   --->   Operation 95 'phi' 'a1' <Predicate = (tmp_229)> <Delay = 0.00>
+ST_11 : Operation 96 [1/1] (0.00ns)   --->   "%r5_cast = zext i62 %r5 to i63" [crypto_sort.c:36]   --->   Operation 96 'zext' 'r5_cast' <Predicate = (tmp_229)> <Delay = 0.00>
+ST_11 : Operation 97 [1/1] (2.34ns)   --->   "%tmp_230 = icmp ugt i63 %r5_cast, %p_cast" [crypto_sort.c:36]   --->   Operation 97 'icmp' 'tmp_230' <Predicate = (tmp_229)> <Delay = 2.34> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.34> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 98 [1/1] (0.00ns)   --->   "br i1 %tmp_230, label %7, label %8" [crypto_sort.c:36]   --->   Operation 98 'br' <Predicate = (tmp_229)> <Delay = 0.00>
+ST_11 : Operation 99 [1/1] (0.00ns)   --->   "%tmp_241 = trunc i62 %r5 to i11" [crypto_sort.c:36]   --->   Operation 99 'trunc' 'tmp_241' <Predicate = (tmp_229 & tmp_230)> <Delay = 0.00>
+ST_11 : Operation 100 [1/1] (1.76ns)   --->   "%sum6 = add i11 %tmp_239, %tmp_241" [crypto_sort.c:37]   --->   Operation 100 'add' 'sum6' <Predicate = (tmp_229 & tmp_230)> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 101 [1/1] (0.00ns)   --->   "%sum6_cast = zext i11 %sum6 to i64" [crypto_sort.c:37]   --->   Operation 101 'zext' 'sum6_cast' <Predicate = (tmp_229 & tmp_230)> <Delay = 0.00>
+ST_11 : Operation 102 [1/1] (0.00ns)   --->   "%array_addr_3 = getelementptr [676 x i32]* %array_r, i64 0, i64 %sum6_cast" [crypto_sort.c:37]   --->   Operation 102 'getelementptr' 'array_addr_3' <Predicate = (tmp_229 & tmp_230)> <Delay = 0.00>
+ST_11 : Operation 103 [2/2] (2.77ns)   --->   "%array_load_4 = load i32* %array_addr_3, align 4" [crypto_sort.c:37]   --->   Operation 103 'load' 'array_load_4' <Predicate = (tmp_229 & tmp_230)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_11 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_243 = call i61 @_ssdm_op_PartSelect.i61.i62.i32.i32(i62 %r5, i32 1, i32 61)" [crypto_sort.c:36]   --->   Operation 104 'partselect' 'tmp_243' <Predicate = (tmp_229 & tmp_230)> <Delay = 0.00>
+ST_11 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_44 = zext i61 %tmp_243 to i62" [crypto_sort.c:36]   --->   Operation 105 'zext' 'tmp_44' <Predicate = (tmp_229 & tmp_230)> <Delay = 0.00>
+ST_11 : Operation 106 [1/1] (2.77ns)   --->   "store i32 %a1, i32* %array_addr_2, align 4" [crypto_sort.c:38]   --->   Operation 106 'store' <Predicate = (tmp_229 & !tmp_230)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_11 : Operation 107 [1/1] (0.00ns)   --->   "br label %._crit_edge1" [crypto_sort.c:39]   --->   Operation 107 'br' <Predicate = (tmp_229 & !tmp_230)> <Delay = 0.00>
+ST_11 : Operation 108 [1/1] (2.99ns)   --->   "%tmp_234 = add nsw i64 %i_2, 1" [crypto_sort.c:33]   --->   Operation 108 'add' 'tmp_234' <Predicate = (!tmp_230) | (!tmp_229)> <Delay = 2.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 109 [1/1] (0.00ns)   --->   "br label %3" [crypto_sort.c:33]   --->   Operation 109 'br' <Predicate = (!tmp_230) | (!tmp_229)> <Delay = 0.00>
+
+State 12 <SV = 7> <Delay = 6.57>
+ST_12 : Operation 110 [1/2] (2.77ns)   --->   "%array_load_4 = load i32* %array_addr_3, align 4" [crypto_sort.c:37]   --->   Operation 110 'load' 'array_load_4' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_12 : Operation 111 [1/1] (0.80ns)   --->   "%ab_1 = xor i32 %array_load_4, %a1" [crypto_sort.c:37]   --->   Operation 111 'xor' 'ab_1' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 112 [1/1] (2.18ns)   --->   "%c_9 = sub nsw i32 %array_load_4, %a1" [crypto_sort.c:37]   --->   Operation 112 'sub' 'c_9' <Predicate = true> <Delay = 2.18> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.99> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node c_12)   --->   "%tmp_231 = xor i32 %array_load_4, %c_9" [crypto_sort.c:37]   --->   Operation 113 'xor' 'tmp_231' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node c_12)   --->   "%tmp_232 = and i32 %tmp_231, %ab_1" [crypto_sort.c:37]   --->   Operation 114 'and' 'tmp_232' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 115 [1/1] (0.00ns) (grouped into LUT with out node c_12)   --->   "%c_10 = xor i32 %tmp_232, %c_9" [crypto_sort.c:37]   --->   Operation 115 'xor' 'c_10' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node c_12)   --->   "%tmp_242 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %c_10, i32 31)" [crypto_sort.c:37]   --->   Operation 116 'bitselect' 'tmp_242' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 117 [1/1] (0.00ns) (grouped into LUT with out node c_12)   --->   "%c_11 = select i1 %tmp_242, i32 -1, i32 0" [crypto_sort.c:37]   --->   Operation 117 'select' 'c_11' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 118 [1/1] (0.81ns) (out node of the LUT)   --->   "%c_12 = and i32 %ab_1, %c_11" [crypto_sort.c:37]   --->   Operation 118 'and' 'c_12' <Predicate = true> <Delay = 0.81> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 119 [1/1] (0.80ns)   --->   "%a_1 = xor i32 %c_12, %a1" [crypto_sort.c:37]   --->   Operation 119 'xor' 'a_1' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 120 [1/1] (0.80ns)   --->   "%tmp_233 = xor i32 %array_load_4, %c_12" [crypto_sort.c:37]   --->   Operation 120 'xor' 'tmp_233' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 8> <Delay = 2.77>
+ST_13 : Operation 121 [1/1] (2.77ns)   --->   "store i32 %tmp_233, i32* %array_addr_3, align 4" [crypto_sort.c:37]   --->   Operation 121 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 676> <RAM>
+ST_13 : Operation 122 [1/1] (0.00ns)   --->   "br label %6" [crypto_sort.c:36]   --->   Operation 122 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('p', crypto_sort.c:27) with incoming values : ('tmp_39', crypto_sort.c:27) [4]  (1.35 ns)
+
+ <State 2>: 2.9ns
+The critical path consists of the following:
+	'phi' operation ('p', crypto_sort.c:27) with incoming values : ('tmp_39', crypto_sort.c:27) [4]  (0 ns)
+	'sub' operation ('tmp_s', crypto_sort.c:28) [12]  (2.9 ns)
+
+ <State 3>: 4.54ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', crypto_sort.c:28) [15]  (0 ns)
+	'add' operation ('sum', crypto_sort.c:30) [30]  (1.76 ns)
+	'getelementptr' operation ('array_addr', crypto_sort.c:30) [32]  (0 ns)
+	'load' operation ('array_load', crypto_sort.c:30) on array 'array_r' [33]  (2.77 ns)
+
+ <State 4>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('array_load', crypto_sort.c:30) on array 'array_r' [33]  (2.77 ns)
+
+ <State 5>: 6.57ns
+The critical path consists of the following:
+	'sub' operation ('c', crypto_sort.c:30) [37]  (2.18 ns)
+	'xor' operation ('c', crypto_sort.c:30) [40]  (0 ns)
+	'select' operation ('c', crypto_sort.c:30) [42]  (0 ns)
+	'and' operation ('c', crypto_sort.c:30) [43]  (0.813 ns)
+	'xor' operation ('tmp_222', crypto_sort.c:30) [44]  (0.809 ns)
+	'store' operation (crypto_sort.c:30) of variable 'tmp_222', crypto_sort.c:30 on array 'array_r' [45]  (2.77 ns)
+
+ <State 6>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('array_load_2', crypto_sort.c:30) on array 'array_r' [46]  (2.77 ns)
+
+ <State 7>: 6.35ns
+The critical path consists of the following:
+	'load' operation ('array_load_2', crypto_sort.c:30) on array 'array_r' [46]  (2.77 ns)
+	'xor' operation ('tmp_223', crypto_sort.c:30) [47]  (0.809 ns)
+	'store' operation (crypto_sort.c:30) of variable 'tmp_223', crypto_sort.c:30 on array 'array_r' [48]  (2.77 ns)
+
+ <State 8>: 6.12ns
+The critical path consists of the following:
+	'phi' operation ('r', crypto_sort.c:32) with incoming values : ('tmp_40', crypto_sort.c:32) [55]  (0 ns)
+	'sub' operation ('tmp_225', crypto_sort.c:33) [61]  (2.95 ns)
+	'icmp' operation ('tmp_226', crypto_sort.c:33) [63]  (2.34 ns)
+	'select' operation ('i', crypto_sort.c:33) [64]  (0.831 ns)
+
+ <State 9>: 4.54ns
+The critical path consists of the following:
+	'phi' operation ('i_2', crypto_sort.c:33) with incoming values : ('i', crypto_sort.c:33) ('tmp_234', crypto_sort.c:33) [67]  (0 ns)
+	'add' operation ('sum4', crypto_sort.c:35) [78]  (1.76 ns)
+	'getelementptr' operation ('array_addr_2', crypto_sort.c:35) [80]  (0 ns)
+	'load' operation ('a', crypto_sort.c:35) on array 'array_r' [81]  (2.77 ns)
+
+ <State 10>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('a', crypto_sort.c:35) on array 'array_r' [81]  (2.77 ns)
+
+ <State 11>: 4.54ns
+The critical path consists of the following:
+	'phi' operation ('r') with incoming values : ('tmp_44', crypto_sort.c:36) ('tmp_40', crypto_sort.c:32) [84]  (0 ns)
+	'add' operation ('sum6', crypto_sort.c:37) [91]  (1.76 ns)
+	'getelementptr' operation ('array_addr_3', crypto_sort.c:37) [93]  (0 ns)
+	'load' operation ('array_load_4', crypto_sort.c:37) on array 'array_r' [94]  (2.77 ns)
+
+ <State 12>: 6.57ns
+The critical path consists of the following:
+	'load' operation ('array_load_4', crypto_sort.c:37) on array 'array_r' [94]  (2.77 ns)
+	'sub' operation ('c', crypto_sort.c:37) [96]  (2.18 ns)
+	'xor' operation ('c', crypto_sort.c:37) [99]  (0 ns)
+	'select' operation ('c', crypto_sort.c:37) [101]  (0 ns)
+	'and' operation ('c', crypto_sort.c:37) [102]  (0.813 ns)
+	'xor' operation ('a', crypto_sort.c:37) [103]  (0.809 ns)
+
+ <State 13>: 2.77ns
+The critical path consists of the following:
+	'store' operation (crypto_sort.c:37) of variable 'tmp_233', crypto_sort.c:37 on array 'array_r' [105]  (2.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

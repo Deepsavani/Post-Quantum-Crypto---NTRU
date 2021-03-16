@@ -1,0 +1,7 @@
+Running: xsim.dir/crypto_kem_keypair/xsimk -simmode gui -wdb crypto_kem_keypair.wdb -simrunnum 0 -socket 38536
+Design successfully loaded
+Design Loading Memory Usage: 39344 KB (Peak: 39344 KB)
+Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 125640 KB (Peak: 178616 KB)
+Simulation CPU Usage: 8491800 ms

@@ -1,0 +1,218 @@
+
+
+================================================================
+== Vivado HLS Report for 'crypto_kem_enc'
+================================================================
+* Date:           Sun Aug 23 21:46:24 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru01
+* Solution:       enc
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.122|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%r_coeffs = alloca [701 x i16], align 2" [owcpa.c:48->kem.c:27]   --->   Operation 13 'alloca' 'r_coeffs' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%m_coeffs = alloca [701 x i16], align 2" [owcpa.c:48->kem.c:27]   --->   Operation 14 'alloca' 'm_coeffs' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%rm = alloca [280 x i8], align 16" [kem.c:23]   --->   Operation 15 'alloca' 'rm' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%rm_seed = alloca [1400 x i8], align 16" [kem.c:24]   --->   Operation 16 'alloca' 'rm_seed' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [2/2] (0.00ns)   --->   "call fastcc void @randombytes([1400 x i8]* %rm_seed) nounwind" [kem.c:26]   --->   Operation 17 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 18 [1/2] (0.00ns)   --->   "call fastcc void @randombytes([1400 x i8]* %rm_seed) nounwind" [kem.c:26]   --->   Operation 18 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.35>
+ST_3 : Operation 19 [2/2] (1.35ns)   --->   "call fastcc void @sample_iid([701 x i16]* %r_coeffs, [1400 x i8]* %rm_seed, i12 0) nounwind" [sample.c:20->owcpa.c:50->kem.c:27]   --->   Operation 19 'call' <Predicate = true> <Delay = 1.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 20 [1/2] (0.00ns)   --->   "call fastcc void @sample_iid([701 x i16]* %r_coeffs, [1400 x i8]* %rm_seed, i12 0) nounwind" [sample.c:20->owcpa.c:50->kem.c:27]   --->   Operation 20 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 1.35>
+ST_5 : Operation 21 [2/2] (1.35ns)   --->   "call fastcc void @sample_iid([701 x i16]* %m_coeffs, [1400 x i8]* %rm_seed, i12 700) nounwind" [sample.c:21->owcpa.c:50->kem.c:27]   --->   Operation 21 'call' <Predicate = true> <Delay = 1.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 22 [2/2] (1.35ns)   --->   "call fastcc void @poly_S3_tobytes([280 x i8]* %rm, i10 0, [701 x i16]* %r_coeffs) nounwind" [owcpa.c:52->kem.c:27]   --->   Operation 22 'call' <Predicate = true> <Delay = 1.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 23 [1/2] (0.00ns)   --->   "call fastcc void @sample_iid([701 x i16]* %m_coeffs, [1400 x i8]* %rm_seed, i12 700) nounwind" [sample.c:21->owcpa.c:50->kem.c:27]   --->   Operation 23 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 24 [1/2] (0.00ns)   --->   "call fastcc void @poly_S3_tobytes([280 x i8]* %rm, i10 0, [701 x i16]* %r_coeffs) nounwind" [owcpa.c:52->kem.c:27]   --->   Operation 24 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 1.35>
+ST_7 : Operation 25 [2/2] (1.35ns)   --->   "call fastcc void @poly_S3_tobytes([280 x i8]* %rm, i10 140, [701 x i16]* %m_coeffs) nounwind" [owcpa.c:53->kem.c:27]   --->   Operation 25 'call' <Predicate = true> <Delay = 1.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 26 [1/2] (0.00ns)   --->   "call fastcc void @poly_S3_tobytes([280 x i8]* %rm, i10 140, [701 x i16]* %m_coeffs) nounwind" [owcpa.c:53->kem.c:27]   --->   Operation 26 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 27 [2/2] (0.00ns)   --->   "call fastcc void @sha3_256([32 x i8]* %k, [280 x i8]* %rm) nounwind" [kem.c:29]   --->   Operation 27 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 28 [1/2] (0.00ns)   --->   "call fastcc void @sha3_256([32 x i8]* %k, [280 x i8]* %rm) nounwind" [kem.c:29]   --->   Operation 28 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 29 [2/2] (0.00ns)   --->   "call fastcc void @owcpa_enc([1138 x i8]* %c, [280 x i8]* %rm, [1138 x i8]* %pk) nounwind" [kem.c:31]   --->   Operation 29 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1138 x i8]* %c) nounwind, !map !192"   --->   Operation 30 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i8]* %k) nounwind, !map !198"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1138 x i8]* %pk) nounwind, !map !202"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !206"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @crypto_kem_enc_str) nounwind"   --->   Operation 34 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 35 [1/2] (0.00ns)   --->   "call fastcc void @owcpa_enc([1138 x i8]* %c, [280 x i8]* %rm, [1138 x i8]* %pk) nounwind" [kem.c:31]   --->   Operation 35 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 36 [1/1] (0.00ns)   --->   "ret i32 0" [kem.c:33]   --->   Operation 36 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.35ns
+The critical path consists of the following:
+	'call' operation (sample.c:20->owcpa.c:50->kem.c:27) to 'sample_iid' [20]  (1.35 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 1.35ns
+The critical path consists of the following:
+	'call' operation (sample.c:21->owcpa.c:50->kem.c:27) to 'sample_iid' [21]  (1.35 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 1.35ns
+The critical path consists of the following:
+	'call' operation (owcpa.c:53->kem.c:27) to 'poly_S3_tobytes' [23]  (1.35 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

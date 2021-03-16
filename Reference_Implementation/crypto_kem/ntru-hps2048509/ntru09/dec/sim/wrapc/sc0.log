@@ -1,0 +1,111 @@
+   Build using "/opt/Xilinx2018/Vivado/2018.3/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_crypto_kem_dec.cpp
+   Compiling (apcc) aes.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:57:44 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/307321598309864082904
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crypto_sort.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:57:50 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/308541598309870552429
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) fips202.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:57:56 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/309741598309876455525
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) kem.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:03 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/311001598309883613127
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) owcpa.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:09 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/312201598309889473544
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) pack3.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:15 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/313421598309895425354
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) packq.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:21 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/314641598309901430895
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) poly.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:27 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/315851598309907640668
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) PQCgenKAT_kem.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:34 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/317071598309914085128
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) rng.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:40 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/320601598309920202503
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sample.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:46 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/321811598309926580174
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) verify.c_pre.c.tb.c
+INFO: [HLS 200-10] Running '/opt/Xilinx2018/Vivado/2018.3/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'dss545' on host 'hansolo.poly.edu' (Linux_x86_64 version 3.10.0-1062.4.1.el7.x86_64) on Mon Aug 24 18:58:52 EDT 2020
+INFO: [HLS 200-10] On os "Red Hat Enterprise Linux Server release 7.7 (Maipo)"
+INFO: [HLS 200-10] In directory '/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048509/ntru09/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_dss545/323031598309932728293
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe

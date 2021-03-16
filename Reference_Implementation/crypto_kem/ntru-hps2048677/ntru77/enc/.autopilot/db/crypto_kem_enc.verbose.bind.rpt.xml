@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'crypto_kem_enc'" level="0">
+<item name = "Date">Tue Aug 25 11:15:15 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">ntru77</item>
+<item name = "Solution">enc</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200tfbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.122, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_sha3_256_fu_142">sha3_256, 1547, 1547, 1547, 1547, none</column>
+<column name="grp_randombytes_fu_151">randombytes, ?, ?, ?, ?, none</column>
+<column name="grp_sample_fixed_type_fu_167">sample_fixed_type, ?, ?, ?, ?, none</column>
+<column name="grp_owcpa_enc_fu_173">owcpa_enc, 15775, 2761687, 15775, 2761687, none</column>
+<column name="grp_poly_S3_tobytes_fu_182">poly_S3_tobytes, 677, 677, 677, 677, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">2028, 2028, 3, -, -, 676, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

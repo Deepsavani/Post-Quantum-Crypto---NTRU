@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Aug 25 12:33:21 2020
+# Process ID: 36777
+# Current directory: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/keypair/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/crypto_kem_keypair/xsim_script.tcl}
+# Log file: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/keypair/sim/verilog/xsim.log
+# Journal file: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/keypair/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/crypto_kem_keypair/xsim_script.tcl
+# xsim {crypto_kem_keypair} -autoloadwcfg -tclbatch {crypto_kem_keypair.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source crypto_kem_keypair.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [n/a] @ "125000"
+// RTL Simulation : 0 / 2 [n/a] @ "100000145000"
+// RTL Simulation : 0 / 2 [n/a] @ "200000155000"
+// RTL Simulation : 0 / 2 [n/a] @ "300000165000"
+// RTL Simulation : 0 / 2 [n/a] @ "400000175000"
+// RTL Simulation : 1 / 2 [n/a] @ "498217755000"
+// RTL Simulation : 1 / 2 [n/a] @ "598217765000"
+// RTL Simulation : 1 / 2 [n/a] @ "698217775000"
+// RTL Simulation : 1 / 2 [n/a] @ "798217785000"
+// RTL Simulation : 1 / 2 [n/a] @ "898217795000"
+// RTL Simulation : 2 / 2 [n/a] @ "996435355000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 996435395 ns : File "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/keypair/sim/verilog/crypto_kem_keypair.autotb.v" Line 587
+run: Time (s): cpu = 00:00:02 ; elapsed = 02:21:29 . Memory (MB): peak = 1375.590 ; gain = 0.000 ; free physical = 1773 ; free virtual = 571903
+## quit
+INFO: [Common 17-206] Exiting xsim at Tue Aug 25 14:55:01 2020...

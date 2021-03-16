@@ -1,0 +1,1152 @@
+
+
+================================================================
+== Vivado HLS Report for 'poly_S3_inv'
+================================================================
+* Date:           Tue Aug 25 12:30:46 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru77
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.750|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +----------+----------+----------+----------+---------+
+    |       Latency       |       Interval      | Pipeline|
+    |    min   |    max   |    min   |    max   |   Type  |
+    +----------+----------+----------+----------+---------+
+    |  16633901|  16633901|  16633901|  16633901|   none  |
+    +----------+----------+----------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+----------+----------+----------+-----------+-----------+------+----------+
+        |             |       Latency       | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |    min   |    max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+----------+----------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |       676|       676|         1|          -|          -|   676|    no    |
+        |- Loop 2     |       677|       677|         1|          -|          -|   677|    no    |
+        |- Loop 3     |      1354|      1354|         2|          -|          -|   677|    no    |
+        |- Loop 4     |       677|       677|         1|          -|          -|   677|    no    |
+        |- Loop 5     |  16475445|  16475445|     12195|          -|          -|  1351|    no    |
+        | + Loop 5.1  |      1354|      1354|         2|          -|          -|   677|    no    |
+        | + Loop 5.2  |      1354|      1354|         2|          -|          -|   677|    no    |
+        | + Loop 5.3  |      3385|      3385|         5|          -|          -|   677|    no    |
+        | + Loop 5.4  |      3385|      3385|         5|          -|          -|   677|    no    |
+        | + Loop 5.5  |      1352|      1352|         2|          -|          -|   676|    no    |
+        | + Loop 5.6  |      1352|      1352|         2|          -|          -|   676|    no    |
+        |- Loop 6     |      3385|      3385|         5|          -|          -|   677|    no    |
+        |- Loop 7     |    148970|    148970|     14897|          -|          -|    10|    no    |
+        | + Loop 7.1  |     10832|     10832|        16|          -|          -|   677|    no    |
+        | + Loop 7.2  |      4062|      4062|         3|          -|          -|  1354|    no    |
+        |- Loop 8     |      2708|      2708|         4|          -|          -|   677|    no    |
+        +-------------+----------+----------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 61
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / (!exitcond10)
+	3  / (exitcond10)
+3 --> 
+	3  / (!exitcond9)
+	4  / (exitcond9)
+4 --> 
+	5  / (!exitcond8)
+	6  / (exitcond8)
+5 --> 
+	4  / true
+6 --> 
+	6  / (!exitcond7)
+	7  / (exitcond7)
+7 --> 
+	8  / (!exitcond6)
+	32  / (exitcond6)
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / (!exitcond_i5)
+	14  / (exitcond_i5)
+13 --> 
+	12  / true
+14 --> 
+	15  / (!exitcond_i9)
+	16  / (exitcond_i9)
+15 --> 
+	14  / true
+16 --> 
+	17  / (!exitcond5)
+	21  / (exitcond5)
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	16  / true
+21 --> 
+	22  / (!exitcond4)
+	26  / (exitcond4)
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	21  / true
+26 --> 
+	27  / (!exitcond_i)
+	28  / (exitcond_i)
+27 --> 
+	26  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / (!exitcond_i6)
+	31  / (exitcond_i6)
+30 --> 
+	29  / true
+31 --> 
+	7  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / (!exitcond3)
+	38  / (exitcond3)
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	33  / true
+38 --> 
+	39  / (!exitcond2)
+	58  / (exitcond2)
+39 --> 
+	40  / (!exitcond1)
+	55  / (exitcond1)
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	39  / true
+55 --> 
+	56  / (!exitcond_i1)
+	38  / (exitcond_i1)
+56 --> 
+	57  / true
+57 --> 
+	55  / true
+58 --> 
+	59  / (!exitcond)
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	58  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%b_coeffs = alloca [677 x i16], align 2" [poly.c:335]   --->   Operation 62 'alloca' 'b_coeffs' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%c_coeffs = alloca [677 x i16], align 2" [poly.c:335]   --->   Operation 63 'alloca' 'c_coeffs' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%f_coeffs = alloca [677 x i16], align 2" [poly.c:335]   --->   Operation 64 'alloca' 'f_coeffs' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%g_coeffs = alloca [677 x i16], align 2" [poly.c:335]   --->   Operation 65 'alloca' 'g_coeffs' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_1 : Operation 66 [1/1] (1.35ns)   --->   "br label %1" [poly.c:339]   --->   Operation 66 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 2.77>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%i = phi i10 [ 1, %0 ], [ %i_10, %2 ]"   --->   Operation 67 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (1.43ns)   --->   "%exitcond10 = icmp eq i10 %i, -347" [poly.c:339]   --->   Operation 68 'icmp' 'exitcond10' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 676, i64 676, i64 676)"   --->   Operation 69 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "br i1 %exitcond10, label %3, label %2" [poly.c:339]   --->   Operation 70 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%tmp = zext i10 %i to i64" [poly.c:340]   --->   Operation 71 'zext' 'tmp' <Predicate = (!exitcond10)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%b_coeffs_addr_1 = getelementptr [677 x i16]* %b_coeffs, i64 0, i64 %tmp" [poly.c:340]   --->   Operation 72 'getelementptr' 'b_coeffs_addr_1' <Predicate = (!exitcond10)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (2.77ns)   --->   "store i16 0, i16* %b_coeffs_addr_1, align 2" [poly.c:340]   --->   Operation 73 'store' <Predicate = (!exitcond10)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_2 : Operation 74 [1/1] (1.74ns)   --->   "%i_10 = add i10 %i, 1" [poly.c:339]   --->   Operation 74 'add' 'i_10' <Predicate = (!exitcond10)> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "br label %1" [poly.c:339]   --->   Operation 75 'br' <Predicate = (!exitcond10)> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%b_coeffs_addr = getelementptr [677 x i16]* %b_coeffs, i64 0, i64 0" [poly.c:341]   --->   Operation 76 'getelementptr' 'b_coeffs_addr' <Predicate = (exitcond10)> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (2.77ns)   --->   "store i16 1, i16* %b_coeffs_addr, align 2" [poly.c:341]   --->   Operation 77 'store' <Predicate = (exitcond10)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_2 : Operation 78 [1/1] (1.35ns)   --->   "br label %4" [poly.c:344]   --->   Operation 78 'br' <Predicate = (exitcond10)> <Delay = 1.35>
+
+State 3 <SV = 2> <Delay = 2.77>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%i_1 = phi i10 [ 0, %3 ], [ %i_11, %5 ]"   --->   Operation 79 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (1.43ns)   --->   "%exitcond9 = icmp eq i10 %i_1, -347" [poly.c:344]   --->   Operation 80 'icmp' 'exitcond9' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "%empty_41 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 81 'speclooptripcount' 'empty_41' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (1.74ns)   --->   "%i_11 = add i10 %i_1, 1" [poly.c:344]   --->   Operation 82 'add' 'i_11' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "br i1 %exitcond9, label %.preheader16.preheader, label %5" [poly.c:344]   --->   Operation 83 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_s = zext i10 %i_1 to i64" [poly.c:345]   --->   Operation 84 'zext' 'tmp_s' <Predicate = (!exitcond9)> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%c_coeffs_addr = getelementptr [677 x i16]* %c_coeffs, i64 0, i64 %tmp_s" [poly.c:345]   --->   Operation 85 'getelementptr' 'c_coeffs_addr' <Predicate = (!exitcond9)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (2.77ns)   --->   "store i16 0, i16* %c_coeffs_addr, align 2" [poly.c:345]   --->   Operation 86 'store' <Predicate = (!exitcond9)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_3 : Operation 87 [1/1] (0.00ns)   --->   "br label %4" [poly.c:344]   --->   Operation 87 'br' <Predicate = (!exitcond9)> <Delay = 0.00>
+ST_3 : Operation 88 [1/1] (1.35ns)   --->   "br label %.preheader16" [poly.c:348]   --->   Operation 88 'br' <Predicate = (exitcond9)> <Delay = 1.35>
+
+State 4 <SV = 3> <Delay = 2.77>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%i_2 = phi i10 [ %i_12, %6 ], [ 0, %.preheader16.preheader ]"   --->   Operation 89 'phi' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 90 [1/1] (1.43ns)   --->   "%exitcond8 = icmp eq i10 %i_2, -347" [poly.c:348]   --->   Operation 90 'icmp' 'exitcond8' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%empty_42 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 91 'speclooptripcount' 'empty_42' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (1.74ns)   --->   "%i_12 = add i10 %i_2, 1" [poly.c:348]   --->   Operation 92 'add' 'i_12' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "br i1 %exitcond8, label %.preheader15.preheader, label %6" [poly.c:348]   --->   Operation 93 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_171 = zext i10 %i_2 to i64" [poly.c:349]   --->   Operation 94 'zext' 'tmp_171' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%a_coeffs_addr = getelementptr [677 x i16]* %a_coeffs, i64 0, i64 %tmp_171" [poly.c:349]   --->   Operation 95 'getelementptr' 'a_coeffs_addr' <Predicate = (!exitcond8)> <Delay = 0.00>
+ST_4 : Operation 96 [2/2] (2.77ns)   --->   "%a_coeffs_load = load i16* %a_coeffs_addr, align 2" [poly.c:349]   --->   Operation 96 'load' 'a_coeffs_load' <Predicate = (!exitcond8)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_4 : Operation 97 [1/1] (1.35ns)   --->   "br label %.preheader15" [poly.c:352]   --->   Operation 97 'br' <Predicate = (exitcond8)> <Delay = 1.35>
+
+State 5 <SV = 4> <Delay = 5.54>
+ST_5 : Operation 98 [1/2] (2.77ns)   --->   "%a_coeffs_load = load i16* %a_coeffs_addr, align 2" [poly.c:349]   --->   Operation 98 'load' 'a_coeffs_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%temp_r_coeffs_addr = getelementptr [677 x i16]* %f_coeffs, i64 0, i64 %tmp_171" [poly.c:349]   --->   Operation 99 'getelementptr' 'temp_r_coeffs_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 100 [1/1] (2.77ns)   --->   "store i16 %a_coeffs_load, i16* %temp_r_coeffs_addr, align 2" [poly.c:349]   --->   Operation 100 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_5 : Operation 101 [1/1] (0.00ns)   --->   "br label %.preheader16" [poly.c:348]   --->   Operation 101 'br' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 2.77>
+ST_6 : Operation 102 [1/1] (0.00ns)   --->   "%i_3 = phi i10 [ %i_13, %7 ], [ 0, %.preheader15.preheader ]"   --->   Operation 102 'phi' 'i_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 103 [1/1] (1.43ns)   --->   "%exitcond7 = icmp eq i10 %i_3, -347" [poly.c:352]   --->   Operation 103 'icmp' 'exitcond7' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%empty_43 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 104 'speclooptripcount' 'empty_43' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 105 [1/1] (1.74ns)   --->   "%i_13 = add i10 %i_3, 1" [poly.c:352]   --->   Operation 105 'add' 'i_13' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 106 [1/1] (0.00ns)   --->   "br i1 %exitcond7, label %.preheader14.preheader, label %7" [poly.c:352]   --->   Operation 106 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_172 = zext i10 %i_3 to i64" [poly.c:353]   --->   Operation 107 'zext' 'tmp_172' <Predicate = (!exitcond7)> <Delay = 0.00>
+ST_6 : Operation 108 [1/1] (0.00ns)   --->   "%g_coeffs_addr_1 = getelementptr [677 x i16]* %g_coeffs, i64 0, i64 %tmp_172" [poly.c:353]   --->   Operation 108 'getelementptr' 'g_coeffs_addr_1' <Predicate = (!exitcond7)> <Delay = 0.00>
+ST_6 : Operation 109 [1/1] (2.77ns)   --->   "store i16 1, i16* %g_coeffs_addr_1, align 2" [poly.c:353]   --->   Operation 109 'store' <Predicate = (!exitcond7)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_6 : Operation 110 [1/1] (0.00ns)   --->   "br label %.preheader15" [poly.c:352]   --->   Operation 110 'br' <Predicate = (!exitcond7)> <Delay = 0.00>
+ST_6 : Operation 111 [1/1] (0.00ns)   --->   "%g_coeffs_addr = getelementptr [677 x i16]* %g_coeffs, i64 0, i64 0" [poly.c:357]   --->   Operation 111 'getelementptr' 'g_coeffs_addr' <Predicate = (exitcond7)> <Delay = 0.00>
+ST_6 : Operation 112 [1/1] (0.00ns)   --->   "%temp_r_coeffs_addr_1 = getelementptr [677 x i16]* %f_coeffs, i64 0, i64 0" [poly.c:357]   --->   Operation 112 'getelementptr' 'temp_r_coeffs_addr_1' <Predicate = (exitcond7)> <Delay = 0.00>
+ST_6 : Operation 113 [1/1] (0.00ns)   --->   "%temp_r_coeffs_addr_2 = getelementptr [677 x i16]* %f_coeffs, i64 0, i64 676" [poly.c:195->poly.c:369]   --->   Operation 113 'getelementptr' 'temp_r_coeffs_addr_2' <Predicate = (exitcond7)> <Delay = 0.00>
+ST_6 : Operation 114 [1/1] (0.00ns)   --->   "%c_coeffs_addr_1 = getelementptr [677 x i16]* %c_coeffs, i64 0, i64 0" [poly.c:204->poly.c:370]   --->   Operation 114 'getelementptr' 'c_coeffs_addr_1' <Predicate = (exitcond7)> <Delay = 0.00>
+ST_6 : Operation 115 [1/1] (1.35ns)   --->   "br label %.preheader14" [poly.c:355]   --->   Operation 115 'br' <Predicate = (exitcond7)> <Delay = 1.35>
+
+State 7 <SV = 5> <Delay = 2.77>
+ST_7 : Operation 116 [1/1] (0.00ns)   --->   "%degg = phi i16 [ %degg_1, %poly_mulx.exit ], [ 676, %.preheader14.preheader ]"   --->   Operation 116 'phi' 'degg' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 117 [1/1] (0.00ns)   --->   "%degf = phi i16 [ %degf_2, %poly_mulx.exit ], [ 676, %.preheader14.preheader ]"   --->   Operation 117 'phi' 'degf' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 118 [1/1] (0.00ns)   --->   "%k = phi i11 [ %k_3, %poly_mulx.exit ], [ 0, %.preheader14.preheader ]"   --->   Operation 118 'phi' 'k' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 119 [1/1] (0.00ns)   --->   "%j = phi i11 [ %j_5, %poly_mulx.exit ], [ 0, %.preheader14.preheader ]"   --->   Operation 119 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 120 [1/1] (0.00ns)   --->   "%done = phi i1 [ %tmp_269, %poly_mulx.exit ], [ true, %.preheader14.preheader ]" [poly.c:358]   --->   Operation 120 'phi' 'done' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 121 [1/1] (1.52ns)   --->   "%exitcond6 = icmp eq i11 %j, -697" [poly.c:355]   --->   Operation 121 'icmp' 'exitcond6' <Predicate = true> <Delay = 1.52> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 122 [1/1] (0.00ns)   --->   "%empty_44 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1351, i64 1351, i64 1351)"   --->   Operation 122 'speclooptripcount' 'empty_44' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 123 [1/1] (1.76ns)   --->   "%j_5 = add i11 %j, 1" [poly.c:355]   --->   Operation 123 'add' 'j_5' <Predicate = true> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 124 [1/1] (0.00ns)   --->   "br i1 %exitcond6, label %20, label %8" [poly.c:355]   --->   Operation 124 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 125 [2/2] (2.77ns)   --->   "%g_coeffs_load = load i16* %g_coeffs_addr, align 2" [poly.c:357]   --->   Operation 125 'load' 'g_coeffs_load' <Predicate = (!exitcond6)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_7 : Operation 126 [2/2] (2.77ns)   --->   "%temp_r_coeffs_load_1 = load i16* %temp_r_coeffs_addr_1, align 2" [poly.c:357]   --->   Operation 126 'load' 'temp_r_coeffs_load_1' <Predicate = (!exitcond6)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_7 : Operation 127 [2/2] (2.77ns)   --->   "%temp_r_coeffs_load = load i16* %temp_r_coeffs_addr_1, align 2" [poly.c:377]   --->   Operation 127 'load' 'temp_r_coeffs_load' <Predicate = (exitcond6)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+
+State 8 <SV = 6> <Delay = 2.77>
+ST_8 : Operation 128 [1/2] (2.77ns)   --->   "%g_coeffs_load = load i16* %g_coeffs_addr, align 2" [poly.c:357]   --->   Operation 128 'load' 'g_coeffs_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_8 : Operation 129 [1/2] (2.77ns)   --->   "%temp_r_coeffs_load_1 = load i16* %temp_r_coeffs_addr_1, align 2" [poly.c:357]   --->   Operation 129 'load' 'temp_r_coeffs_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+
+State 9 <SV = 7> <Delay = 6.35>
+ST_9 : Operation 130 [1/1] (6.35ns) (root node of the DSP)   --->   "%tmp_174 = mul i16 %temp_r_coeffs_load_1, %g_coeffs_load" [poly.c:357]   --->   Operation 130 'mul' 'tmp_174' <Predicate = true> <Delay = 6.35> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 6.35> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 8> <Delay = 8.75>
+ST_10 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_207 = shl i16 %tmp_174, 1" [poly.c:357]   --->   Operation 131 'shl' 'tmp_207' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 132 [1/1] (8.75ns)   --->   "%tmp_175 = call fastcc zeroext i16 @mod3(i16 zeroext %tmp_207)" [poly.c:357]   --->   Operation 132 'call' 'tmp_175' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 133 [1/1] (0.00ns)   --->   "%tmp_208 = trunc i16 %tmp_175 to i1" [poly.c:357]   --->   Operation 133 'trunc' 'tmp_208' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_209 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %tmp_175, i32 1)" [poly.c:357]   --->   Operation 134 'bitselect' 'tmp_209' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 9> <Delay = 2.65>
+ST_11 : Operation 135 [1/1] (0.80ns)   --->   "%tmp_61_cast = or i1 %tmp_209, %tmp_208" [poly.c:357]   --->   Operation 135 'or' 'tmp_61_cast' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 136 [1/1] (0.00ns)   --->   "%tmp_250_cast = zext i16 %degf to i17" [poly.c:358]   --->   Operation 136 'zext' 'tmp_250_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 137 [1/1] (0.00ns)   --->   "%tmp_251_cast = zext i16 %degg to i17" [poly.c:358]   --->   Operation 137 'zext' 'tmp_251_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 138 [1/1] (1.84ns)   --->   "%tmp_176 = sub i17 %tmp_250_cast, %tmp_251_cast" [poly.c:358]   --->   Operation 138 'sub' 'tmp_176' <Predicate = true> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 139 [1/1] (0.00ns)   --->   "%tmp_210 = call i1 @_ssdm_op_BitSelect.i1.i17.i32(i17 %tmp_176, i32 15)" [poly.c:358]   --->   Operation 139 'bitselect' 'tmp_210' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_64 = zext i1 %done to i16" [poly.c:358]   --->   Operation 140 'zext' 'tmp_64' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 141 [1/1] (0.00ns)   --->   "%tmp_64_cast = zext i1 %done to i11" [poly.c:358]   --->   Operation 141 'zext' 'tmp_64_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 142 [1/1] (0.00ns) (grouped into LUT with out node tmp_i3_cast)   --->   "%tmp21 = and i1 %tmp_61_cast, %done" [poly.c:358]   --->   Operation 142 'and' 'tmp21' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 143 [1/1] (0.00ns) (grouped into LUT with out node tmp_i3_cast)   --->   "%swap = and i1 %tmp21, %tmp_210" [poly.c:358]   --->   Operation 143 'and' 'swap' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 144 [1/1] (0.81ns) (out node of the LUT)   --->   "%tmp_i3_cast = select i1 %swap, i16 -1, i16 0" [poly.c:183->poly.c:360]   --->   Operation 144 'select' 'tmp_i3_cast' <Predicate = true> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 145 [1/1] (1.35ns)   --->   "br label %9" [poly.c:181->poly.c:360]   --->   Operation 145 'br' <Predicate = true> <Delay = 1.35>
+
+State 12 <SV = 10> <Delay = 2.77>
+ST_12 : Operation 146 [1/1] (0.00ns)   --->   "%i_i4 = phi i10 [ 0, %8 ], [ %i_9, %10 ]"   --->   Operation 146 'phi' 'i_i4' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 147 [1/1] (1.43ns)   --->   "%exitcond_i5 = icmp eq i10 %i_i4, -347" [poly.c:181->poly.c:360]   --->   Operation 147 'icmp' 'exitcond_i5' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 148 [1/1] (0.00ns)   --->   "%empty_45 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 148 'speclooptripcount' 'empty_45' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 149 [1/1] (1.74ns)   --->   "%i_9 = add i10 %i_i4, 1" [poly.c:181->poly.c:360]   --->   Operation 149 'add' 'i_9' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 150 [1/1] (0.00ns)   --->   "br i1 %exitcond_i5, label %cswappoly.exit.preheader, label %10" [poly.c:181->poly.c:360]   --->   Operation 150 'br' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 151 [1/1] (0.00ns)   --->   "%tmp_361_i = zext i10 %i_i4 to i64" [poly.c:183->poly.c:360]   --->   Operation 151 'zext' 'tmp_361_i' <Predicate = (!exitcond_i5)> <Delay = 0.00>
+ST_12 : Operation 152 [1/1] (0.00ns)   --->   "%temp_r_coeffs_addr_3 = getelementptr [677 x i16]* %f_coeffs, i64 0, i64 %tmp_361_i" [poly.c:183->poly.c:360]   --->   Operation 152 'getelementptr' 'temp_r_coeffs_addr_3' <Predicate = (!exitcond_i5)> <Delay = 0.00>
+ST_12 : Operation 153 [2/2] (2.77ns)   --->   "%temp_r_coeffs_load_3 = load i16* %temp_r_coeffs_addr_3, align 2" [poly.c:183->poly.c:360]   --->   Operation 153 'load' 'temp_r_coeffs_load_3' <Predicate = (!exitcond_i5)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_12 : Operation 154 [1/1] (0.00ns)   --->   "%g_coeffs_addr_2 = getelementptr [677 x i16]* %g_coeffs, i64 0, i64 %tmp_361_i" [poly.c:183->poly.c:360]   --->   Operation 154 'getelementptr' 'g_coeffs_addr_2' <Predicate = (!exitcond_i5)> <Delay = 0.00>
+ST_12 : Operation 155 [2/2] (2.77ns)   --->   "%g_coeffs_load_1 = load i16* %g_coeffs_addr_2, align 2" [poly.c:183->poly.c:360]   --->   Operation 155 'load' 'g_coeffs_load_1' <Predicate = (!exitcond_i5)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_12 : Operation 156 [1/1] (1.35ns)   --->   "br label %cswappoly.exit" [poly.c:181->poly.c:361]   --->   Operation 156 'br' <Predicate = (exitcond_i5)> <Delay = 1.35>
+
+State 13 <SV = 11> <Delay = 7.15>
+ST_13 : Operation 157 [1/2] (2.77ns)   --->   "%temp_r_coeffs_load_3 = load i16* %temp_r_coeffs_addr_3, align 2" [poly.c:183->poly.c:360]   --->   Operation 157 'load' 'temp_r_coeffs_load_3' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_13 : Operation 158 [1/2] (2.77ns)   --->   "%g_coeffs_load_1 = load i16* %g_coeffs_addr_2, align 2" [poly.c:183->poly.c:360]   --->   Operation 158 'load' 'g_coeffs_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_13 : Operation 159 [1/1] (0.00ns) (grouped into LUT with out node t)   --->   "%tmp_362_i = xor i16 %g_coeffs_load_1, %temp_r_coeffs_load_3" [poly.c:183->poly.c:360]   --->   Operation 159 'xor' 'tmp_362_i' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 160 [1/1] (0.80ns) (out node of the LUT)   --->   "%t = and i16 %tmp_362_i, %tmp_i3_cast" [poly.c:183->poly.c:360]   --->   Operation 160 'and' 't' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 161 [1/1] (0.80ns)   --->   "%tmp_363_i = xor i16 %temp_r_coeffs_load_3, %t" [poly.c:184->poly.c:360]   --->   Operation 161 'xor' 'tmp_363_i' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 162 [1/1] (2.77ns)   --->   "store i16 %tmp_363_i, i16* %temp_r_coeffs_addr_3, align 2" [poly.c:184->poly.c:360]   --->   Operation 162 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_13 : Operation 163 [1/1] (0.80ns)   --->   "%tmp_364_i = xor i16 %g_coeffs_load_1, %t" [poly.c:185->poly.c:360]   --->   Operation 163 'xor' 'tmp_364_i' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 164 [1/1] (2.77ns)   --->   "store i16 %tmp_364_i, i16* %g_coeffs_addr_2, align 2" [poly.c:185->poly.c:360]   --->   Operation 164 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_13 : Operation 165 [1/1] (0.00ns)   --->   "br label %9" [poly.c:181->poly.c:360]   --->   Operation 165 'br' <Predicate = true> <Delay = 0.00>
+
+State 14 <SV = 11> <Delay = 2.77>
+ST_14 : Operation 166 [1/1] (0.00ns)   --->   "%i_i8 = phi i10 [ %i_15, %11 ], [ 0, %cswappoly.exit.preheader ]"   --->   Operation 166 'phi' 'i_i8' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 167 [1/1] (1.43ns)   --->   "%exitcond_i9 = icmp eq i10 %i_i8, -347" [poly.c:181->poly.c:361]   --->   Operation 167 'icmp' 'exitcond_i9' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 168 [1/1] (0.00ns)   --->   "%empty_46 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 168 'speclooptripcount' 'empty_46' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 169 [1/1] (1.74ns)   --->   "%i_15 = add i10 %i_i8, 1" [poly.c:181->poly.c:361]   --->   Operation 169 'add' 'i_15' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 170 [1/1] (0.00ns)   --->   "br i1 %exitcond_i9, label %cswappoly.exit20, label %11" [poly.c:181->poly.c:361]   --->   Operation 170 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 171 [1/1] (0.00ns)   --->   "%tmp_361_i1 = zext i10 %i_i8 to i64" [poly.c:183->poly.c:361]   --->   Operation 171 'zext' 'tmp_361_i1' <Predicate = (!exitcond_i9)> <Delay = 0.00>
+ST_14 : Operation 172 [1/1] (0.00ns)   --->   "%b_coeffs_addr_3 = getelementptr [677 x i16]* %b_coeffs, i64 0, i64 %tmp_361_i1" [poly.c:183->poly.c:361]   --->   Operation 172 'getelementptr' 'b_coeffs_addr_3' <Predicate = (!exitcond_i9)> <Delay = 0.00>
+ST_14 : Operation 173 [2/2] (2.77ns)   --->   "%b_coeffs_load_1 = load i16* %b_coeffs_addr_3, align 2" [poly.c:183->poly.c:361]   --->   Operation 173 'load' 'b_coeffs_load_1' <Predicate = (!exitcond_i9)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_14 : Operation 174 [1/1] (0.00ns)   --->   "%c_coeffs_addr_2 = getelementptr [677 x i16]* %c_coeffs, i64 0, i64 %tmp_361_i1" [poly.c:183->poly.c:361]   --->   Operation 174 'getelementptr' 'c_coeffs_addr_2' <Predicate = (!exitcond_i9)> <Delay = 0.00>
+ST_14 : Operation 175 [2/2] (2.77ns)   --->   "%c_coeffs_load_1 = load i16* %c_coeffs_addr_2, align 2" [poly.c:183->poly.c:361]   --->   Operation 175 'load' 'c_coeffs_load_1' <Predicate = (!exitcond_i9)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_14 : Operation 176 [1/1] (0.00ns) (grouped into LUT with out node tmp_183)   --->   "%tmp_181 = xor i16 %degf, %degg" [poly.c:362]   --->   Operation 176 'xor' 'tmp_181' <Predicate = (exitcond_i9)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 177 [1/1] (0.00ns) (grouped into LUT with out node tmp_183)   --->   "%tmp22 = and i1 %tmp_210, %done" [poly.c:362]   --->   Operation 177 'and' 'tmp22' <Predicate = (exitcond_i9)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 178 [1/1] (0.00ns) (grouped into LUT with out node tmp_183)   --->   "%tmp_182 = and i1 %tmp22, %tmp_61_cast" [poly.c:362]   --->   Operation 178 'and' 'tmp_182' <Predicate = (exitcond_i9)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 179 [1/1] (0.00ns) (grouped into LUT with out node tmp_183)   --->   "%tmp_257_cast = select i1 %tmp_182, i16 -1, i16 0" [poly.c:362]   --->   Operation 179 'select' 'tmp_257_cast' <Predicate = (exitcond_i9)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 180 [1/1] (0.81ns) (out node of the LUT)   --->   "%tmp_183 = and i16 %tmp_181, %tmp_257_cast" [poly.c:363]   --->   Operation 180 'and' 'tmp_183' <Predicate = (exitcond_i9)> <Delay = 0.81> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 181 [1/1] (0.80ns)   --->   "%degf_1 = xor i16 %tmp_183, %degf" [poly.c:363]   --->   Operation 181 'xor' 'degf_1' <Predicate = (exitcond_i9)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 182 [1/1] (0.80ns)   --->   "%degg_1 = xor i16 %tmp_183, %degg" [poly.c:364]   --->   Operation 182 'xor' 'degg_1' <Predicate = (exitcond_i9)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 183 [1/1] (0.00ns) (grouped into LUT with out node tmp_185)   --->   "%tmp_184 = select i1 %done, i16 -1, i16 0" [poly.c:366]   --->   Operation 183 'select' 'tmp_184' <Predicate = (exitcond_i9)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 184 [1/1] (0.81ns) (out node of the LUT)   --->   "%tmp_185 = and i16 %tmp_175, %tmp_184" [poly.c:366]   --->   Operation 184 'and' 'tmp_185' <Predicate = (exitcond_i9)> <Delay = 0.81> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 185 [1/1] (1.35ns)   --->   "br label %12" [poly.c:366]   --->   Operation 185 'br' <Predicate = (exitcond_i9)> <Delay = 1.35>
+
+State 15 <SV = 12> <Delay = 7.15>
+ST_15 : Operation 186 [1/2] (2.77ns)   --->   "%b_coeffs_load_1 = load i16* %b_coeffs_addr_3, align 2" [poly.c:183->poly.c:361]   --->   Operation 186 'load' 'b_coeffs_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_15 : Operation 187 [1/2] (2.77ns)   --->   "%c_coeffs_load_1 = load i16* %c_coeffs_addr_2, align 2" [poly.c:183->poly.c:361]   --->   Operation 187 'load' 'c_coeffs_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_15 : Operation 188 [1/1] (0.00ns) (grouped into LUT with out node t_1)   --->   "%tmp_362_i1 = xor i16 %c_coeffs_load_1, %b_coeffs_load_1" [poly.c:183->poly.c:361]   --->   Operation 188 'xor' 'tmp_362_i1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 189 [1/1] (0.80ns) (out node of the LUT)   --->   "%t_1 = and i16 %tmp_362_i1, %tmp_i3_cast" [poly.c:183->poly.c:361]   --->   Operation 189 'and' 't_1' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 190 [1/1] (0.80ns)   --->   "%tmp_363_i1 = xor i16 %b_coeffs_load_1, %t_1" [poly.c:184->poly.c:361]   --->   Operation 190 'xor' 'tmp_363_i1' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 191 [1/1] (2.77ns)   --->   "store i16 %tmp_363_i1, i16* %b_coeffs_addr_3, align 2" [poly.c:184->poly.c:361]   --->   Operation 191 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_15 : Operation 192 [1/1] (0.80ns)   --->   "%tmp_364_i1 = xor i16 %c_coeffs_load_1, %t_1" [poly.c:185->poly.c:361]   --->   Operation 192 'xor' 'tmp_364_i1' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 193 [1/1] (2.77ns)   --->   "store i16 %tmp_364_i1, i16* %c_coeffs_addr_2, align 2" [poly.c:185->poly.c:361]   --->   Operation 193 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_15 : Operation 194 [1/1] (0.00ns)   --->   "br label %cswappoly.exit" [poly.c:181->poly.c:361]   --->   Operation 194 'br' <Predicate = true> <Delay = 0.00>
+
+State 16 <SV = 12> <Delay = 2.77>
+ST_16 : Operation 195 [1/1] (0.00ns)   --->   "%i_4 = phi i10 [ 0, %cswappoly.exit20 ], [ %i_17, %13 ]"   --->   Operation 195 'phi' 'i_4' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 196 [1/1] (1.43ns)   --->   "%exitcond5 = icmp eq i10 %i_4, -347" [poly.c:366]   --->   Operation 196 'icmp' 'exitcond5' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 197 [1/1] (0.00ns)   --->   "%empty_47 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 197 'speclooptripcount' 'empty_47' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 198 [1/1] (1.74ns)   --->   "%i_17 = add i10 %i_4, 1" [poly.c:366]   --->   Operation 198 'add' 'i_17' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 199 [1/1] (0.00ns)   --->   "br i1 %exitcond5, label %.preheader13.preheader, label %13" [poly.c:366]   --->   Operation 199 'br' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 200 [1/1] (0.00ns)   --->   "%tmp_194 = zext i10 %i_4 to i64" [poly.c:366]   --->   Operation 200 'zext' 'tmp_194' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_16 : Operation 201 [1/1] (0.00ns)   --->   "%temp_r_coeffs_addr_5 = getelementptr [677 x i16]* %f_coeffs, i64 0, i64 %tmp_194" [poly.c:366]   --->   Operation 201 'getelementptr' 'temp_r_coeffs_addr_5' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_16 : Operation 202 [1/1] (0.00ns)   --->   "%g_coeffs_addr_3 = getelementptr [677 x i16]* %g_coeffs, i64 0, i64 %tmp_194" [poly.c:366]   --->   Operation 202 'getelementptr' 'g_coeffs_addr_3' <Predicate = (!exitcond5)> <Delay = 0.00>
+ST_16 : Operation 203 [2/2] (2.77ns)   --->   "%g_coeffs_load_2 = load i16* %g_coeffs_addr_3, align 2" [poly.c:366]   --->   Operation 203 'load' 'g_coeffs_load_2' <Predicate = (!exitcond5)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_16 : Operation 204 [1/1] (1.35ns)   --->   "br label %.preheader13" [poly.c:367]   --->   Operation 204 'br' <Predicate = (exitcond5)> <Delay = 1.35>
+
+State 17 <SV = 13> <Delay = 2.77>
+ST_17 : Operation 205 [2/2] (2.77ns)   --->   "%temp_r_coeffs_load_4 = load i16* %temp_r_coeffs_addr_5, align 2" [poly.c:366]   --->   Operation 205 'load' 'temp_r_coeffs_load_4' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_17 : Operation 206 [1/2] (2.77ns)   --->   "%g_coeffs_load_2 = load i16* %g_coeffs_addr_3, align 2" [poly.c:366]   --->   Operation 206 'load' 'g_coeffs_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+
+State 18 <SV = 14> <Delay = 6.35>
+ST_18 : Operation 207 [1/2] (2.77ns)   --->   "%temp_r_coeffs_load_4 = load i16* %temp_r_coeffs_addr_5, align 2" [poly.c:366]   --->   Operation 207 'load' 'temp_r_coeffs_load_4' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_18 : Operation 208 [1/1] (2.82ns) (grouped into DSP with root node tmp_196)   --->   "%tmp_195 = mul i16 %g_coeffs_load_2, %tmp_185" [poly.c:366]   --->   Operation 208 'mul' 'tmp_195' <Predicate = true> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 6.35> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_18 : Operation 209 [1/1] (3.53ns) (root node of the DSP)   --->   "%tmp_196 = add i16 %temp_r_coeffs_load_4, %tmp_195" [poly.c:366]   --->   Operation 209 'add' 'tmp_196' <Predicate = true> <Delay = 3.53> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 6.35> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 19 <SV = 15> <Delay = 8.75>
+ST_19 : Operation 210 [1/1] (8.75ns)   --->   "%tmp_197 = call fastcc zeroext i16 @mod3(i16 zeroext %tmp_196)" [poly.c:366]   --->   Operation 210 'call' 'tmp_197' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 16> <Delay = 2.77>
+ST_20 : Operation 211 [1/1] (2.77ns)   --->   "store i16 %tmp_197, i16* %temp_r_coeffs_addr_5, align 2" [poly.c:366]   --->   Operation 211 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_20 : Operation 212 [1/1] (0.00ns)   --->   "br label %12" [poly.c:366]   --->   Operation 212 'br' <Predicate = true> <Delay = 0.00>
+
+State 21 <SV = 13> <Delay = 2.77>
+ST_21 : Operation 213 [1/1] (0.00ns)   --->   "%i_5 = phi i10 [ %i_19, %14 ], [ 0, %.preheader13.preheader ]"   --->   Operation 213 'phi' 'i_5' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 214 [1/1] (1.43ns)   --->   "%exitcond4 = icmp eq i10 %i_5, -347" [poly.c:367]   --->   Operation 214 'icmp' 'exitcond4' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 215 [1/1] (0.00ns)   --->   "%empty_48 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 215 'speclooptripcount' 'empty_48' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 216 [1/1] (1.74ns)   --->   "%i_19 = add i10 %i_5, 1" [poly.c:367]   --->   Operation 216 'add' 'i_19' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 217 [1/1] (0.00ns)   --->   "br i1 %exitcond4, label %15, label %14" [poly.c:367]   --->   Operation 217 'br' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 218 [1/1] (0.00ns)   --->   "%tmp_198 = zext i10 %i_5 to i64" [poly.c:367]   --->   Operation 218 'zext' 'tmp_198' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_21 : Operation 219 [1/1] (0.00ns)   --->   "%b_coeffs_addr_4 = getelementptr [677 x i16]* %b_coeffs, i64 0, i64 %tmp_198" [poly.c:367]   --->   Operation 219 'getelementptr' 'b_coeffs_addr_4' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_21 : Operation 220 [1/1] (0.00ns)   --->   "%c_coeffs_addr_3 = getelementptr [677 x i16]* %c_coeffs, i64 0, i64 %tmp_198" [poly.c:367]   --->   Operation 220 'getelementptr' 'c_coeffs_addr_3' <Predicate = (!exitcond4)> <Delay = 0.00>
+ST_21 : Operation 221 [2/2] (2.77ns)   --->   "%c_coeffs_load_2 = load i16* %c_coeffs_addr_3, align 2" [poly.c:367]   --->   Operation 221 'load' 'c_coeffs_load_2' <Predicate = (!exitcond4)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_21 : Operation 222 [1/1] (0.80ns)   --->   "%tmp_i = xor i1 %done, true" [poly.c:194->poly.c:369]   --->   Operation 222 'xor' 'tmp_i' <Predicate = (exitcond4)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 223 [1/1] (1.35ns)   --->   "br label %16" [poly.c:193->poly.c:369]   --->   Operation 223 'br' <Predicate = (exitcond4)> <Delay = 1.35>
+
+State 22 <SV = 14> <Delay = 2.77>
+ST_22 : Operation 224 [2/2] (2.77ns)   --->   "%b_coeffs_load_2 = load i16* %b_coeffs_addr_4, align 2" [poly.c:367]   --->   Operation 224 'load' 'b_coeffs_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_22 : Operation 225 [1/2] (2.77ns)   --->   "%c_coeffs_load_2 = load i16* %c_coeffs_addr_3, align 2" [poly.c:367]   --->   Operation 225 'load' 'c_coeffs_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+
+State 23 <SV = 15> <Delay = 6.35>
+ST_23 : Operation 226 [1/2] (2.77ns)   --->   "%b_coeffs_load_2 = load i16* %b_coeffs_addr_4, align 2" [poly.c:367]   --->   Operation 226 'load' 'b_coeffs_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_23 : Operation 227 [1/1] (2.82ns) (grouped into DSP with root node tmp_200)   --->   "%tmp_199 = mul i16 %c_coeffs_load_2, %tmp_185" [poly.c:367]   --->   Operation 227 'mul' 'tmp_199' <Predicate = true> <Delay = 2.82> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 6.35> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_23 : Operation 228 [1/1] (3.53ns) (root node of the DSP)   --->   "%tmp_200 = add i16 %b_coeffs_load_2, %tmp_199" [poly.c:367]   --->   Operation 228 'add' 'tmp_200' <Predicate = true> <Delay = 3.53> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 6.35> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 24 <SV = 16> <Delay = 8.75>
+ST_24 : Operation 229 [1/1] (8.75ns)   --->   "%tmp_201 = call fastcc zeroext i16 @mod3(i16 zeroext %tmp_200)" [poly.c:367]   --->   Operation 229 'call' 'tmp_201' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 17> <Delay = 2.77>
+ST_25 : Operation 230 [1/1] (2.77ns)   --->   "store i16 %tmp_201, i16* %b_coeffs_addr_4, align 2" [poly.c:367]   --->   Operation 230 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_25 : Operation 231 [1/1] (0.00ns)   --->   "br label %.preheader13" [poly.c:367]   --->   Operation 231 'br' <Predicate = true> <Delay = 0.00>
+
+State 26 <SV = 14> <Delay = 4.52>
+ST_26 : Operation 232 [1/1] (0.00ns)   --->   "%i_i = phi i10 [ 1, %15 ], [ %i_21, %17 ]"   --->   Operation 232 'phi' 'i_i' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 233 [1/1] (1.43ns)   --->   "%exitcond_i = icmp eq i10 %i_i, -347" [poly.c:193->poly.c:369]   --->   Operation 233 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 234 [1/1] (0.00ns)   --->   "%empty_49 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 676, i64 676, i64 676)"   --->   Operation 234 'speclooptripcount' 'empty_49' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 235 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %poly_divx.exit, label %17" [poly.c:193->poly.c:369]   --->   Operation 235 'br' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 236 [1/1] (0.00ns)   --->   "%tmp_112_i = zext i10 %i_i to i64" [poly.c:194->poly.c:369]   --->   Operation 236 'zext' 'tmp_112_i' <Predicate = (!exitcond_i & done)> <Delay = 0.00>
+ST_26 : Operation 237 [1/1] (0.00ns)   --->   "%temp_r_coeffs_addr_6 = getelementptr [677 x i16]* %f_coeffs, i64 0, i64 %tmp_112_i" [poly.c:194->poly.c:369]   --->   Operation 237 'getelementptr' 'temp_r_coeffs_addr_6' <Predicate = (!exitcond_i & done)> <Delay = 0.00>
+ST_26 : Operation 238 [2/2] (2.77ns)   --->   "%temp_r_coeffs_load_5 = load i16* %temp_r_coeffs_addr_6, align 2" [poly.c:194->poly.c:369]   --->   Operation 238 'load' 'temp_r_coeffs_load_5' <Predicate = (!exitcond_i & done)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_26 : Operation 239 [1/1] (1.74ns)   --->   "%tmp_113_i = add i10 %i_i, -1" [poly.c:194->poly.c:369]   --->   Operation 239 'add' 'tmp_113_i' <Predicate = (!exitcond_i)> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 240 [1/1] (0.00ns)   --->   "%tmp_114_i = zext i10 %tmp_113_i to i64" [poly.c:194->poly.c:369]   --->   Operation 240 'zext' 'tmp_114_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_26 : Operation 241 [1/1] (0.00ns)   --->   "%temp_r_coeffs_addr_7 = getelementptr [677 x i16]* %f_coeffs, i64 0, i64 %tmp_114_i" [poly.c:194->poly.c:369]   --->   Operation 241 'getelementptr' 'temp_r_coeffs_addr_7' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_26 : Operation 242 [2/2] (2.77ns)   --->   "%temp_r_coeffs_load_6 = load i16* %temp_r_coeffs_addr_7, align 2" [poly.c:194->poly.c:369]   --->   Operation 242 'load' 'temp_r_coeffs_load_6' <Predicate = (!exitcond_i & !done)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_26 : Operation 243 [1/1] (1.74ns)   --->   "%i_21 = add i10 %i_i, 1" [poly.c:193->poly.c:369]   --->   Operation 243 'add' 'i_21' <Predicate = (!exitcond_i)> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 244 [2/2] (2.77ns)   --->   "%temp_r_coeffs_load_2 = load i16* %temp_r_coeffs_addr_2, align 2" [poly.c:195->poly.c:369]   --->   Operation 244 'load' 'temp_r_coeffs_load_2' <Predicate = (exitcond_i)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+
+State 27 <SV = 15> <Delay = 6.60>
+ST_27 : Operation 245 [1/2] (2.77ns)   --->   "%temp_r_coeffs_load_5 = load i16* %temp_r_coeffs_addr_6, align 2" [poly.c:194->poly.c:369]   --->   Operation 245 'load' 'temp_r_coeffs_load_5' <Predicate = (done)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_27 : Operation 246 [1/2] (2.77ns)   --->   "%temp_r_coeffs_load_6 = load i16* %temp_r_coeffs_addr_7, align 2" [poly.c:194->poly.c:369]   --->   Operation 246 'load' 'temp_r_coeffs_load_6' <Predicate = (!done)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_27 : Operation 247 [1/1] (1.06ns)   --->   "%tmp_115_i = select i1 %done, i16 %temp_r_coeffs_load_5, i16 %temp_r_coeffs_load_6" [poly.c:194->poly.c:369]   --->   Operation 247 'select' 'tmp_115_i' <Predicate = true> <Delay = 1.06> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 248 [1/1] (2.77ns)   --->   "store i16 %tmp_115_i, i16* %temp_r_coeffs_addr_7, align 2" [poly.c:194->poly.c:369]   --->   Operation 248 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_27 : Operation 249 [1/1] (0.00ns)   --->   "br label %16" [poly.c:193->poly.c:369]   --->   Operation 249 'br' <Predicate = true> <Delay = 0.00>
+
+State 28 <SV = 15> <Delay = 6.35>
+ST_28 : Operation 250 [1/2] (2.77ns)   --->   "%temp_r_coeffs_load_2 = load i16* %temp_r_coeffs_addr_2, align 2" [poly.c:195->poly.c:369]   --->   Operation 250 'load' 'temp_r_coeffs_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_28 : Operation 251 [1/1] (0.81ns)   --->   "%tmp_i_50 = select i1 %tmp_i, i16 -1, i16 0" [poly.c:195->poly.c:369]   --->   Operation 251 'select' 'tmp_i_50' <Predicate = true> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_28 : Operation 252 [1/1] (0.80ns)   --->   "%tmp_111_i = and i16 %temp_r_coeffs_load_2, %tmp_i_50" [poly.c:195->poly.c:369]   --->   Operation 252 'and' 'tmp_111_i' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 253 [1/1] (2.77ns)   --->   "store i16 %tmp_111_i, i16* %temp_r_coeffs_addr_2, align 2" [poly.c:195->poly.c:369]   --->   Operation 253 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_28 : Operation 254 [1/1] (1.35ns)   --->   "br label %18" [poly.c:202->poly.c:370]   --->   Operation 254 'br' <Predicate = true> <Delay = 1.35>
+
+State 29 <SV = 16> <Delay = 4.52>
+ST_29 : Operation 255 [1/1] (0.00ns)   --->   "%i_i5 = phi i10 [ 1, %poly_divx.exit ], [ %i_22, %19 ]"   --->   Operation 255 'phi' 'i_i5' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 256 [1/1] (1.43ns)   --->   "%exitcond_i6 = icmp eq i10 %i_i5, -347" [poly.c:202->poly.c:370]   --->   Operation 256 'icmp' 'exitcond_i6' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 257 [1/1] (0.00ns)   --->   "%empty_51 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 676, i64 676, i64 676)"   --->   Operation 257 'speclooptripcount' 'empty_51' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 258 [1/1] (0.00ns)   --->   "br i1 %exitcond_i6, label %poly_mulx.exit, label %19" [poly.c:202->poly.c:370]   --->   Operation 258 'br' <Predicate = true> <Delay = 0.00>
+ST_29 : Operation 259 [1/1] (1.74ns)   --->   "%tmp_106_i = sub i10 -348, %i_i5" [poly.c:203->poly.c:370]   --->   Operation 259 'sub' 'tmp_106_i' <Predicate = (!exitcond_i6 & done)> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 260 [1/1] (0.00ns)   --->   "%tmp_107_i = zext i10 %tmp_106_i to i64" [poly.c:203->poly.c:370]   --->   Operation 260 'zext' 'tmp_107_i' <Predicate = (!exitcond_i6 & done)> <Delay = 0.00>
+ST_29 : Operation 261 [1/1] (0.00ns)   --->   "%c_coeffs_addr_4 = getelementptr [677 x i16]* %c_coeffs, i64 0, i64 %tmp_107_i" [poly.c:203->poly.c:370]   --->   Operation 261 'getelementptr' 'c_coeffs_addr_4' <Predicate = (!exitcond_i6 & done)> <Delay = 0.00>
+ST_29 : Operation 262 [2/2] (2.77ns)   --->   "%c_coeffs_load_3 = load i16* %c_coeffs_addr_4, align 2" [poly.c:203->poly.c:370]   --->   Operation 262 'load' 'c_coeffs_load_3' <Predicate = (!exitcond_i6 & done)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_29 : Operation 263 [1/1] (1.74ns)   --->   "%tmp_108_i = sub i10 -347, %i_i5" [poly.c:203->poly.c:370]   --->   Operation 263 'sub' 'tmp_108_i' <Predicate = (!exitcond_i6)> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 264 [1/1] (0.00ns)   --->   "%tmp_109_i = zext i10 %tmp_108_i to i64" [poly.c:203->poly.c:370]   --->   Operation 264 'zext' 'tmp_109_i' <Predicate = (!exitcond_i6)> <Delay = 0.00>
+ST_29 : Operation 265 [1/1] (0.00ns)   --->   "%c_coeffs_addr_5 = getelementptr [677 x i16]* %c_coeffs, i64 0, i64 %tmp_109_i" [poly.c:203->poly.c:370]   --->   Operation 265 'getelementptr' 'c_coeffs_addr_5' <Predicate = (!exitcond_i6)> <Delay = 0.00>
+ST_29 : Operation 266 [2/2] (2.77ns)   --->   "%c_coeffs_load_4 = load i16* %c_coeffs_addr_5, align 2" [poly.c:203->poly.c:370]   --->   Operation 266 'load' 'c_coeffs_load_4' <Predicate = (!exitcond_i6 & !done)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_29 : Operation 267 [1/1] (1.74ns)   --->   "%i_22 = add i10 %i_i5, 1" [poly.c:202->poly.c:370]   --->   Operation 267 'add' 'i_22' <Predicate = (!exitcond_i6)> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 268 [2/2] (2.77ns)   --->   "%c_coeffs_load = load i16* %c_coeffs_addr_1, align 2" [poly.c:204->poly.c:370]   --->   Operation 268 'load' 'c_coeffs_load' <Predicate = (exitcond_i6)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_29 : Operation 269 [1/1] (1.84ns)   --->   "%degf_2 = sub i16 %degf_1, %tmp_64" [poly.c:371]   --->   Operation 269 'sub' 'degf_2' <Predicate = (exitcond_i6)> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 270 [1/1] (1.76ns)   --->   "%k_3 = add i11 %tmp_64_cast, %k" [poly.c:372]   --->   Operation 270 'add' 'k_3' <Predicate = (exitcond_i6)> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 271 [1/1] (1.84ns)   --->   "%tmp_202 = sub i16 0, %degf_2" [poly.c:374]   --->   Operation 271 'sub' 'tmp_202' <Predicate = (exitcond_i6)> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 272 [1/1] (0.00ns)   --->   "%tmp_269 = call i1 @_ssdm_op_BitSelect.i1.i16.i32(i16 %tmp_202, i32 15)" [poly.c:374]   --->   Operation 272 'bitselect' 'tmp_269' <Predicate = (exitcond_i6)> <Delay = 0.00>
+
+State 30 <SV = 17> <Delay = 6.60>
+ST_30 : Operation 273 [1/2] (2.77ns)   --->   "%c_coeffs_load_3 = load i16* %c_coeffs_addr_4, align 2" [poly.c:203->poly.c:370]   --->   Operation 273 'load' 'c_coeffs_load_3' <Predicate = (done)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_30 : Operation 274 [1/2] (2.77ns)   --->   "%c_coeffs_load_4 = load i16* %c_coeffs_addr_5, align 2" [poly.c:203->poly.c:370]   --->   Operation 274 'load' 'c_coeffs_load_4' <Predicate = (!done)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_30 : Operation 275 [1/1] (1.06ns)   --->   "%tmp_110_i = select i1 %done, i16 %c_coeffs_load_3, i16 %c_coeffs_load_4" [poly.c:203->poly.c:370]   --->   Operation 275 'select' 'tmp_110_i' <Predicate = true> <Delay = 1.06> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_30 : Operation 276 [1/1] (2.77ns)   --->   "store i16 %tmp_110_i, i16* %c_coeffs_addr_5, align 2" [poly.c:203->poly.c:370]   --->   Operation 276 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_30 : Operation 277 [1/1] (0.00ns)   --->   "br label %18" [poly.c:202->poly.c:370]   --->   Operation 277 'br' <Predicate = true> <Delay = 0.00>
+
+State 31 <SV = 17> <Delay = 6.35>
+ST_31 : Operation 278 [1/2] (2.77ns)   --->   "%c_coeffs_load = load i16* %c_coeffs_addr_1, align 2" [poly.c:204->poly.c:370]   --->   Operation 278 'load' 'c_coeffs_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_31 : Operation 279 [1/1] (0.80ns)   --->   "%tmp_105_i = and i16 %c_coeffs_load, %tmp_i_50" [poly.c:204->poly.c:370]   --->   Operation 279 'and' 'tmp_105_i' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 280 [1/1] (2.77ns)   --->   "store i16 %tmp_105_i, i16* %c_coeffs_addr_1, align 2" [poly.c:204->poly.c:370]   --->   Operation 280 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_31 : Operation 281 [1/1] (0.00ns)   --->   "br label %.preheader14" [poly.c:355]   --->   Operation 281 'br' <Predicate = true> <Delay = 0.00>
+
+State 32 <SV = 6> <Delay = 3.52>
+ST_32 : Operation 282 [1/1] (0.00ns) (grouped into LUT with out node k_2)   --->   "%k_cast = zext i11 %k to i12" [poly.c:355]   --->   Operation 282 'zext' 'k_cast' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 283 [1/2] (2.77ns)   --->   "%temp_r_coeffs_load = load i16* %temp_r_coeffs_addr_1, align 2" [poly.c:377]   --->   Operation 283 'load' 'temp_r_coeffs_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_32 : Operation 284 [1/1] (1.76ns)   --->   "%tmp_173 = sub i11 676, %k" [poly.c:378]   --->   Operation 284 'sub' 'tmp_173' <Predicate = true> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 285 [1/1] (0.00ns) (grouped into LUT with out node k_2)   --->   "%tmp_191 = call i1 @_ssdm_op_BitSelect.i1.i11.i32(i11 %tmp_173, i32 10)" [poly.c:378]   --->   Operation 285 'bitselect' 'tmp_191' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 286 [1/1] (0.00ns) (grouped into LUT with out node k_2)   --->   "%tmp_240_cast_cast = select i1 %tmp_191, i12 677, i12 0" [poly.c:378]   --->   Operation 286 'select' 'tmp_240_cast_cast' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_32 : Operation 287 [1/1] (1.76ns) (out node of the LUT)   --->   "%k_2 = sub i12 %k_cast, %tmp_240_cast_cast" [poly.c:378]   --->   Operation 287 'sub' 'k_2' <Predicate = true> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 288 [1/1] (0.00ns)   --->   "%k_2_cast = sext i12 %k_2 to i16" [poly.c:378]   --->   Operation 288 'sext' 'k_2_cast' <Predicate = true> <Delay = 0.00>
+ST_32 : Operation 289 [1/1] (1.35ns)   --->   "br label %21" [poly.c:384]   --->   Operation 289 'br' <Predicate = true> <Delay = 1.35>
+
+State 33 <SV = 7> <Delay = 2.77>
+ST_33 : Operation 290 [1/1] (0.00ns)   --->   "%i_6 = phi i10 [ 0, %20 ], [ %i_14, %22 ]"   --->   Operation 290 'phi' 'i_6' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 291 [1/1] (1.43ns)   --->   "%exitcond3 = icmp eq i10 %i_6, -347" [poly.c:384]   --->   Operation 291 'icmp' 'exitcond3' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 292 [1/1] (0.00ns)   --->   "%empty_52 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 292 'speclooptripcount' 'empty_52' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 293 [1/1] (1.74ns)   --->   "%i_14 = add i10 %i_6, 1" [poly.c:384]   --->   Operation 293 'add' 'i_14' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 294 [1/1] (0.00ns)   --->   "br i1 %exitcond3, label %.preheader12.preheader, label %22" [poly.c:384]   --->   Operation 294 'br' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 295 [1/1] (0.00ns)   --->   "%tmp_177 = zext i10 %i_6 to i64" [poly.c:385]   --->   Operation 295 'zext' 'tmp_177' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_33 : Operation 296 [1/1] (0.00ns)   --->   "%b_coeffs_addr_2 = getelementptr [677 x i16]* %b_coeffs, i64 0, i64 %tmp_177" [poly.c:385]   --->   Operation 296 'getelementptr' 'b_coeffs_addr_2' <Predicate = (!exitcond3)> <Delay = 0.00>
+ST_33 : Operation 297 [2/2] (2.77ns)   --->   "%b_coeffs_load = load i16* %b_coeffs_addr_2, align 2" [poly.c:385]   --->   Operation 297 'load' 'b_coeffs_load' <Predicate = (!exitcond3)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_33 : Operation 298 [1/1] (1.35ns)   --->   "br label %.preheader12" [poly.c:387]   --->   Operation 298 'br' <Predicate = (exitcond3)> <Delay = 1.35>
+
+State 34 <SV = 8> <Delay = 2.77>
+ST_34 : Operation 299 [1/2] (2.77ns)   --->   "%b_coeffs_load = load i16* %b_coeffs_addr_2, align 2" [poly.c:385]   --->   Operation 299 'load' 'b_coeffs_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+
+State 35 <SV = 9> <Delay = 6.35>
+ST_35 : Operation 300 [1/1] (6.35ns) (root node of the DSP)   --->   "%tmp_178 = mul i16 %temp_r_coeffs_load, %b_coeffs_load" [poly.c:385]   --->   Operation 300 'mul' 'tmp_178' <Predicate = true> <Delay = 6.35> <Core = "DSP48">   --->   Core 65 'DSP48' <Latency = 0> <II = 1> <Delay = 6.35> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 36 <SV = 10> <Delay = 8.75>
+ST_36 : Operation 301 [1/1] (8.75ns)   --->   "%tmp_179 = call fastcc zeroext i16 @mod3(i16 zeroext %tmp_178)" [poly.c:385]   --->   Operation 301 'call' 'tmp_179' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 37 <SV = 11> <Delay = 2.77>
+ST_37 : Operation 302 [1/1] (0.00ns)   --->   "%r_coeffs_addr = getelementptr [677 x i16]* %r_coeffs, i64 0, i64 %tmp_177" [poly.c:385]   --->   Operation 302 'getelementptr' 'r_coeffs_addr' <Predicate = true> <Delay = 0.00>
+ST_37 : Operation 303 [1/1] (2.77ns)   --->   "call void @_ssdm_op_Write.bram.i16(i16* %r_coeffs_addr, i16 %tmp_179, i2 -1)" [poly.c:385]   --->   Operation 303 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_37 : Operation 304 [1/1] (0.00ns)   --->   "br label %21" [poly.c:384]   --->   Operation 304 'br' <Predicate = true> <Delay = 0.00>
+
+State 38 <SV = 8> <Delay = 1.88>
+ST_38 : Operation 305 [1/1] (0.00ns)   --->   "%k_1 = phi i16 [ %k_5, %cmov.exit ], [ %k_2_cast, %.preheader12.preheader ]"   --->   Operation 305 'phi' 'k_1' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 306 [1/1] (0.00ns)   --->   "%i_7 = phi i4 [ %i_20, %cmov.exit ], [ 0, %.preheader12.preheader ]"   --->   Operation 306 'phi' 'i_7' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 307 [1/1] (0.00ns)   --->   "%i_7_cast = zext i4 %i_7 to i10" [poly.c:387]   --->   Operation 307 'zext' 'i_7_cast' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 308 [1/1] (1.21ns)   --->   "%exitcond2 = icmp eq i4 %i_7, -6" [poly.c:387]   --->   Operation 308 'icmp' 'exitcond2' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 309 [1/1] (0.00ns)   --->   "%empty_53 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 10, i64 10, i64 10)"   --->   Operation 309 'speclooptripcount' 'empty_53' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 310 [1/1] (1.49ns)   --->   "%i_20 = add i4 %i_7, 1" [poly.c:387]   --->   Operation 310 'add' 'i_20' <Predicate = true> <Delay = 1.49> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 311 [1/1] (0.00ns)   --->   "br i1 %exitcond2, label %.preheader.preheader, label %.preheader11.preheader" [poly.c:387]   --->   Operation 311 'br' <Predicate = true> <Delay = 0.00>
+ST_38 : Operation 312 [1/1] (1.88ns)   --->   "%tmp_180 = shl i10 1, %i_7_cast" [poly.c:389]   --->   Operation 312 'shl' 'tmp_180' <Predicate = (!exitcond2)> <Delay = 1.88> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 313 [1/1] (0.00ns)   --->   "%tmp_270_cast = zext i10 %tmp_180 to i11" [poly.c:389]   --->   Operation 313 'zext' 'tmp_270_cast' <Predicate = (!exitcond2)> <Delay = 0.00>
+ST_38 : Operation 314 [1/1] (1.35ns)   --->   "br label %.preheader11" [poly.c:388]   --->   Operation 314 'br' <Predicate = (!exitcond2)> <Delay = 1.35>
+ST_38 : Operation 315 [1/1] (0.00ns)   --->   "%r_coeffs_addr_2 = getelementptr [677 x i16]* %r_coeffs, i64 0, i64 676" [poly.c:398]   --->   Operation 315 'getelementptr' 'r_coeffs_addr_2' <Predicate = (exitcond2)> <Delay = 0.00>
+ST_38 : Operation 316 [1/1] (1.35ns)   --->   "br label %.preheader" [poly.c:397]   --->   Operation 316 'br' <Predicate = (exitcond2)> <Delay = 1.35>
+
+State 39 <SV = 9> <Delay = 4.59>
+ST_39 : Operation 317 [1/1] (0.00ns)   --->   "%j_1 = phi i10 [ %j_6, %23 ], [ 0, %.preheader11.preheader ]"   --->   Operation 317 'phi' 'j_1' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 318 [1/1] (0.00ns)   --->   "%j_1_cast = zext i10 %j_1 to i11" [poly.c:388]   --->   Operation 318 'zext' 'j_1_cast' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 319 [1/1] (1.43ns)   --->   "%exitcond1 = icmp eq i10 %j_1, -347" [poly.c:388]   --->   Operation 319 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 320 [1/1] (0.00ns)   --->   "%empty_54 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 320 'speclooptripcount' 'empty_54' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 321 [1/1] (1.74ns)   --->   "%j_6 = add i10 %j_1, 1" [poly.c:388]   --->   Operation 321 'add' 'j_6' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 322 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %24, label %23" [poly.c:388]   --->   Operation 322 'br' <Predicate = true> <Delay = 0.00>
+ST_39 : Operation 323 [1/1] (1.74ns)   --->   "%tmp_189 = add i11 %tmp_270_cast, %j_1_cast" [poly.c:389]   --->   Operation 323 'add' 'tmp_189' <Predicate = (!exitcond1)> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 324 [15/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 324 'urem' 'tmp_190' <Predicate = (!exitcond1)> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 325 [1/1] (0.00ns)   --->   "%tmp_212 = trunc i16 %k_1 to i1" [poly.c:391]   --->   Operation 325 'trunc' 'tmp_212' <Predicate = (exitcond1)> <Delay = 0.00>
+ST_39 : Operation 326 [1/1] (0.81ns)   --->   "%b_assign_1_cast = select i1 %tmp_212, i8 -1, i8 0" [verify.c:23->poly.c:391]   --->   Operation 326 'select' 'b_assign_1_cast' <Predicate = (exitcond1)> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_39 : Operation 327 [1/1] (1.35ns)   --->   "br label %25" [verify.c:24->poly.c:391]   --->   Operation 327 'br' <Predicate = (exitcond1)> <Delay = 1.35>
+
+State 40 <SV = 10> <Delay = 2.84>
+ST_40 : Operation 328 [14/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 328 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 11> <Delay = 2.84>
+ST_41 : Operation 329 [13/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 329 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 12> <Delay = 2.84>
+ST_42 : Operation 330 [12/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 330 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 13> <Delay = 2.84>
+ST_43 : Operation 331 [11/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 331 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 14> <Delay = 2.84>
+ST_44 : Operation 332 [10/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 332 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 15> <Delay = 2.84>
+ST_45 : Operation 333 [9/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 333 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 16> <Delay = 2.84>
+ST_46 : Operation 334 [8/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 334 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 47 <SV = 17> <Delay = 2.84>
+ST_47 : Operation 335 [7/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 335 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 48 <SV = 18> <Delay = 2.84>
+ST_48 : Operation 336 [6/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 336 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 19> <Delay = 2.84>
+ST_49 : Operation 337 [5/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 337 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 20> <Delay = 2.84>
+ST_50 : Operation 338 [4/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 338 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 21> <Delay = 2.84>
+ST_51 : Operation 339 [3/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 339 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 22> <Delay = 2.84>
+ST_52 : Operation 340 [2/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 340 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 23> <Delay = 5.62>
+ST_53 : Operation 341 [1/15] (2.84ns)   --->   "%tmp_190 = urem i11 %tmp_189, 677" [poly.c:389]   --->   Operation 341 'urem' 'tmp_190' <Predicate = true> <Delay = 2.84> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 14> <II = 11> <Delay = 2.84> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 342 [1/1] (0.00ns)   --->   "%tmp_192 = zext i11 %tmp_190 to i64" [poly.c:389]   --->   Operation 342 'zext' 'tmp_192' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 343 [1/1] (0.00ns)   --->   "%r_coeffs_addr_4 = getelementptr [677 x i16]* %r_coeffs, i64 0, i64 %tmp_192" [poly.c:389]   --->   Operation 343 'getelementptr' 'r_coeffs_addr_4' <Predicate = true> <Delay = 0.00>
+ST_53 : Operation 344 [2/2] (2.77ns)   --->   "%r_coeffs_load_2 = load i16* %r_coeffs_addr_4, align 2" [poly.c:389]   --->   Operation 344 'load' 'r_coeffs_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+
+State 54 <SV = 24> <Delay = 5.54>
+ST_54 : Operation 345 [1/2] (2.77ns)   --->   "%r_coeffs_load_2 = load i16* %r_coeffs_addr_4, align 2" [poly.c:389]   --->   Operation 345 'load' 'r_coeffs_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_54 : Operation 346 [1/1] (0.00ns)   --->   "%tmp_193 = zext i10 %j_1 to i64" [poly.c:389]   --->   Operation 346 'zext' 'tmp_193' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 347 [1/1] (0.00ns)   --->   "%temp_r_coeffs_addr_4 = getelementptr [677 x i16]* %f_coeffs, i64 0, i64 %tmp_193" [poly.c:389]   --->   Operation 347 'getelementptr' 'temp_r_coeffs_addr_4' <Predicate = true> <Delay = 0.00>
+ST_54 : Operation 348 [1/1] (2.77ns)   --->   "store i16 %r_coeffs_load_2, i16* %temp_r_coeffs_addr_4, align 2" [poly.c:389]   --->   Operation 348 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_54 : Operation 349 [1/1] (0.00ns)   --->   "br label %.preheader11" [poly.c:388]   --->   Operation 349 'br' <Predicate = true> <Delay = 0.00>
+
+State 55 <SV = 10> <Delay = 7.65>
+ST_55 : Operation 350 [1/1] (0.00ns)   --->   "%i_i1 = phi i11 [ 0, %24 ], [ %i_18, %26 ]"   --->   Operation 350 'phi' 'i_i1' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 351 [1/1] (1.52ns)   --->   "%exitcond_i1 = icmp eq i11 %i_i1, -694" [verify.c:24->poly.c:391]   --->   Operation 351 'icmp' 'exitcond_i1' <Predicate = true> <Delay = 1.52> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 352 [1/1] (0.00ns)   --->   "%empty_55 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1354, i64 1354, i64 1354) nounwind"   --->   Operation 352 'speclooptripcount' 'empty_55' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 353 [1/1] (1.76ns)   --->   "%i_18 = add i11 %i_i1, 1" [verify.c:24->poly.c:391]   --->   Operation 353 'add' 'i_18' <Predicate = true> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 354 [1/1] (0.00ns)   --->   "br i1 %exitcond_i1, label %cmov.exit, label %26" [verify.c:24->poly.c:391]   --->   Operation 354 'br' <Predicate = true> <Delay = 0.00>
+ST_55 : Operation 355 [1/1] (0.00ns)   --->   "%tmp_213 = trunc i11 %i_i1 to i1" [verify.c:24->poly.c:391]   --->   Operation 355 'trunc' 'tmp_213' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 356 [1/1] (0.00ns)   --->   "%adjSize = call i10 @_ssdm_op_PartSelect.i10.i11.i32.i32(i11 %i_i1, i32 1, i32 10)" [verify.c:25->poly.c:391]   --->   Operation 356 'partselect' 'adjSize' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 357 [1/1] (0.00ns)   --->   "%adjSize340_cast = zext i10 %adjSize to i16" [verify.c:25->poly.c:391]   --->   Operation 357 'zext' 'adjSize340_cast' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 358 [1/1] (0.00ns)   --->   "%adjSize340_cast_cast = zext i10 %adjSize to i14" [verify.c:25->poly.c:391]   --->   Operation 358 'zext' 'adjSize340_cast_cast' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 359 [1/1] (1.80ns)   --->   "%mem_index_gep = add i14 -7311, %adjSize340_cast_cast" [verify.c:25->poly.c:391]   --->   Operation 359 'add' 'mem_index_gep' <Predicate = (!exitcond_i1)> <Delay = 1.80> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 360 [1/1] (0.00ns)   --->   "%tmp_214 = trunc i14 %mem_index_gep to i10" [verify.c:25->poly.c:391]   --->   Operation 360 'trunc' 'tmp_214' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 361 [1/1] (1.79ns)   --->   "%addrCmp = icmp ult i14 %mem_index_gep, -6634" [verify.c:25->poly.c:391]   --->   Operation 361 'icmp' 'addrCmp' <Predicate = (!exitcond_i1)> <Delay = 1.79> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 362 [1/1] (1.74ns)   --->   "%gepindex = add i10 143, %tmp_214" [verify.c:25->poly.c:391]   --->   Operation 362 'add' 'gepindex' <Predicate = (!exitcond_i1)> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 363 [1/1] (1.06ns)   --->   "%gepindex2 = select i1 %addrCmp, i10 %gepindex, i10 -348" [verify.c:25->poly.c:391]   --->   Operation 363 'select' 'gepindex2' <Predicate = (!exitcond_i1)> <Delay = 1.06> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_55 : Operation 364 [1/1] (0.00ns)   --->   "%gepindex2_cast = zext i10 %gepindex2 to i64" [verify.c:25->poly.c:391]   --->   Operation 364 'zext' 'gepindex2_cast' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 365 [1/1] (0.00ns)   --->   "%temp_r_coeffs_addr_8 = getelementptr [677 x i16]* %f_coeffs, i64 0, i64 %gepindex2_cast" [verify.c:25->poly.c:391]   --->   Operation 365 'getelementptr' 'temp_r_coeffs_addr_8' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 366 [2/2] (2.77ns)   --->   "%temp_r_coeffs_load_7 = load i16* %temp_r_coeffs_addr_8, align 2" [verify.c:25->poly.c:391]   --->   Operation 366 'load' 'temp_r_coeffs_load_7' <Predicate = (!exitcond_i1)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_55 : Operation 367 [1/1] (1.84ns)   --->   "%mem_index_gep1 = add i16 -25316, %adjSize340_cast" [verify.c:25->poly.c:391]   --->   Operation 367 'add' 'mem_index_gep1' <Predicate = (!exitcond_i1)> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 368 [1/1] (0.00ns)   --->   "%tmp_232 = trunc i16 %mem_index_gep1 to i10" [verify.c:25->poly.c:391]   --->   Operation 368 'trunc' 'tmp_232' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 369 [1/1] (1.97ns)   --->   "%addrCmp1 = icmp ult i16 %mem_index_gep1, -24639" [verify.c:25->poly.c:391]   --->   Operation 369 'icmp' 'addrCmp1' <Predicate = (!exitcond_i1)> <Delay = 1.97> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 370 [1/1] (1.74ns)   --->   "%gepindex1 = add i10 -284, %tmp_232" [verify.c:25->poly.c:391]   --->   Operation 370 'add' 'gepindex1' <Predicate = (!exitcond_i1)> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 371 [1/1] (1.06ns)   --->   "%gepindex3 = select i1 %addrCmp1, i10 %gepindex1, i10 -348" [verify.c:25->poly.c:391]   --->   Operation 371 'select' 'gepindex3' <Predicate = (!exitcond_i1)> <Delay = 1.06> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_55 : Operation 372 [1/1] (0.00ns)   --->   "%gepindex2371_cast = zext i10 %gepindex3 to i64" [verify.c:25->poly.c:391]   --->   Operation 372 'zext' 'gepindex2371_cast' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 373 [1/1] (0.00ns)   --->   "%r_coeffs_addr_5 = getelementptr [677 x i16]* %r_coeffs, i64 0, i64 %gepindex2371_cast" [verify.c:25->poly.c:391]   --->   Operation 373 'getelementptr' 'r_coeffs_addr_5' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 374 [2/2] (2.77ns)   --->   "%r_coeffs_load_3 = load i16* %r_coeffs_addr_5, align 2" [verify.c:25->poly.c:391]   --->   Operation 374 'load' 'r_coeffs_load_3' <Predicate = (!exitcond_i1)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_55 : Operation 375 [1/1] (0.00ns)   --->   "%k_4 = call i15 @_ssdm_op_PartSelect.i15.i16.i32.i32(i16 %k_1, i32 1, i32 15)" [poly.c:393]   --->   Operation 375 'partselect' 'k_4' <Predicate = (exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 376 [1/1] (0.00ns)   --->   "%k_5 = zext i15 %k_4 to i16" [poly.c:393]   --->   Operation 376 'zext' 'k_5' <Predicate = (exitcond_i1)> <Delay = 0.00>
+ST_55 : Operation 377 [1/1] (0.00ns)   --->   "br label %.preheader12" [poly.c:387]   --->   Operation 377 'br' <Predicate = (exitcond_i1)> <Delay = 0.00>
+
+State 56 <SV = 11> <Delay = 7.84>
+ST_56 : Operation 378 [1/2] (2.77ns)   --->   "%temp_r_coeffs_load_7 = load i16* %temp_r_coeffs_addr_8, align 2" [verify.c:25->poly.c:391]   --->   Operation 378 'load' 'temp_r_coeffs_load_7' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_56 : Operation 379 [1/1] (0.00ns)   --->   "%start_pos = call i4 @_ssdm_op_BitConcatenate.i4.i1.i3(i1 %tmp_213, i3 0)" [verify.c:25->poly.c:391]   --->   Operation 379 'bitconcatenate' 'start_pos' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 380 [1/1] (0.00ns)   --->   "%end_pos = or i4 %start_pos, 7" [verify.c:25->poly.c:391]   --->   Operation 380 'or' 'end_pos' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 381 [1/1] (1.21ns)   --->   "%tmp_215 = icmp ugt i4 %start_pos, %end_pos" [verify.c:25->poly.c:391]   --->   Operation 381 'icmp' 'tmp_215' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 382 [1/1] (0.00ns)   --->   "%tmp_216 = zext i4 %start_pos to i5" [verify.c:25->poly.c:391]   --->   Operation 382 'zext' 'tmp_216' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 383 [1/1] (0.00ns)   --->   "%tmp_217 = zext i4 %end_pos to i5" [verify.c:25->poly.c:391]   --->   Operation 383 'zext' 'tmp_217' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 384 [1/1] (0.00ns) (grouped into LUT with out node tmp_228)   --->   "%tmp_218 = call i16 @llvm.part.select.i16(i16 %temp_r_coeffs_load_7, i32 15, i32 0)" [verify.c:25->poly.c:391]   --->   Operation 384 'partselect' 'tmp_218' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 385 [1/1] (1.49ns)   --->   "%tmp_219 = sub i5 %tmp_216, %tmp_217" [verify.c:25->poly.c:391]   --->   Operation 385 'sub' 'tmp_219' <Predicate = true> <Delay = 1.49> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 386 [1/1] (0.00ns) (grouped into LUT with out node tmp_228)   --->   "%tmp_220 = xor i5 %tmp_216, 15" [verify.c:25->poly.c:391]   --->   Operation 386 'xor' 'tmp_220' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 387 [1/1] (1.49ns)   --->   "%tmp_221 = sub i5 %tmp_217, %tmp_216" [verify.c:25->poly.c:391]   --->   Operation 387 'sub' 'tmp_221' <Predicate = true> <Delay = 1.49> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 388 [1/1] (0.00ns) (grouped into LUT with out node tmp_225)   --->   "%tmp_222 = select i1 %tmp_215, i5 %tmp_219, i5 %tmp_221" [verify.c:25->poly.c:391]   --->   Operation 388 'select' 'tmp_222' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_56 : Operation 389 [1/1] (0.00ns) (grouped into LUT with out node tmp_228)   --->   "%tmp_223 = select i1 %tmp_215, i16 %tmp_218, i16 %temp_r_coeffs_load_7" [verify.c:25->poly.c:391]   --->   Operation 389 'select' 'tmp_223' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_56 : Operation 390 [1/1] (0.00ns) (grouped into LUT with out node tmp_228)   --->   "%tmp_224 = select i1 %tmp_215, i5 %tmp_220, i5 %tmp_216" [verify.c:25->poly.c:391]   --->   Operation 390 'select' 'tmp_224' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_56 : Operation 391 [1/1] (1.54ns) (out node of the LUT)   --->   "%tmp_225 = sub i5 15, %tmp_222" [verify.c:25->poly.c:391]   --->   Operation 391 'sub' 'tmp_225' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 392 [1/1] (0.00ns) (grouped into LUT with out node tmp_228)   --->   "%tmp_226 = zext i5 %tmp_224 to i16" [verify.c:25->poly.c:391]   --->   Operation 392 'zext' 'tmp_226' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 393 [1/1] (2.98ns) (out node of the LUT)   --->   "%tmp_228 = lshr i16 %tmp_223, %tmp_226" [verify.c:25->poly.c:391]   --->   Operation 393 'lshr' 'tmp_228' <Predicate = true> <Delay = 2.98> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 394 [1/2] (2.77ns)   --->   "%r_coeffs_load_3 = load i16* %r_coeffs_addr_5, align 2" [verify.c:25->poly.c:391]   --->   Operation 394 'load' 'r_coeffs_load_3' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_56 : Operation 395 [1/1] (1.21ns)   --->   "%tmp_233 = icmp ugt i4 %start_pos, %end_pos" [verify.c:25->poly.c:391]   --->   Operation 395 'icmp' 'tmp_233' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 396 [1/1] (0.00ns)   --->   "%tmp_234 = zext i4 %start_pos to i5" [verify.c:25->poly.c:391]   --->   Operation 396 'zext' 'tmp_234' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 397 [1/1] (0.00ns)   --->   "%tmp_235 = zext i4 %end_pos to i5" [verify.c:25->poly.c:391]   --->   Operation 397 'zext' 'tmp_235' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 398 [1/1] (0.00ns) (grouped into LUT with out node tmp_246)   --->   "%tmp_236 = call i16 @llvm.part.select.i16(i16 %r_coeffs_load_3, i32 15, i32 0)" [verify.c:25->poly.c:391]   --->   Operation 398 'partselect' 'tmp_236' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 399 [1/1] (1.49ns)   --->   "%tmp_237 = sub i5 %tmp_234, %tmp_235" [verify.c:25->poly.c:391]   --->   Operation 399 'sub' 'tmp_237' <Predicate = true> <Delay = 1.49> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 400 [1/1] (0.00ns) (grouped into LUT with out node tmp_246)   --->   "%tmp_238 = xor i5 %tmp_234, 15" [verify.c:25->poly.c:391]   --->   Operation 400 'xor' 'tmp_238' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 401 [1/1] (1.49ns)   --->   "%tmp_239 = sub i5 %tmp_235, %tmp_234" [verify.c:25->poly.c:391]   --->   Operation 401 'sub' 'tmp_239' <Predicate = true> <Delay = 1.49> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 402 [1/1] (0.00ns) (grouped into LUT with out node tmp_243)   --->   "%tmp_240 = select i1 %tmp_233, i5 %tmp_237, i5 %tmp_239" [verify.c:25->poly.c:391]   --->   Operation 402 'select' 'tmp_240' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_56 : Operation 403 [1/1] (0.00ns) (grouped into LUT with out node tmp_246)   --->   "%tmp_241 = select i1 %tmp_233, i16 %tmp_236, i16 %r_coeffs_load_3" [verify.c:25->poly.c:391]   --->   Operation 403 'select' 'tmp_241' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_56 : Operation 404 [1/1] (0.00ns) (grouped into LUT with out node tmp_246)   --->   "%tmp_242 = select i1 %tmp_233, i5 %tmp_238, i5 %tmp_234" [verify.c:25->poly.c:391]   --->   Operation 404 'select' 'tmp_242' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_56 : Operation 405 [1/1] (1.54ns) (out node of the LUT)   --->   "%tmp_243 = sub i5 15, %tmp_240" [verify.c:25->poly.c:391]   --->   Operation 405 'sub' 'tmp_243' <Predicate = true> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 406 [1/1] (0.00ns) (grouped into LUT with out node tmp_246)   --->   "%tmp_244 = zext i5 %tmp_242 to i16" [verify.c:25->poly.c:391]   --->   Operation 406 'zext' 'tmp_244' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 407 [1/1] (0.00ns) (grouped into LUT with out node tmp_248)   --->   "%tmp_245 = zext i5 %tmp_243 to i16" [verify.c:25->poly.c:391]   --->   Operation 407 'zext' 'tmp_245' <Predicate = true> <Delay = 0.00>
+ST_56 : Operation 408 [1/1] (2.98ns) (out node of the LUT)   --->   "%tmp_246 = lshr i16 %tmp_241, %tmp_244" [verify.c:25->poly.c:391]   --->   Operation 408 'lshr' 'tmp_246' <Predicate = true> <Delay = 2.98> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 409 [1/1] (0.00ns) (grouped into LUT with out node tmp_248)   --->   "%tmp_247 = lshr i16 -1, %tmp_245" [verify.c:25->poly.c:391]   --->   Operation 409 'lshr' 'tmp_247' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 410 [1/1] (2.08ns) (out node of the LUT)   --->   "%tmp_248 = and i16 %tmp_246, %tmp_247" [verify.c:25->poly.c:391]   --->   Operation 410 'and' 'tmp_248' <Predicate = true> <Delay = 2.08> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 411 [1/1] (0.00ns)   --->   "%tmp_249 = trunc i16 %tmp_248 to i8" [verify.c:25->poly.c:391]   --->   Operation 411 'trunc' 'tmp_249' <Predicate = true> <Delay = 0.00>
+
+State 57 <SV = 12> <Delay = 8.34>
+ST_57 : Operation 412 [1/1] (0.00ns) (grouped into LUT with out node tmp_386_i)   --->   "%tmp_227 = zext i5 %tmp_225 to i16" [verify.c:25->poly.c:391]   --->   Operation 412 'zext' 'tmp_227' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 413 [1/1] (0.00ns) (grouped into LUT with out node tmp_386_i)   --->   "%tmp_229 = lshr i16 -1, %tmp_227" [verify.c:25->poly.c:391]   --->   Operation 413 'lshr' 'tmp_229' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 414 [1/1] (0.00ns) (grouped into LUT with out node tmp_386_i)   --->   "%tmp_230 = and i16 %tmp_228, %tmp_229" [verify.c:25->poly.c:391]   --->   Operation 414 'and' 'tmp_230' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 415 [1/1] (0.00ns) (grouped into LUT with out node tmp_386_i)   --->   "%tmp_231 = trunc i16 %tmp_230 to i8" [verify.c:25->poly.c:391]   --->   Operation 415 'trunc' 'tmp_231' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 416 [1/1] (0.00ns) (grouped into LUT with out node tmp_386_i)   --->   "%tmp_i1 = xor i8 %tmp_249, %tmp_231" [verify.c:25->poly.c:391]   --->   Operation 416 'xor' 'tmp_i1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 417 [1/1] (0.00ns) (grouped into LUT with out node tmp_386_i)   --->   "%tmp_i1_56 = and i8 %tmp_i1, %b_assign_1_cast" [verify.c:25->poly.c:391]   --->   Operation 417 'and' 'tmp_i1_56' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 418 [1/1] (2.08ns) (out node of the LUT)   --->   "%tmp_386_i = xor i8 %tmp_249, %tmp_i1_56" [verify.c:25->poly.c:391]   --->   Operation 418 'xor' 'tmp_386_i' <Predicate = true> <Delay = 2.08> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 419 [1/1] (1.21ns)   --->   "%tmp_250 = icmp ugt i4 %start_pos, %end_pos" [verify.c:25->poly.c:391]   --->   Operation 419 'icmp' 'tmp_250' <Predicate = true> <Delay = 1.21> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 420 [1/1] (0.00ns)   --->   "%tmp_251 = zext i4 %start_pos to i5" [verify.c:25->poly.c:391]   --->   Operation 420 'zext' 'tmp_251' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 421 [1/1] (0.00ns)   --->   "%tmp_252 = zext i4 %end_pos to i5" [verify.c:25->poly.c:391]   --->   Operation 421 'zext' 'tmp_252' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 422 [1/1] (0.00ns) (grouped into LUT with out node tmp_262)   --->   "%tmp_253 = zext i8 %tmp_386_i to i16" [verify.c:25->poly.c:391]   --->   Operation 422 'zext' 'tmp_253' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 423 [1/1] (0.00ns) (grouped into LUT with out node tmp_262)   --->   "%tmp_254 = xor i5 %tmp_251, 15" [verify.c:25->poly.c:391]   --->   Operation 423 'xor' 'tmp_254' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 424 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_255 = select i1 %tmp_250, i5 %tmp_251, i5 %tmp_252" [verify.c:25->poly.c:391]   --->   Operation 424 'select' 'tmp_255' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_57 : Operation 425 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_256 = select i1 %tmp_250, i5 %tmp_252, i5 %tmp_251" [verify.c:25->poly.c:391]   --->   Operation 425 'select' 'tmp_256' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_57 : Operation 426 [1/1] (0.00ns) (grouped into LUT with out node tmp_262)   --->   "%tmp_257 = select i1 %tmp_250, i5 %tmp_254, i5 %tmp_251" [verify.c:25->poly.c:391]   --->   Operation 426 'select' 'tmp_257' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_57 : Operation 427 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_258 = xor i5 %tmp_255, 15" [verify.c:25->poly.c:391]   --->   Operation 427 'xor' 'tmp_258' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 428 [1/1] (0.00ns) (grouped into LUT with out node tmp_262)   --->   "%tmp_259 = zext i5 %tmp_257 to i16" [verify.c:25->poly.c:391]   --->   Operation 428 'zext' 'tmp_259' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 429 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_260 = zext i5 %tmp_256 to i16" [verify.c:25->poly.c:391]   --->   Operation 429 'zext' 'tmp_260' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 430 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_261 = zext i5 %tmp_258 to i16" [verify.c:25->poly.c:391]   --->   Operation 430 'zext' 'tmp_261' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 431 [1/1] (2.42ns) (out node of the LUT)   --->   "%tmp_262 = shl i16 %tmp_253, %tmp_259" [verify.c:25->poly.c:391]   --->   Operation 431 'shl' 'tmp_262' <Predicate = true> <Delay = 2.42> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 432 [1/1] (0.00ns) (grouped into LUT with out node tmp_267)   --->   "%tmp_263 = call i16 @llvm.part.select.i16(i16 %tmp_262, i32 15, i32 0)" [verify.c:25->poly.c:391]   --->   Operation 432 'partselect' 'tmp_263' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 433 [1/1] (0.00ns) (grouped into LUT with out node tmp_267)   --->   "%tmp_264 = select i1 %tmp_250, i16 %tmp_263, i16 %tmp_262" [verify.c:25->poly.c:391]   --->   Operation 433 'select' 'tmp_264' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.06> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_57 : Operation 434 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_265 = shl i16 -1, %tmp_260" [verify.c:25->poly.c:391]   --->   Operation 434 'shl' 'tmp_265' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 435 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_266 = lshr i16 -1, %tmp_261" [verify.c:25->poly.c:391]   --->   Operation 435 'lshr' 'tmp_266' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 436 [1/1] (2.08ns) (out node of the LUT)   --->   "%p_demorgan = and i16 %tmp_265, %tmp_266" [verify.c:25->poly.c:391]   --->   Operation 436 'and' 'p_demorgan' <Predicate = true> <Delay = 2.08> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 437 [1/1] (1.06ns) (out node of the LUT)   --->   "%tmp_267 = and i16 %tmp_264, %p_demorgan" [verify.c:25->poly.c:391]   --->   Operation 437 'and' 'tmp_267' <Predicate = true> <Delay = 1.06> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 438 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBRAMWithByteEnable([677 x i16]* %r_coeffs)" [verify.c:25->poly.c:391]   --->   Operation 438 'specbramwithbyteenable' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 439 [1/1] (0.00ns)   --->   "%tmp_268 = zext i1 %tmp_213 to i2" [verify.c:25->poly.c:391]   --->   Operation 439 'zext' 'tmp_268' <Predicate = true> <Delay = 0.00>
+ST_57 : Operation 440 [1/1] (1.49ns)   --->   "%mask = shl i2 1, %tmp_268" [verify.c:25->poly.c:391]   --->   Operation 440 'shl' 'mask' <Predicate = true> <Delay = 1.49> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.49> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 441 [1/1] (2.77ns)   --->   "call void @_ssdm_op_Write.bram.i16(i16* %r_coeffs_addr_5, i16 %tmp_267, i2 %mask)" [verify.c:25->poly.c:391]   --->   Operation 441 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_57 : Operation 442 [1/1] (0.00ns)   --->   "br label %25" [verify.c:24->poly.c:391]   --->   Operation 442 'br' <Predicate = true> <Delay = 0.00>
+
+State 58 <SV = 9> <Delay = 2.77>
+ST_58 : Operation 443 [1/1] (0.00ns)   --->   "%i_8 = phi i10 [ %i_16, %27 ], [ 0, %.preheader.preheader ]"   --->   Operation 443 'phi' 'i_8' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 444 [1/1] (1.43ns)   --->   "%exitcond = icmp eq i10 %i_8, -347" [poly.c:397]   --->   Operation 444 'icmp' 'exitcond' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 445 [1/1] (0.00ns)   --->   "%empty_57 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 445 'speclooptripcount' 'empty_57' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 446 [1/1] (1.74ns)   --->   "%i_16 = add i10 %i_8, 1" [poly.c:397]   --->   Operation 446 'add' 'i_16' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 447 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %28, label %27" [poly.c:397]   --->   Operation 447 'br' <Predicate = true> <Delay = 0.00>
+ST_58 : Operation 448 [1/1] (0.00ns)   --->   "%tmp_186 = zext i10 %i_8 to i64" [poly.c:398]   --->   Operation 448 'zext' 'tmp_186' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_58 : Operation 449 [1/1] (0.00ns)   --->   "%r_coeffs_addr_3 = getelementptr [677 x i16]* %r_coeffs, i64 0, i64 %tmp_186" [poly.c:398]   --->   Operation 449 'getelementptr' 'r_coeffs_addr_3' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_58 : Operation 450 [2/2] (2.77ns)   --->   "%r_coeffs_load = load i16* %r_coeffs_addr_3, align 2" [poly.c:398]   --->   Operation 450 'load' 'r_coeffs_load' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_58 : Operation 451 [2/2] (2.77ns)   --->   "%r_coeffs_load_1 = load i16* %r_coeffs_addr_2, align 2" [poly.c:398]   --->   Operation 451 'load' 'r_coeffs_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_58 : Operation 452 [1/1] (0.00ns)   --->   "ret void" [poly.c:399]   --->   Operation 452 'ret' <Predicate = (exitcond)> <Delay = 0.00>
+
+State 59 <SV = 10> <Delay = 4.61>
+ST_59 : Operation 453 [1/2] (2.77ns)   --->   "%r_coeffs_load = load i16* %r_coeffs_addr_3, align 2" [poly.c:398]   --->   Operation 453 'load' 'r_coeffs_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_59 : Operation 454 [1/2] (2.77ns)   --->   "%r_coeffs_load_1 = load i16* %r_coeffs_addr_2, align 2" [poly.c:398]   --->   Operation 454 'load' 'r_coeffs_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_59 : Operation 455 [1/1] (0.00ns) (grouped into LUT with out node tmp_187)   --->   "%tmp_211 = shl i16 %r_coeffs_load_1, 1" [poly.c:398]   --->   Operation 455 'shl' 'tmp_211' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 456 [1/1] (1.84ns) (out node of the LUT)   --->   "%tmp_187 = add i16 %r_coeffs_load, %tmp_211" [poly.c:398]   --->   Operation 456 'add' 'tmp_187' <Predicate = true> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 60 <SV = 11> <Delay = 8.75>
+ST_60 : Operation 457 [1/1] (8.75ns)   --->   "%tmp_188 = call fastcc zeroext i16 @mod3(i16 zeroext %tmp_187)" [poly.c:398]   --->   Operation 457 'call' 'tmp_188' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 61 <SV = 12> <Delay = 2.77>
+ST_61 : Operation 458 [1/1] (2.77ns)   --->   "call void @_ssdm_op_Write.bram.i16(i16* %r_coeffs_addr_3, i16 %tmp_188, i2 -1)" [poly.c:398]   --->   Operation 458 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_61 : Operation 459 [1/1] (0.00ns)   --->   "br label %.preheader" [poly.c:397]   --->   Operation 459 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', poly.c:339) [9]  (1.35 ns)
+
+ <State 2>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:339) [9]  (0 ns)
+	'getelementptr' operation ('b_coeffs_addr_1', poly.c:340) [15]  (0 ns)
+	'store' operation (poly.c:340) of constant 0 on array 'a.coeffs', poly.c:335 [16]  (2.77 ns)
+
+ <State 3>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:344) [24]  (0 ns)
+	'getelementptr' operation ('c_coeffs_addr', poly.c:345) [31]  (0 ns)
+	'store' operation (poly.c:345) of constant 0 on array 'b.coeffs', poly.c:335 [32]  (2.77 ns)
+
+ <State 4>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:348) [37]  (0 ns)
+	'getelementptr' operation ('a_coeffs_addr', poly.c:349) [44]  (0 ns)
+	'load' operation ('a_coeffs_load', poly.c:349) on array 'a_coeffs' [45]  (2.77 ns)
+
+ <State 5>: 5.54ns
+The critical path consists of the following:
+	'load' operation ('a_coeffs_load', poly.c:349) on array 'a_coeffs' [45]  (2.77 ns)
+	'store' operation (poly.c:349) of variable 'a_coeffs_load', poly.c:349 on array 'f.coeffs', poly.c:335 [47]  (2.77 ns)
+
+ <State 6>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:352) [52]  (0 ns)
+	'getelementptr' operation ('g_coeffs_addr_1', poly.c:353) [59]  (0 ns)
+	'store' operation (poly.c:353) of constant 1 on array 'g.coeffs', poly.c:335 [60]  (2.77 ns)
+
+ <State 7>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('g_coeffs_load', poly.c:357) on array 'g.coeffs', poly.c:335 [79]  (2.77 ns)
+
+ <State 8>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('g_coeffs_load', poly.c:357) on array 'g.coeffs', poly.c:335 [79]  (2.77 ns)
+
+ <State 9>: 6.35ns
+The critical path consists of the following:
+	'mul' operation of DSP[81] ('tmp_174', poly.c:357) [81]  (6.35 ns)
+
+ <State 10>: 8.75ns
+The critical path consists of the following:
+	'shl' operation ('tmp_207', poly.c:357) [82]  (0 ns)
+	'call' operation ('tmp_175', poly.c:357) to 'mod3' [83]  (8.75 ns)
+
+ <State 11>: 2.65ns
+The critical path consists of the following:
+	'sub' operation ('tmp_176', poly.c:358) [89]  (1.84 ns)
+	'and' operation ('swap', poly.c:358) [94]  (0 ns)
+	'select' operation ('tmp_i3_cast', poly.c:183->poly.c:360) [95]  (0.813 ns)
+
+ <State 12>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:181->poly.c:360) [98]  (0 ns)
+	'getelementptr' operation ('temp_r_coeffs_addr_3', poly.c:183->poly.c:360) [105]  (0 ns)
+	'load' operation ('temp_r_coeffs_load_3', poly.c:183->poly.c:360) on array 'f.coeffs', poly.c:335 [106]  (2.77 ns)
+
+ <State 13>: 7.16ns
+The critical path consists of the following:
+	'load' operation ('temp_r_coeffs_load_3', poly.c:183->poly.c:360) on array 'f.coeffs', poly.c:335 [106]  (2.77 ns)
+	'xor' operation ('tmp_362_i', poly.c:183->poly.c:360) [109]  (0 ns)
+	'and' operation ('t', poly.c:183->poly.c:360) [110]  (0.808 ns)
+	'xor' operation ('tmp_363_i', poly.c:184->poly.c:360) [111]  (0.808 ns)
+	'store' operation (poly.c:184->poly.c:360) of variable 'tmp_363_i', poly.c:184->poly.c:360 on array 'f.coeffs', poly.c:335 [112]  (2.77 ns)
+
+ <State 14>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:181->poly.c:361) [119]  (0 ns)
+	'getelementptr' operation ('b_coeffs_addr_3', poly.c:183->poly.c:361) [126]  (0 ns)
+	'load' operation ('b_coeffs_load_1', poly.c:183->poly.c:361) on array 'a.coeffs', poly.c:335 [127]  (2.77 ns)
+
+ <State 15>: 7.16ns
+The critical path consists of the following:
+	'load' operation ('b_coeffs_load_1', poly.c:183->poly.c:361) on array 'a.coeffs', poly.c:335 [127]  (2.77 ns)
+	'xor' operation ('tmp_362_i1', poly.c:183->poly.c:361) [130]  (0 ns)
+	'and' operation ('t', poly.c:183->poly.c:361) [131]  (0.808 ns)
+	'xor' operation ('tmp_363_i1', poly.c:184->poly.c:361) [132]  (0.808 ns)
+	'store' operation (poly.c:184->poly.c:361) of variable 'tmp_363_i1', poly.c:184->poly.c:361 on array 'a.coeffs', poly.c:335 [133]  (2.77 ns)
+
+ <State 16>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:366) [149]  (0 ns)
+	'getelementptr' operation ('g_coeffs_addr_3', poly.c:366) [158]  (0 ns)
+	'load' operation ('g_coeffs_load_2', poly.c:366) on array 'g.coeffs', poly.c:335 [159]  (2.77 ns)
+
+ <State 17>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('temp_r_coeffs_load_4', poly.c:366) on array 'f.coeffs', poly.c:335 [157]  (2.77 ns)
+
+ <State 18>: 6.35ns
+The critical path consists of the following:
+	'mul' operation of DSP[161] ('tmp_195', poly.c:366) [160]  (2.82 ns)
+	'add' operation of DSP[161] ('tmp_196', poly.c:366) [161]  (3.53 ns)
+
+ <State 19>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_197', poly.c:366) to 'mod3' [162]  (8.75 ns)
+
+ <State 20>: 2.77ns
+The critical path consists of the following:
+	'store' operation (poly.c:366) of variable 'tmp_197', poly.c:366 on array 'f.coeffs', poly.c:335 [163]  (2.77 ns)
+
+ <State 21>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:367) [168]  (0 ns)
+	'getelementptr' operation ('c_coeffs_addr_3', poly.c:367) [177]  (0 ns)
+	'load' operation ('c_coeffs_load_2', poly.c:367) on array 'b.coeffs', poly.c:335 [178]  (2.77 ns)
+
+ <State 22>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('b_coeffs_load_2', poly.c:367) on array 'a.coeffs', poly.c:335 [176]  (2.77 ns)
+
+ <State 23>: 6.35ns
+The critical path consists of the following:
+	'mul' operation of DSP[180] ('tmp_199', poly.c:367) [179]  (2.82 ns)
+	'add' operation of DSP[180] ('tmp_200', poly.c:367) [180]  (3.53 ns)
+
+ <State 24>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_201', poly.c:367) to 'mod3' [181]  (8.75 ns)
+
+ <State 25>: 2.77ns
+The critical path consists of the following:
+	'store' operation (poly.c:367) of variable 'tmp_201', poly.c:367 on array 'a.coeffs', poly.c:335 [182]  (2.77 ns)
+
+ <State 26>: 4.52ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:193->poly.c:369) [188]  (0 ns)
+	'add' operation ('tmp_113_i', poly.c:194->poly.c:369) [196]  (1.75 ns)
+	'getelementptr' operation ('temp_r_coeffs_addr_7', poly.c:194->poly.c:369) [198]  (0 ns)
+	'load' operation ('temp_r_coeffs_load_6', poly.c:194->poly.c:369) on array 'f.coeffs', poly.c:335 [199]  (2.77 ns)
+
+ <State 27>: 6.61ns
+The critical path consists of the following:
+	'load' operation ('temp_r_coeffs_load_5', poly.c:194->poly.c:369) on array 'f.coeffs', poly.c:335 [195]  (2.77 ns)
+	'select' operation ('tmp_115_i', poly.c:194->poly.c:369) [200]  (1.06 ns)
+	'store' operation (poly.c:194->poly.c:369) of variable 'tmp_115_i', poly.c:194->poly.c:369 on array 'f.coeffs', poly.c:335 [201]  (2.77 ns)
+
+ <State 28>: 6.35ns
+The critical path consists of the following:
+	'load' operation ('temp_r_coeffs_load_2', poly.c:195->poly.c:369) on array 'f.coeffs', poly.c:335 [205]  (2.77 ns)
+	'and' operation ('tmp_111_i', poly.c:195->poly.c:369) [207]  (0.808 ns)
+	'store' operation (poly.c:195->poly.c:369) of variable 'tmp_111_i', poly.c:195->poly.c:369 on array 'f.coeffs', poly.c:335 [208]  (2.77 ns)
+
+ <State 29>: 4.52ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:202->poly.c:370) [211]  (0 ns)
+	'sub' operation ('tmp_106_i', poly.c:203->poly.c:370) [216]  (1.75 ns)
+	'getelementptr' operation ('c_coeffs_addr_4', poly.c:203->poly.c:370) [218]  (0 ns)
+	'load' operation ('c_coeffs_load_3', poly.c:203->poly.c:370) on array 'b.coeffs', poly.c:335 [219]  (2.77 ns)
+
+ <State 30>: 6.61ns
+The critical path consists of the following:
+	'load' operation ('c_coeffs_load_3', poly.c:203->poly.c:370) on array 'b.coeffs', poly.c:335 [219]  (2.77 ns)
+	'select' operation ('tmp_110_i', poly.c:203->poly.c:370) [224]  (1.06 ns)
+	'store' operation (poly.c:203->poly.c:370) of variable 'tmp_110_i', poly.c:203->poly.c:370 on array 'b.coeffs', poly.c:335 [225]  (2.77 ns)
+
+ <State 31>: 6.35ns
+The critical path consists of the following:
+	'load' operation ('c_coeffs_load', poly.c:204->poly.c:370) on array 'b.coeffs', poly.c:335 [229]  (2.77 ns)
+	'and' operation ('tmp_105_i', poly.c:204->poly.c:370) [230]  (0.808 ns)
+	'store' operation (poly.c:204->poly.c:370) of variable 'tmp_105_i', poly.c:204->poly.c:370 on array 'b.coeffs', poly.c:335 [231]  (2.77 ns)
+
+ <State 32>: 3.53ns
+The critical path consists of the following:
+	'sub' operation ('tmp_173', poly.c:378) [240]  (1.76 ns)
+	'select' operation ('tmp_240_cast_cast', poly.c:378) [242]  (0 ns)
+	'sub' operation ('k', poly.c:378) [243]  (1.76 ns)
+
+ <State 33>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:384) [247]  (0 ns)
+	'getelementptr' operation ('b_coeffs_addr_2', poly.c:385) [254]  (0 ns)
+	'load' operation ('b_coeffs_load', poly.c:385) on array 'a.coeffs', poly.c:335 [255]  (2.77 ns)
+
+ <State 34>: 2.77ns
+The critical path consists of the following:
+	'load' operation ('b_coeffs_load', poly.c:385) on array 'a.coeffs', poly.c:335 [255]  (2.77 ns)
+
+ <State 35>: 6.35ns
+The critical path consists of the following:
+	'mul' operation of DSP[256] ('tmp_178', poly.c:385) [256]  (6.35 ns)
+
+ <State 36>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_179', poly.c:385) to 'mod3' [257]  (8.75 ns)
+
+ <State 37>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('r_coeffs_addr', poly.c:385) [258]  (0 ns)
+	'store' operation (poly.c:385) of constant <constant:_ssdm_op_Write.bram.i16> on array 'r_coeffs' [259]  (2.77 ns)
+
+ <State 38>: 1.89ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:387) [265]  (0 ns)
+	'shl' operation ('tmp_180', poly.c:389) [272]  (1.89 ns)
+
+ <State 39>: 4.6ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', poly.c:388) [276]  (0 ns)
+	'add' operation ('tmp_189', poly.c:389) [283]  (1.75 ns)
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 40>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 41>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 42>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 43>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 44>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 45>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 46>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 47>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 48>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 49>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 50>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 51>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 52>: 2.85ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+
+ <State 53>: 5.62ns
+The critical path consists of the following:
+	'urem' operation ('tmp_190', poly.c:389) [284]  (2.85 ns)
+	'getelementptr' operation ('r_coeffs_addr_4', poly.c:389) [286]  (0 ns)
+	'load' operation ('r_coeffs_load_2', poly.c:389) on array 'r_coeffs' [287]  (2.77 ns)
+
+ <State 54>: 5.54ns
+The critical path consists of the following:
+	'load' operation ('r_coeffs_load_2', poly.c:389) on array 'r_coeffs' [287]  (2.77 ns)
+	'store' operation (poly.c:389) of variable 'r_coeffs_load_2', poly.c:389 on array 'f.coeffs', poly.c:335 [290]  (2.77 ns)
+
+ <State 55>: 7.65ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', verify.c:24->poly.c:391) [297]  (0 ns)
+	'add' operation ('mem_index_gep1', verify.c:25->poly.c:391) [334]  (1.84 ns)
+	'icmp' operation ('addrCmp1', verify.c:25->poly.c:391) [336]  (1.98 ns)
+	'select' operation ('gepindex3', verify.c:25->poly.c:391) [338]  (1.06 ns)
+	'getelementptr' operation ('r_coeffs_addr_5', verify.c:25->poly.c:391) [340]  (0 ns)
+	'load' operation ('r_coeffs_load_3', verify.c:25->poly.c:391) on array 'r_coeffs' [341]  (2.77 ns)
+
+ <State 56>: 7.84ns
+The critical path consists of the following:
+	'load' operation ('r_coeffs_load_3', verify.c:25->poly.c:391) on array 'r_coeffs' [341]  (2.77 ns)
+	'select' operation ('tmp_241', verify.c:25->poly.c:391) [350]  (0 ns)
+	'lshr' operation ('tmp_246', verify.c:25->poly.c:391) [355]  (2.99 ns)
+	'and' operation ('tmp_248', verify.c:25->poly.c:391) [357]  (2.08 ns)
+
+ <State 57>: 8.34ns
+The critical path consists of the following:
+	'lshr' operation ('tmp_229', verify.c:25->poly.c:391) [331]  (0 ns)
+	'and' operation ('tmp_230', verify.c:25->poly.c:391) [332]  (0 ns)
+	'xor' operation ('tmp_i1', verify.c:25->poly.c:391) [359]  (0 ns)
+	'and' operation ('tmp_i1_56', verify.c:25->poly.c:391) [360]  (0 ns)
+	'xor' operation ('tmp_386_i', verify.c:25->poly.c:391) [361]  (2.08 ns)
+	'shl' operation ('tmp_262', verify.c:25->poly.c:391) [374]  (2.42 ns)
+	'select' operation ('tmp_264', verify.c:25->poly.c:391) [376]  (0 ns)
+	'and' operation ('tmp_267', verify.c:25->poly.c:391) [380]  (1.06 ns)
+	'store' operation (verify.c:25->poly.c:391) of constant <constant:_ssdm_op_Write.bram.i16> on array 'r_coeffs' [384]  (2.77 ns)
+
+ <State 58>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:397) [394]  (0 ns)
+	'getelementptr' operation ('r_coeffs_addr_3', poly.c:398) [401]  (0 ns)
+	'load' operation ('r_coeffs_load', poly.c:398) on array 'r_coeffs' [402]  (2.77 ns)
+
+ <State 59>: 4.61ns
+The critical path consists of the following:
+	'load' operation ('r_coeffs_load', poly.c:398) on array 'r_coeffs' [402]  (2.77 ns)
+	'add' operation ('tmp_187', poly.c:398) [405]  (1.84 ns)
+
+ <State 60>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_188', poly.c:398) to 'mod3' [406]  (8.75 ns)
+
+ <State 61>: 2.77ns
+The critical path consists of the following:
+	'store' operation (poly.c:398) of constant <constant:_ssdm_op_Write.bram.i16> on array 'r_coeffs' [407]  (2.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

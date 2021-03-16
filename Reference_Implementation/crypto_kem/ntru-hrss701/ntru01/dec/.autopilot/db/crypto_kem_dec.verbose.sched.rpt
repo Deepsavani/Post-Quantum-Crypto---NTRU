@@ -1,0 +1,278 @@
+
+
+================================================================
+== Vivado HLS Report for 'crypto_kem_dec'
+================================================================
+* Date:           Sun Aug 23 20:04:28 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru01
+* Solution:       dec
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.122|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+---------+-------+---------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |  min  |   max   |  min  |   max   |   Type  |
+    +-------+---------+-------+---------+---------+
+    |  50999|  8883599|  50999|  8883599|   none  |
+    +-------+---------+-------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    64|    64|         2|          -|          -|    32|    no    |
+        |- Loop 2  |  2276|  2276|         2|          -|          -|  1138|    no    |
+        |- Loop 3  |    64|    64|         2|          -|          -|    32|    no    |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / (!exitcond1)
+	7  / (exitcond1)
+6 --> 
+	5  / true
+7 --> 
+	8  / (!exitcond)
+	9  / (exitcond)
+8 --> 
+	7  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / (!exitcond_i)
+11 --> 
+	10  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%rm = alloca [280 x i8], align 16" [kem.c:39]   --->   Operation 12 'alloca' 'rm' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%buf = alloca [1170 x i8], align 16" [kem.c:40]   --->   Operation 13 'alloca' 'buf' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_1 : Operation 14 [2/2] (0.00ns)   --->   "%fail = call fastcc i1 @owcpa_dec([280 x i8]* %rm, [1138 x i8]* %c, [1450 x i8]* %sk) nounwind" [kem.c:43]   --->   Operation 14 'call' 'fail' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 15 [1/2] (0.00ns)   --->   "%fail = call fastcc i1 @owcpa_dec([280 x i8]* %rm, [1138 x i8]* %c, [1450 x i8]* %sk) nounwind" [kem.c:43]   --->   Operation 15 'call' 'fail' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 16 [2/2] (0.00ns)   --->   "call fastcc void @sha3_256.1([32 x i8]* %k, [280 x i8]* %rm) nounwind" [kem.c:47]   --->   Operation 16 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.35>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i8]* %k) nounwind, !map !191"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1138 x i8]* %c) nounwind, !map !195"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1450 x i8]* %sk) nounwind, !map !201"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !207"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @crypto_kem_dec_str) nounwind"   --->   Operation 21 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/2] (0.00ns)   --->   "call fastcc void @sha3_256.1([32 x i8]* %k, [280 x i8]* %rm) nounwind" [kem.c:47]   --->   Operation 22 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 23 [1/1] (1.35ns)   --->   "br label %1" [kem.c:50]   --->   Operation 23 'br' <Predicate = true> <Delay = 1.35>
+
+State 5 <SV = 4> <Delay = 4.53>
+ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%i = phi i6 [ 0, %0 ], [ %i_33, %2 ]"   --->   Operation 24 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 25 [1/1] (0.00ns)   --->   "%i_cast4 = zext i6 %i to i11" [kem.c:50]   --->   Operation 25 'zext' 'i_cast4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 26 [1/1] (1.22ns)   --->   "%exitcond1 = icmp eq i6 %i, -32" [kem.c:50]   --->   Operation 26 'icmp' 'exitcond1' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind"   --->   Operation 27 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (1.60ns)   --->   "%i_33 = add i6 %i, 1" [kem.c:50]   --->   Operation 28 'add' 'i_33' <Predicate = true> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "br i1 %exitcond1, label %.preheader.preheader, label %2" [kem.c:50]   --->   Operation 29 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (1.76ns)   --->   "%tmp = add i11 %i_cast4, -630" [kem.c:51]   --->   Operation 30 'add' 'tmp' <Predicate = (!exitcond1)> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_s = zext i11 %tmp to i64" [kem.c:51]   --->   Operation 31 'zext' 'tmp_s' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "%sk_addr = getelementptr [1450 x i8]* %sk, i64 0, i64 %tmp_s" [kem.c:51]   --->   Operation 32 'getelementptr' 'sk_addr' <Predicate = (!exitcond1)> <Delay = 0.00>
+ST_5 : Operation 33 [2/2] (2.77ns)   --->   "%sk_load = load i8* %sk_addr, align 1" [kem.c:51]   --->   Operation 33 'load' 'sk_load' <Predicate = (!exitcond1)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_5 : Operation 34 [1/1] (1.35ns)   --->   "br label %.preheader" [kem.c:52]   --->   Operation 34 'br' <Predicate = (exitcond1)> <Delay = 1.35>
+
+State 6 <SV = 5> <Delay = 5.54>
+ST_6 : Operation 35 [1/2] (2.77ns)   --->   "%sk_load = load i8* %sk_addr, align 1" [kem.c:51]   --->   Operation 35 'load' 'sk_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_258 = zext i6 %i to i64" [kem.c:51]   --->   Operation 36 'zext' 'tmp_258' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%buf_addr = getelementptr inbounds [1170 x i8]* %buf, i64 0, i64 %tmp_258" [kem.c:51]   --->   Operation 37 'getelementptr' 'buf_addr' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (2.77ns)   --->   "store i8 %sk_load, i8* %buf_addr, align 1" [kem.c:51]   --->   Operation 38 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "br label %1" [kem.c:50]   --->   Operation 39 'br' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 5> <Delay = 2.77>
+ST_7 : Operation 40 [1/1] (0.00ns)   --->   "%i_1 = phi i11 [ %i_34, %3 ], [ 0, %.preheader.preheader ]"   --->   Operation 40 'phi' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 41 [1/1] (1.52ns)   --->   "%exitcond = icmp eq i11 %i_1, -910" [kem.c:52]   --->   Operation 41 'icmp' 'exitcond' <Predicate = true> <Delay = 1.52> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%empty_61 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1138, i64 1138, i64 1138) nounwind"   --->   Operation 42 'speclooptripcount' 'empty_61' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (1.76ns)   --->   "%i_34 = add i11 %i_1, 1" [kem.c:52]   --->   Operation 43 'add' 'i_34' <Predicate = true> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %4, label %3" [kem.c:52]   --->   Operation 44 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_259 = zext i11 %i_1 to i64" [kem.c:53]   --->   Operation 45 'zext' 'tmp_259' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%c_addr = getelementptr [1138 x i8]* %c, i64 0, i64 %tmp_259" [kem.c:53]   --->   Operation 46 'getelementptr' 'c_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_7 : Operation 47 [2/2] (2.77ns)   --->   "%c_load = load i8* %c_addr, align 1" [kem.c:53]   --->   Operation 47 'load' 'c_load' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_7 : Operation 48 [2/2] (0.00ns)   --->   "call fastcc void @sha3_256([280 x i8]* %rm, [1170 x i8]* %buf) nounwind" [kem.c:54]   --->   Operation 48 'call' <Predicate = (exitcond)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 6> <Delay = 5.54>
+ST_8 : Operation 49 [1/2] (2.77ns)   --->   "%c_load = load i8* %c_addr, align 1" [kem.c:53]   --->   Operation 49 'load' 'c_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 50 [1/1] (1.76ns)   --->   "%cmp_0_sum = add i11 %i_1, 32" [kem.c:53]   --->   Operation 50 'add' 'cmp_0_sum' <Predicate = true> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 51 [1/1] (0.00ns)   --->   "%cmp_0_sum_cast = zext i11 %cmp_0_sum to i64" [kem.c:53]   --->   Operation 51 'zext' 'cmp_0_sum_cast' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 52 [1/1] (0.00ns)   --->   "%buf_addr_1 = getelementptr inbounds [1170 x i8]* %buf, i64 0, i64 %cmp_0_sum_cast" [kem.c:53]   --->   Operation 52 'getelementptr' 'buf_addr_1' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 53 [1/1] (2.77ns)   --->   "store i8 %c_load, i8* %buf_addr_1, align 1" [kem.c:53]   --->   Operation 53 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_8 : Operation 54 [1/1] (0.00ns)   --->   "br label %.preheader" [kem.c:52]   --->   Operation 54 'br' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 6> <Delay = 1.35>
+ST_9 : Operation 55 [1/2] (0.00ns)   --->   "call fastcc void @sha3_256([280 x i8]* %rm, [1170 x i8]* %buf) nounwind" [kem.c:54]   --->   Operation 55 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 56 [1/1] (0.81ns)   --->   "%b_assign_1 = select i1 %fail, i8 -1, i8 0" [verify.c:23->kem.c:56]   --->   Operation 56 'select' 'b_assign_1' <Predicate = true> <Delay = 0.81> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_9 : Operation 57 [1/1] (1.35ns)   --->   "br label %5" [verify.c:24->kem.c:56]   --->   Operation 57 'br' <Predicate = true> <Delay = 1.35>
+
+State 10 <SV = 7> <Delay = 2.77>
+ST_10 : Operation 58 [1/1] (0.00ns)   --->   "%i_i = phi i6 [ 0, %4 ], [ %i_35, %6 ]"   --->   Operation 58 'phi' 'i_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 59 [1/1] (0.00ns)   --->   "%i_i_cast1 = zext i6 %i_i to i64" [verify.c:24->kem.c:56]   --->   Operation 59 'zext' 'i_i_cast1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 60 [1/1] (1.22ns)   --->   "%exitcond_i = icmp eq i6 %i_i, -32" [verify.c:24->kem.c:56]   --->   Operation 60 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.22> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.22> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 61 [1/1] (0.00ns)   --->   "%empty_62 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32) nounwind"   --->   Operation 61 'speclooptripcount' 'empty_62' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 62 [1/1] (1.60ns)   --->   "%i_35 = add i6 %i_i, 1" [verify.c:24->kem.c:56]   --->   Operation 62 'add' 'i_35' <Predicate = true> <Delay = 1.60> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.60> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 63 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %cmov.exit, label %6" [verify.c:24->kem.c:56]   --->   Operation 63 'br' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 64 [1/1] (0.00ns)   --->   "%rm_addr = getelementptr [280 x i8]* %rm, i64 0, i64 %i_i_cast1" [verify.c:25->kem.c:56]   --->   Operation 64 'getelementptr' 'rm_addr' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_10 : Operation 65 [2/2] (2.77ns)   --->   "%rm_load = load i8* %rm_addr, align 1" [verify.c:25->kem.c:56]   --->   Operation 65 'load' 'rm_load' <Predicate = (!exitcond_i)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 66 [1/1] (0.00ns)   --->   "%k_addr = getelementptr [32 x i8]* %k, i64 0, i64 %i_i_cast1" [verify.c:25->kem.c:56]   --->   Operation 66 'getelementptr' 'k_addr' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_10 : Operation 67 [2/2] (1.75ns)   --->   "%k_load = load i8* %k_addr, align 1" [verify.c:25->kem.c:56]   --->   Operation 67 'load' 'k_load' <Predicate = (!exitcond_i)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_10 : Operation 68 [1/1] (0.00ns)   --->   "ret i32 0" [kem.c:58]   --->   Operation 68 'ret' <Predicate = (exitcond_i)> <Delay = 0.00>
+
+State 11 <SV = 8> <Delay = 5.32>
+ST_11 : Operation 69 [1/2] (2.77ns)   --->   "%rm_load = load i8* %rm_addr, align 1" [verify.c:25->kem.c:56]   --->   Operation 69 'load' 'rm_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_11 : Operation 70 [1/2] (1.75ns)   --->   "%k_load = load i8* %k_addr, align 1" [verify.c:25->kem.c:56]   --->   Operation 70 'load' 'k_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_11 : Operation 71 [1/1] (0.00ns) (grouped into LUT with out node tmp_290_i)   --->   "%tmp_i = xor i8 %k_load, %rm_load" [verify.c:25->kem.c:56]   --->   Operation 71 'xor' 'tmp_i' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 72 [1/1] (0.00ns) (grouped into LUT with out node tmp_290_i)   --->   "%tmp_i_63 = and i8 %tmp_i, %b_assign_1" [verify.c:25->kem.c:56]   --->   Operation 72 'and' 'tmp_i_63' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 73 [1/1] (0.80ns) (out node of the LUT)   --->   "%tmp_290_i = xor i8 %k_load, %tmp_i_63" [verify.c:25->kem.c:56]   --->   Operation 73 'xor' 'tmp_290_i' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 74 [1/1] (1.75ns)   --->   "store i8 %tmp_290_i, i8* %k_addr, align 1" [verify.c:25->kem.c:56]   --->   Operation 74 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 32> <RAM>
+ST_11 : Operation 75 [1/1] (0.00ns)   --->   "br label %5" [verify.c:24->kem.c:56]   --->   Operation 75 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', kem.c:50) [16]  (1.35 ns)
+
+ <State 5>: 4.54ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', kem.c:50) [16]  (0 ns)
+	'add' operation ('tmp', kem.c:51) [23]  (1.76 ns)
+	'getelementptr' operation ('sk_addr', kem.c:51) [25]  (0 ns)
+	'load' operation ('sk_load', kem.c:51) on array 'sk' [26]  (2.77 ns)
+
+ <State 6>: 5.54ns
+The critical path consists of the following:
+	'load' operation ('sk_load', kem.c:51) on array 'sk' [26]  (2.77 ns)
+	'store' operation (kem.c:51) of variable 'sk_load', kem.c:51 on array 'buf', kem.c:40 [29]  (2.77 ns)
+
+ <State 7>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', kem.c:52) [34]  (0 ns)
+	'getelementptr' operation ('c_addr', kem.c:53) [41]  (0 ns)
+	'load' operation ('c_load', kem.c:53) on array 'c' [42]  (2.77 ns)
+
+ <State 8>: 5.54ns
+The critical path consists of the following:
+	'load' operation ('c_load', kem.c:53) on array 'c' [42]  (2.77 ns)
+	'store' operation (kem.c:53) of variable 'c_load', kem.c:53 on array 'buf', kem.c:40 [46]  (2.77 ns)
+
+ <State 9>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', verify.c:24->kem.c:56) [53]  (1.35 ns)
+
+ <State 10>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', verify.c:24->kem.c:56) [53]  (0 ns)
+	'getelementptr' operation ('rm_addr', verify.c:25->kem.c:56) [60]  (0 ns)
+	'load' operation ('rm_load', verify.c:25->kem.c:56) on array 'rm', kem.c:39 [61]  (2.77 ns)
+
+ <State 11>: 5.33ns
+The critical path consists of the following:
+	'load' operation ('rm_load', verify.c:25->kem.c:56) on array 'rm', kem.c:39 [61]  (2.77 ns)
+	'xor' operation ('tmp_i', verify.c:25->kem.c:56) [64]  (0 ns)
+	'and' operation ('tmp_i_63', verify.c:25->kem.c:56) [65]  (0 ns)
+	'xor' operation ('tmp_290_i', verify.c:25->kem.c:56) [66]  (0.8 ns)
+	'store' operation (verify.c:25->kem.c:56) of variable 'tmp_290_i', verify.c:25->kem.c:56 on array 'k' [67]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

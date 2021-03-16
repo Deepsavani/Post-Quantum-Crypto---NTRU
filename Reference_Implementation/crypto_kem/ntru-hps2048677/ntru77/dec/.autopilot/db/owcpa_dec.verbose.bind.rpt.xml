@@ -1,0 +1,61 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'owcpa_dec'" level="0">
+<item name = "Date">Tue Aug 25 09:27:43 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">ntru77</item>
+<item name = "Solution">dec</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200tfbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.122, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">35340, 8273076, 35340, 8273076, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_poly_Sq_frombytes_1_fu_393">poly_Sq_frombytes_1, 592, 592, 592, 592, none</column>
+<column name="grp_poly_Sq_frombytes_fu_400">poly_Sq_frombytes, 592, 592, 592, 592, none</column>
+<column name="grp_poly_S3_mul_fu_408">poly_S3_mul, 6095, 2752007, 6095, 2752007, none</column>
+<column name="grp_poly_S3_frombytes_fu_415">poly_S3_frombytes, 814, 814, 814, 814, none</column>
+<column name="grp_poly_Rq_to_S3_fu_425">poly_Rq_to_S3, 3389, 3389, 3389, 3389, none</column>
+<column name="grp_poly_Rq_mul_fu_431">poly_Rq_mul, 4740, 2750652, 4740, 2750652, none</column>
+<column name="grp_poly_S3_tobytes_fu_438">poly_S3_tobytes, 677, 677, 677, 677, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">1352, 1352, 2, -, -, 676, no</column>
+<column name="- Loop 2">1354, 1354, 2, -, -, 677, no</column>
+<column name="- Loop 3">1354, 1354, 2, -, -, 677, no</column>
+<column name="- Loop 4">1354, 1354, 2, -, -, 677, no</column>
+<column name="- Loop 5">1354, 1354, 2, -, -, 677, no</column>
+<column name="- Loop 6">1354, 1354, 2, -, -, 677, no</column>
+<column name="- Loop 7">1354, 1354, 2, -, -, 677, no</column>
+<column name="- Loop 8">1354, 1354, 2, -, -, 677, no</column>
+<column name="- Loop 9">1354, 1354, 2, -, -, 677, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

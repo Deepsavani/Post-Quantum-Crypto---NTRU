@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Aug 26 13:47:59 2020
+# Process ID: 6710
+# Current directory: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps4096821/ntru21/keypair/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/crypto_kem_keypair/xsim_script.tcl}
+# Log file: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps4096821/ntru21/keypair/sim/verilog/xsim.log
+# Journal file: /home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps4096821/ntru21/keypair/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/crypto_kem_keypair/xsim_script.tcl
+# xsim {crypto_kem_keypair} -autoloadwcfg -tclbatch {crypto_kem_keypair.tcl}
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source crypto_kem_keypair.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 2 [n/a] @ "125000"
+// RTL Simulation : 0 / 2 [n/a] @ "100000145000"
+// RTL Simulation : 0 / 2 [n/a] @ "200000155000"
+// RTL Simulation : 0 / 2 [n/a] @ "300000165000"
+// RTL Simulation : 0 / 2 [n/a] @ "400000175000"
+// RTL Simulation : 0 / 2 [n/a] @ "500000185000"
+// RTL Simulation : 0 / 2 [n/a] @ "600000195000"
+// RTL Simulation : 0 / 2 [n/a] @ "700000205000"
+// RTL Simulation : 1 / 2 [n/a] @ "730656895000"
+// RTL Simulation : 1 / 2 [n/a] @ "830656905000"
+// RTL Simulation : 1 / 2 [n/a] @ "930656915000"
+// RTL Simulation : 1 / 2 [n/a] @ "1030656925000"
+// RTL Simulation : 1 / 2 [n/a] @ "1130656935000"
+// RTL Simulation : 1 / 2 [n/a] @ "1230656945000"
+// RTL Simulation : 1 / 2 [n/a] @ "1330656955000"
+// RTL Simulation : 1 / 2 [n/a] @ "1430656965000"
+// RTL Simulation : 2 / 2 [n/a] @ "1461313675000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1461313715 ns : File "/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps4096821/ntru21/keypair/sim/verilog/crypto_kem_keypair.autotb.v" Line 331
+run: Time (s): cpu = 00:00:03 ; elapsed = 02:53:22 . Memory (MB): peak = 1375.594 ; gain = 0.000 ; free physical = 16108 ; free virtual = 584596
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Aug 26 16:41:32 2020...

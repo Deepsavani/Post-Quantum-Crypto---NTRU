@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Global scalar 'DRBG_ctx_reseed_counter' will be exposed as RTL port." projectName="ntru09" solutionName="Keypair" date="2020-08-24T20:10:23.876-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'DRBG_ctx_Key' will be exposed as RTL port." projectName="ntru09" solutionName="Keypair" date="2020-08-24T20:10:23.844-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'DRBG_ctx_V' will be exposed as RTL port." projectName="ntru09" solutionName="Keypair" date="2020-08-24T20:10:23.837-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'poly_Rq_mul' consists of the following:&#xA;&#x9;'mul' operation of DSP[38] ('tmp_188', poly.c:45) [36]  (2.82 ns)&#xA;&#x9;'add' operation of DSP[38] ('tmp_189', poly.c:45) [38]  (3.53 ns)&#xA;&#x9;'store' operation (poly.c:45) of variable 'tmp_189', poly.c:45 on array 'r_coeffs' [39]  (2.77 ns)" projectName="ntru09" solutionName="Keypair" date="2020-08-24T20:09:57.651-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.122ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="ntru09" solutionName="Keypair" date="2020-08-24T20:09:57.645-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'randombytes.1' to 'randombytes_1'." projectName="ntru09" solutionName="Keypair" date="2020-08-24T20:09:49.624-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'poly_Sq_tobytes.1' to 'poly_Sq_tobytes_1'." projectName="ntru09" solutionName="Keypair" date="2020-08-24T20:09:49.595-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'AES256_ECB.1' to 'AES256_ECB_1'." projectName="ntru09" solutionName="Keypair" date="2020-08-24T20:09:49.587-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'AES256_CTR_DRBG_Update' to 'AES256_CTR_DRBG_Upda' (rng.c:271:19)" projectName="ntru09" solutionName="Keypair" date="2020-08-24T20:09:48.017-0400" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] verify.c:25: variable-indexed range selection may cause suboptimal QoR." projectName="ntru09" solutionName="Keypair" date="2020-08-24T20:08:49.792-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global scalar 'DRBG_ctx_reseed_counter' will be exposed as RTL port." projectName="ntru09" solutionName="enc" date="2020-08-24T19:52:56.120-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'DRBG_ctx_Key' will be exposed as RTL port." projectName="ntru09" solutionName="enc" date="2020-08-24T19:52:56.013-0400" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Global array 'DRBG_ctx_V' will be exposed as RTL port." projectName="ntru09" solutionName="enc" date="2020-08-24T19:52:56.004-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'poly_Rq_mul' consists of the following:&#xA;&#x9;'mul' operation of DSP[36] ('tmp_211', poly.c:45) [34]  (2.82 ns)&#xA;&#x9;'add' operation of DSP[36] ('tmp_212', poly.c:45) [36]  (3.53 ns)&#xA;&#x9;'store' operation (poly.c:45) of variable 'tmp_212', poly.c:45 on array 'r_coeffs' [37]  (2.77 ns)" projectName="ntru09" solutionName="enc" date="2020-08-24T19:52:34.326-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.122ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="ntru09" solutionName="enc" date="2020-08-24T19:52:34.316-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'AES256_ECB.1' to 'AES256_ECB_1'." projectName="ntru09" solutionName="enc" date="2020-08-24T19:52:22.455-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'AES256_CTR_DRBG_Update' to 'AES256_CTR_DRBG_Upda' (rng.c:271:19)" projectName="ntru09" solutionName="enc" date="2020-08-24T19:52:22.401-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:88:1)" projectName="ntru09" solutionName="enc" date="2020-08-24T19:52:18.862-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'poly_S3_mul' consists of the following:&#xA;&#x9;'mul' operation of DSP[36] ('tmp_149', poly.c:68) [34]  (2.82 ns)&#xA;&#x9;'add' operation of DSP[36] ('tmp_150', poly.c:68) [36]  (3.53 ns)&#xA;&#x9;'store' operation (poly.c:68) of variable 'tmp_150', poly.c:68 on array 'r_coeffs' [37]  (2.77 ns)" projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:52.894-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.122ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:52.884-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'poly_Rq_mul' consists of the following:&#xA;&#x9;'mul' operation of DSP[36] ('tmp_190', poly.c:45) [34]  (2.82 ns)&#xA;&#x9;'add' operation of DSP[36] ('tmp_191', poly.c:45) [36]  (3.53 ns)&#xA;&#x9;'store' operation (poly.c:45) of variable 'tmp_191', poly.c:45 on array 'r_coeffs' [37]  (2.77 ns)" projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:52.287-0400" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.122ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:52.277-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'keccak_absorb.1' to 'keccak_absorb_1'." projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:51.326-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sha3_256.1' to 'sha3_256_1'." projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:51.313-0400" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'poly_Sq_frombytes.1' to 'poly_Sq_frombytes_1'." projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:51.308-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'KeccakF1600_StatePermute' to 'KeccakF1600_StatePer' (fips202.c:88:1)" projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:51.295-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 68 for loop 'Loop-3' in function 'keccak_absorb'." projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:46.727-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 135 to 68 for loop 'Loop-3' in function 'keccak_absorb'." projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:46.376-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 51 for loop 'Loop-3' in function 'keccak_absorb.1'." projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:46.369-0400" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] Updating loop upper bound from 135 to 51 for loop 'Loop-3' in function 'keccak_absorb.1'." projectName="ntru09" solutionName="dec" date="2020-08-24T18:55:46.348-0400" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

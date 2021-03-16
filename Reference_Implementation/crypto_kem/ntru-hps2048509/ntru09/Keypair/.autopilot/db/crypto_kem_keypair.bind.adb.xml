@@ -1,0 +1,369 @@
+<stg><name>crypto_kem_keypair</name>
+
+
+<trans_list>
+
+<trans id="19" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="20" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="21" from="3" to="4">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="22" from="4" to="5">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="23" from="5" to="6">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="8" op_0_bw="64">
+<![CDATA[
+:4  %seed = alloca [2413 x i8], align 16
+
+]]></Node>
+<StgValue><ssdm name="seed"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="0" op_0_bw="0" op_1_bw="8">
+<![CDATA[
+:5  call fastcc void @randombytes([2413 x i8]* %seed) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="9" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="0" op_0_bw="0" op_1_bw="8">
+<![CDATA[
+:5  call fastcc void @randombytes([2413 x i8]* %seed) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="10" st_id="3" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8">
+<![CDATA[
+:6  call fastcc void @owcpa_keypair([699 x i8]* %pk, [935 x i8]* %sk, [2413 x i8]* %seed) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="4" st_id="4">
+
+<operation id="11" st_id="4" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="8" op_3_bw="8">
+<![CDATA[
+:6  call fastcc void @owcpa_keypair([699 x i8]* %pk, [935 x i8]* %sk, [2413 x i8]* %seed) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="5" st_id="5">
+
+<operation id="12" st_id="5" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="8">
+<![CDATA[
+:7  call fastcc void @randombytes.1([935 x i8]* %sk) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+
+<state id="6" st_id="6">
+
+<operation id="13" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="8">
+<![CDATA[
+:0  call void (...)* @_ssdm_op_SpecBitsMap([699 x i8]* %pk) nounwind, !map !199
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="14" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="0" op_0_bw="0" op_1_bw="8">
+<![CDATA[
+:1  call void (...)* @_ssdm_op_SpecBitsMap([935 x i8]* %sk) nounwind, !map !205
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="15" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !211
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="16" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+:3  call void (...)* @_ssdm_op_SpecTopModule([19 x i8]* @crypto_kem_keypair_s) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="17" st_id="6" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="8">
+<![CDATA[
+:7  call fastcc void @randombytes.1([935 x i8]* %sk) nounwind
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="18" st_id="6" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="0" op_0_bw="32">
+<![CDATA[
+:8  ret i32 0
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="24" name="pk" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="pk"/><MemPortTyVec>0 0 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="25" name="sk" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="sk"/><MemPortTyVec>0 0 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="26" name="DRBG_ctx_V" dir="2" iftype="1">
+<core>RAM</core><StgValue><ssdm name="DRBG_ctx_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="27" name="sbox" dir="0" iftype="1">
+<core>ROM_nP</core><StgValue><ssdm name="sbox"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="28" name="Rcon" dir="0" iftype="1">
+<core>ROM_nP</core><StgValue><ssdm name="Rcon"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="29" name="DRBG_ctx_Key" dir="2" iftype="1">
+<core>RAM</core><StgValue><ssdm name="DRBG_ctx_Key"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="30" name="DRBG_ctx_reseed_counter" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="DRBG_ctx_reseed_counter"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="32" from="StgValue_31" to="seed" fromId="31" toId="7">
+</dataflow>
+<dataflow id="34" from="randombytes" to="StgValue_8" fromId="33" toId="8">
+</dataflow>
+<dataflow id="35" from="seed" to="StgValue_8" fromId="7" toId="8">
+</dataflow>
+<dataflow id="36" from="DRBG_ctx_V" to="StgValue_8" fromId="26" toId="8">
+</dataflow>
+<dataflow id="37" from="sbox" to="StgValue_8" fromId="27" toId="8">
+</dataflow>
+<dataflow id="38" from="Rcon" to="StgValue_8" fromId="28" toId="8">
+</dataflow>
+<dataflow id="39" from="DRBG_ctx_Key" to="StgValue_8" fromId="29" toId="8">
+</dataflow>
+<dataflow id="40" from="DRBG_ctx_reseed_counter" to="StgValue_8" fromId="30" toId="8">
+</dataflow>
+<dataflow id="41" from="randombytes" to="StgValue_9" fromId="33" toId="9">
+</dataflow>
+<dataflow id="42" from="seed" to="StgValue_9" fromId="7" toId="9">
+</dataflow>
+<dataflow id="43" from="DRBG_ctx_V" to="StgValue_9" fromId="26" toId="9">
+</dataflow>
+<dataflow id="44" from="sbox" to="StgValue_9" fromId="27" toId="9">
+</dataflow>
+<dataflow id="45" from="Rcon" to="StgValue_9" fromId="28" toId="9">
+</dataflow>
+<dataflow id="46" from="DRBG_ctx_Key" to="StgValue_9" fromId="29" toId="9">
+</dataflow>
+<dataflow id="47" from="DRBG_ctx_reseed_counter" to="StgValue_9" fromId="30" toId="9">
+</dataflow>
+<dataflow id="49" from="owcpa_keypair" to="StgValue_10" fromId="48" toId="10">
+</dataflow>
+<dataflow id="50" from="pk" to="StgValue_10" fromId="24" toId="10">
+</dataflow>
+<dataflow id="51" from="sk" to="StgValue_10" fromId="25" toId="10">
+</dataflow>
+<dataflow id="52" from="seed" to="StgValue_10" fromId="7" toId="10">
+</dataflow>
+<dataflow id="53" from="owcpa_keypair" to="StgValue_11" fromId="48" toId="11">
+</dataflow>
+<dataflow id="54" from="pk" to="StgValue_11" fromId="24" toId="11">
+</dataflow>
+<dataflow id="55" from="sk" to="StgValue_11" fromId="25" toId="11">
+</dataflow>
+<dataflow id="56" from="seed" to="StgValue_11" fromId="7" toId="11">
+</dataflow>
+<dataflow id="58" from="randombytes.1" to="StgValue_12" fromId="57" toId="12">
+</dataflow>
+<dataflow id="59" from="sk" to="StgValue_12" fromId="25" toId="12">
+</dataflow>
+<dataflow id="60" from="DRBG_ctx_V" to="StgValue_12" fromId="26" toId="12">
+</dataflow>
+<dataflow id="61" from="sbox" to="StgValue_12" fromId="27" toId="12">
+</dataflow>
+<dataflow id="62" from="Rcon" to="StgValue_12" fromId="28" toId="12">
+</dataflow>
+<dataflow id="63" from="DRBG_ctx_Key" to="StgValue_12" fromId="29" toId="12">
+</dataflow>
+<dataflow id="64" from="DRBG_ctx_reseed_counter" to="StgValue_12" fromId="30" toId="12">
+</dataflow>
+<dataflow id="66" from="_ssdm_op_SpecBitsMap" to="StgValue_13" fromId="65" toId="13">
+</dataflow>
+<dataflow id="67" from="pk" to="StgValue_13" fromId="24" toId="13">
+</dataflow>
+<dataflow id="68" from="_ssdm_op_SpecBitsMap" to="StgValue_14" fromId="65" toId="14">
+</dataflow>
+<dataflow id="69" from="sk" to="StgValue_14" fromId="25" toId="14">
+</dataflow>
+<dataflow id="70" from="_ssdm_op_SpecBitsMap" to="StgValue_15" fromId="65" toId="15">
+</dataflow>
+<dataflow id="72" from="StgValue_71" to="StgValue_15" fromId="71" toId="15">
+</dataflow>
+<dataflow id="74" from="_ssdm_op_SpecTopModule" to="StgValue_16" fromId="73" toId="16">
+</dataflow>
+<dataflow id="76" from="crypto_kem_keypair_s" to="StgValue_16" fromId="75" toId="16">
+</dataflow>
+<dataflow id="77" from="randombytes.1" to="StgValue_17" fromId="57" toId="17">
+</dataflow>
+<dataflow id="78" from="sk" to="StgValue_17" fromId="25" toId="17">
+</dataflow>
+<dataflow id="79" from="DRBG_ctx_V" to="StgValue_17" fromId="26" toId="17">
+</dataflow>
+<dataflow id="80" from="sbox" to="StgValue_17" fromId="27" toId="17">
+</dataflow>
+<dataflow id="81" from="Rcon" to="StgValue_17" fromId="28" toId="17">
+</dataflow>
+<dataflow id="82" from="DRBG_ctx_Key" to="StgValue_17" fromId="29" toId="17">
+</dataflow>
+<dataflow id="83" from="DRBG_ctx_reseed_counter" to="StgValue_17" fromId="30" toId="17">
+</dataflow>
+<dataflow id="84" from="StgValue_71" to="StgValue_18" fromId="71" toId="18">
+</dataflow>
+</dataflows>
+
+
+</stg>

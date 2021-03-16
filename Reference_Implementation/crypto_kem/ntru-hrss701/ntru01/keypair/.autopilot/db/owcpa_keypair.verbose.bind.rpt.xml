@@ -1,0 +1,59 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'owcpa_keypair'" level="0">
+<item name = "Date">Sun Aug 23 22:38:18 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">ntru01</item>
+<item name = "Solution">keypair</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a200tfbg676-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 9.122, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">33772958, 72047558, 33772958, 72047558, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_poly_S3_inv_fu_328">poly_S3_inv, 17829245, 17829245, 17829245, 17829245, none</column>
+<column name="grp_poly_R2_inv_fu_334">poly_R2_inv, 15858741, 15858741, 15858741, 15858741, none</column>
+<column name="grp_poly_Sq_tobytes_1_fu_340">poly_Sq_tobytes_1, 2194, 2194, 2194, 2194, none</column>
+<column name="grp_poly_Sq_tobytes_fu_347">poly_Sq_tobytes, 2194, 2194, 2194, 2194, none</column>
+<column name="grp_sample_iid_plus_fu_354">sample_iid_plus, 7709, 7709, 7709, 7709, none</column>
+<column name="grp_poly_Rq_mul_fu_365">poly_Rq_mul, 4908, 2949108, 4908, 2949108, none</column>
+<column name="grp_poly_S3_tobytes_fu_372">poly_S3_tobytes, 701, 701, 701, 701, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">1402, 1402, 2, -, -, 701, no</column>
+<column name="- Loop 2">1402, 1402, 2, -, -, 701, no</column>
+<column name="- Loop 3">1400, 1400, 2, -, -, 700, no</column>
+<column name="- Loop 4">1402, 1402, 2, -, -, 701, no</column>
+<column name="- Loop 5">1402, 1402, 2, -, -, 701, no</column>
+<column name="- Loop 6">1402, 1402, 2, -, -, 701, no</column>
+<column name="- Loop 7">1402, 1402, 2, -, -, 701, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

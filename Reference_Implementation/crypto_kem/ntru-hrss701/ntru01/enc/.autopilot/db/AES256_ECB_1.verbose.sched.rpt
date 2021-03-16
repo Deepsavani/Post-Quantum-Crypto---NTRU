@@ -1,0 +1,441 @@
+
+
+================================================================
+== Vivado HLS Report for 'AES256_ECB_1'
+================================================================
+* Date:           Sun Aug 23 21:46:12 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru01
+* Solution:       enc
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.620|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  2203|  2203|  2203|  2203|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 20
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.75>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%ctr_addr = getelementptr [16 x i8]* %ctr, i64 0, i64 0" [rng.c:136]   --->   Operation 21 'getelementptr' 'ctr_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%ctx_RoundKey = alloca [240 x i8], align 1" [rng.c:140]   --->   Operation 22 'alloca' 'ctx_RoundKey' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%test = alloca [16 x i8], align 1" [rng.c:155]   --->   Operation 23 'alloca' 'test' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 24 [2/2] (1.75ns)   --->   "%ctr_load = load i8* %ctr_addr, align 1" [rng.c:157]   --->   Operation 24 'load' 'ctr_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%ctr_addr_1 = getelementptr [16 x i8]* %ctr, i64 0, i64 1" [rng.c:158]   --->   Operation 25 'getelementptr' 'ctr_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [2/2] (1.75ns)   --->   "%ctr_load_1 = load i8* %ctr_addr_1, align 1" [rng.c:158]   --->   Operation 26 'load' 'ctr_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 2 <SV = 1> <Delay = 3.51>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%test_addr = getelementptr [16 x i8]* %test, i64 0, i64 0" [rng.c:157]   --->   Operation 27 'getelementptr' 'test_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%test_addr_1 = getelementptr [16 x i8]* %test, i64 0, i64 1" [rng.c:158]   --->   Operation 28 'getelementptr' 'test_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/2] (1.75ns)   --->   "%ctr_load = load i8* %ctr_addr, align 1" [rng.c:157]   --->   Operation 29 'load' 'ctr_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 30 [1/1] (1.75ns)   --->   "store i8 %ctr_load, i8* %test_addr, align 16" [rng.c:157]   --->   Operation 30 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 31 [1/2] (1.75ns)   --->   "%ctr_load_1 = load i8* %ctr_addr_1, align 1" [rng.c:158]   --->   Operation 31 'load' 'ctr_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 32 [1/1] (1.75ns)   --->   "store i8 %ctr_load_1, i8* %test_addr_1, align 1" [rng.c:158]   --->   Operation 32 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%ctr_addr_2 = getelementptr [16 x i8]* %ctr, i64 0, i64 2" [rng.c:159]   --->   Operation 33 'getelementptr' 'ctr_addr_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [2/2] (1.75ns)   --->   "%ctr_load_2 = load i8* %ctr_addr_2, align 1" [rng.c:159]   --->   Operation 34 'load' 'ctr_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%ctr_addr_3 = getelementptr [16 x i8]* %ctr, i64 0, i64 3" [rng.c:160]   --->   Operation 35 'getelementptr' 'ctr_addr_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [2/2] (1.75ns)   --->   "%ctr_load_3 = load i8* %ctr_addr_3, align 1" [rng.c:160]   --->   Operation 36 'load' 'ctr_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 3 <SV = 2> <Delay = 3.51>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%test_addr_2 = getelementptr [16 x i8]* %test, i64 0, i64 2" [rng.c:159]   --->   Operation 37 'getelementptr' 'test_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%test_addr_3 = getelementptr [16 x i8]* %test, i64 0, i64 3" [rng.c:160]   --->   Operation 38 'getelementptr' 'test_addr_3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/2] (1.75ns)   --->   "%ctr_load_2 = load i8* %ctr_addr_2, align 1" [rng.c:159]   --->   Operation 39 'load' 'ctr_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 40 [1/1] (1.75ns)   --->   "store i8 %ctr_load_2, i8* %test_addr_2, align 2" [rng.c:159]   --->   Operation 40 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 41 [1/2] (1.75ns)   --->   "%ctr_load_3 = load i8* %ctr_addr_3, align 1" [rng.c:160]   --->   Operation 41 'load' 'ctr_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 42 [1/1] (1.75ns)   --->   "store i8 %ctr_load_3, i8* %test_addr_3, align 1" [rng.c:160]   --->   Operation 42 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%ctr_addr_4 = getelementptr [16 x i8]* %ctr, i64 0, i64 4" [rng.c:161]   --->   Operation 43 'getelementptr' 'ctr_addr_4' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [2/2] (1.75ns)   --->   "%ctr_load_4 = load i8* %ctr_addr_4, align 1" [rng.c:161]   --->   Operation 44 'load' 'ctr_load_4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%ctr_addr_5 = getelementptr [16 x i8]* %ctr, i64 0, i64 5" [rng.c:162]   --->   Operation 45 'getelementptr' 'ctr_addr_5' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 46 [2/2] (1.75ns)   --->   "%ctr_load_5 = load i8* %ctr_addr_5, align 1" [rng.c:162]   --->   Operation 46 'load' 'ctr_load_5' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 4 <SV = 3> <Delay = 3.51>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%test_addr_4 = getelementptr [16 x i8]* %test, i64 0, i64 4" [rng.c:161]   --->   Operation 47 'getelementptr' 'test_addr_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%test_addr_5 = getelementptr [16 x i8]* %test, i64 0, i64 5" [rng.c:162]   --->   Operation 48 'getelementptr' 'test_addr_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/2] (1.75ns)   --->   "%ctr_load_4 = load i8* %ctr_addr_4, align 1" [rng.c:161]   --->   Operation 49 'load' 'ctr_load_4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 50 [1/1] (1.75ns)   --->   "store i8 %ctr_load_4, i8* %test_addr_4, align 4" [rng.c:161]   --->   Operation 50 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 51 [1/2] (1.75ns)   --->   "%ctr_load_5 = load i8* %ctr_addr_5, align 1" [rng.c:162]   --->   Operation 51 'load' 'ctr_load_5' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 52 [1/1] (1.75ns)   --->   "store i8 %ctr_load_5, i8* %test_addr_5, align 1" [rng.c:162]   --->   Operation 52 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%ctr_addr_6 = getelementptr [16 x i8]* %ctr, i64 0, i64 6" [rng.c:163]   --->   Operation 53 'getelementptr' 'ctr_addr_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [2/2] (1.75ns)   --->   "%ctr_load_6 = load i8* %ctr_addr_6, align 1" [rng.c:163]   --->   Operation 54 'load' 'ctr_load_6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%ctr_addr_7 = getelementptr [16 x i8]* %ctr, i64 0, i64 7" [rng.c:164]   --->   Operation 55 'getelementptr' 'ctr_addr_7' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [2/2] (1.75ns)   --->   "%ctr_load_7 = load i8* %ctr_addr_7, align 1" [rng.c:164]   --->   Operation 56 'load' 'ctr_load_7' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 5 <SV = 4> <Delay = 3.51>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%test_addr_6 = getelementptr [16 x i8]* %test, i64 0, i64 6" [rng.c:163]   --->   Operation 57 'getelementptr' 'test_addr_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%test_addr_7 = getelementptr [16 x i8]* %test, i64 0, i64 7" [rng.c:164]   --->   Operation 58 'getelementptr' 'test_addr_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 59 [1/2] (1.75ns)   --->   "%ctr_load_6 = load i8* %ctr_addr_6, align 1" [rng.c:163]   --->   Operation 59 'load' 'ctr_load_6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 60 [1/1] (1.75ns)   --->   "store i8 %ctr_load_6, i8* %test_addr_6, align 2" [rng.c:163]   --->   Operation 60 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 61 [1/2] (1.75ns)   --->   "%ctr_load_7 = load i8* %ctr_addr_7, align 1" [rng.c:164]   --->   Operation 61 'load' 'ctr_load_7' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 62 [1/1] (1.75ns)   --->   "store i8 %ctr_load_7, i8* %test_addr_7, align 1" [rng.c:164]   --->   Operation 62 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 63 [1/1] (0.00ns)   --->   "%ctr_addr_8 = getelementptr [16 x i8]* %ctr, i64 0, i64 8" [rng.c:165]   --->   Operation 63 'getelementptr' 'ctr_addr_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 64 [2/2] (1.75ns)   --->   "%ctr_load_8 = load i8* %ctr_addr_8, align 1" [rng.c:165]   --->   Operation 64 'load' 'ctr_load_8' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 65 [1/1] (0.00ns)   --->   "%ctr_addr_9 = getelementptr [16 x i8]* %ctr, i64 0, i64 9" [rng.c:166]   --->   Operation 65 'getelementptr' 'ctr_addr_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 66 [2/2] (1.75ns)   --->   "%ctr_load_9 = load i8* %ctr_addr_9, align 1" [rng.c:166]   --->   Operation 66 'load' 'ctr_load_9' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 6 <SV = 5> <Delay = 3.51>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "%test_addr_8 = getelementptr [16 x i8]* %test, i64 0, i64 8" [rng.c:165]   --->   Operation 67 'getelementptr' 'test_addr_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (0.00ns)   --->   "%test_addr_9 = getelementptr [16 x i8]* %test, i64 0, i64 9" [rng.c:166]   --->   Operation 68 'getelementptr' 'test_addr_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 69 [1/2] (1.75ns)   --->   "%ctr_load_8 = load i8* %ctr_addr_8, align 1" [rng.c:165]   --->   Operation 69 'load' 'ctr_load_8' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 70 [1/1] (1.75ns)   --->   "store i8 %ctr_load_8, i8* %test_addr_8, align 8" [rng.c:165]   --->   Operation 70 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 71 [1/2] (1.75ns)   --->   "%ctr_load_9 = load i8* %ctr_addr_9, align 1" [rng.c:166]   --->   Operation 71 'load' 'ctr_load_9' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 72 [1/1] (1.75ns)   --->   "store i8 %ctr_load_9, i8* %test_addr_9, align 1" [rng.c:166]   --->   Operation 72 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 73 [1/1] (0.00ns)   --->   "%ctr_addr_10 = getelementptr [16 x i8]* %ctr, i64 0, i64 10" [rng.c:167]   --->   Operation 73 'getelementptr' 'ctr_addr_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 74 [2/2] (1.75ns)   --->   "%ctr_load_10 = load i8* %ctr_addr_10, align 1" [rng.c:167]   --->   Operation 74 'load' 'ctr_load_10' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_6 : Operation 75 [1/1] (0.00ns)   --->   "%ctr_addr_11 = getelementptr [16 x i8]* %ctr, i64 0, i64 11" [rng.c:168]   --->   Operation 75 'getelementptr' 'ctr_addr_11' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 76 [2/2] (1.75ns)   --->   "%ctr_load_11 = load i8* %ctr_addr_11, align 1" [rng.c:168]   --->   Operation 76 'load' 'ctr_load_11' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 7 <SV = 6> <Delay = 3.51>
+ST_7 : Operation 77 [1/1] (0.00ns)   --->   "%test_addr_10 = getelementptr [16 x i8]* %test, i64 0, i64 10" [rng.c:167]   --->   Operation 77 'getelementptr' 'test_addr_10' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 78 [1/1] (0.00ns)   --->   "%test_addr_11 = getelementptr [16 x i8]* %test, i64 0, i64 11" [rng.c:168]   --->   Operation 78 'getelementptr' 'test_addr_11' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 79 [1/2] (1.75ns)   --->   "%ctr_load_10 = load i8* %ctr_addr_10, align 1" [rng.c:167]   --->   Operation 79 'load' 'ctr_load_10' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 80 [1/1] (1.75ns)   --->   "store i8 %ctr_load_10, i8* %test_addr_10, align 2" [rng.c:167]   --->   Operation 80 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 81 [1/2] (1.75ns)   --->   "%ctr_load_11 = load i8* %ctr_addr_11, align 1" [rng.c:168]   --->   Operation 81 'load' 'ctr_load_11' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 82 [1/1] (1.75ns)   --->   "store i8 %ctr_load_11, i8* %test_addr_11, align 1" [rng.c:168]   --->   Operation 82 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 83 [1/1] (0.00ns)   --->   "%ctr_addr_12 = getelementptr [16 x i8]* %ctr, i64 0, i64 12" [rng.c:169]   --->   Operation 83 'getelementptr' 'ctr_addr_12' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 84 [2/2] (1.75ns)   --->   "%ctr_load_12 = load i8* %ctr_addr_12, align 1" [rng.c:169]   --->   Operation 84 'load' 'ctr_load_12' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_7 : Operation 85 [1/1] (0.00ns)   --->   "%ctr_addr_13 = getelementptr [16 x i8]* %ctr, i64 0, i64 13" [rng.c:170]   --->   Operation 85 'getelementptr' 'ctr_addr_13' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 86 [2/2] (1.75ns)   --->   "%ctr_load_13 = load i8* %ctr_addr_13, align 1" [rng.c:170]   --->   Operation 86 'load' 'ctr_load_13' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 8 <SV = 7> <Delay = 3.51>
+ST_8 : Operation 87 [1/1] (0.00ns)   --->   "%test_addr_12 = getelementptr [16 x i8]* %test, i64 0, i64 12" [rng.c:169]   --->   Operation 87 'getelementptr' 'test_addr_12' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%test_addr_13 = getelementptr [16 x i8]* %test, i64 0, i64 13" [rng.c:170]   --->   Operation 88 'getelementptr' 'test_addr_13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [2/2] (0.00ns)   --->   "call fastcc void @KeyExpansion([240 x i8]* %ctx_RoundKey, [32 x i8]* %key)" [aes.c:227->rng.c:147]   --->   Operation 89 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 90 [1/2] (1.75ns)   --->   "%ctr_load_12 = load i8* %ctr_addr_12, align 1" [rng.c:169]   --->   Operation 90 'load' 'ctr_load_12' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 91 [1/1] (1.75ns)   --->   "store i8 %ctr_load_12, i8* %test_addr_12, align 4" [rng.c:169]   --->   Operation 91 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 92 [1/2] (1.75ns)   --->   "%ctr_load_13 = load i8* %ctr_addr_13, align 1" [rng.c:170]   --->   Operation 92 'load' 'ctr_load_13' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 93 [1/1] (1.75ns)   --->   "store i8 %ctr_load_13, i8* %test_addr_13, align 1" [rng.c:170]   --->   Operation 93 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 94 [1/1] (0.00ns)   --->   "%ctr_addr_14 = getelementptr [16 x i8]* %ctr, i64 0, i64 14" [rng.c:171]   --->   Operation 94 'getelementptr' 'ctr_addr_14' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 95 [2/2] (1.75ns)   --->   "%ctr_load_14 = load i8* %ctr_addr_14, align 1" [rng.c:171]   --->   Operation 95 'load' 'ctr_load_14' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_8 : Operation 96 [1/1] (0.00ns)   --->   "%ctr_addr_15 = getelementptr [16 x i8]* %ctr, i64 0, i64 15" [rng.c:172]   --->   Operation 96 'getelementptr' 'ctr_addr_15' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 97 [2/2] (1.75ns)   --->   "%ctr_load_15 = load i8* %ctr_addr_15, align 1" [rng.c:172]   --->   Operation 97 'load' 'ctr_load_15' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 9 <SV = 8> <Delay = 3.51>
+ST_9 : Operation 98 [1/1] (0.00ns)   --->   "%test_addr_14 = getelementptr [16 x i8]* %test, i64 0, i64 14" [rng.c:171]   --->   Operation 98 'getelementptr' 'test_addr_14' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 99 [1/1] (0.00ns)   --->   "%test_addr_15 = getelementptr [16 x i8]* %test, i64 0, i64 15" [rng.c:172]   --->   Operation 99 'getelementptr' 'test_addr_15' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 100 [1/2] (0.00ns)   --->   "call fastcc void @KeyExpansion([240 x i8]* %ctx_RoundKey, [32 x i8]* %key)" [aes.c:227->rng.c:147]   --->   Operation 100 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_9 : Operation 101 [1/2] (1.75ns)   --->   "%ctr_load_14 = load i8* %ctr_addr_14, align 1" [rng.c:171]   --->   Operation 101 'load' 'ctr_load_14' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 102 [1/1] (1.75ns)   --->   "store i8 %ctr_load_14, i8* %test_addr_14, align 2" [rng.c:171]   --->   Operation 102 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 103 [1/2] (1.75ns)   --->   "%ctr_load_15 = load i8* %ctr_addr_15, align 1" [rng.c:172]   --->   Operation 103 'load' 'ctr_load_15' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_9 : Operation 104 [1/1] (1.75ns)   --->   "store i8 %ctr_load_15, i8* %test_addr_15, align 1" [rng.c:172]   --->   Operation 104 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 105 [2/2] (0.00ns)   --->   "call fastcc void @Cipher([16 x i8]* %test, [240 x i8]* %ctx_RoundKey)" [aes.c:473->rng.c:175]   --->   Operation 105 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 106 [1/2] (0.00ns)   --->   "call fastcc void @Cipher([16 x i8]* %test, [240 x i8]* %ctx_RoundKey)" [aes.c:473->rng.c:175]   --->   Operation 106 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 1.75>
+ST_12 : Operation 107 [2/2] (1.75ns)   --->   "%test_load = load i8* %test_addr, align 16" [rng.c:177]   --->   Operation 107 'load' 'test_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_12 : Operation 108 [2/2] (1.75ns)   --->   "%test_load_1 = load i8* %test_addr_1, align 1" [rng.c:178]   --->   Operation 108 'load' 'test_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 13 <SV = 12> <Delay = 3.51>
+ST_13 : Operation 109 [1/1] (0.00ns)   --->   "%buffer_addr = getelementptr [16 x i8]* %buffer_r, i64 0, i64 0" [rng.c:136]   --->   Operation 109 'getelementptr' 'buffer_addr' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 110 [1/2] (1.75ns)   --->   "%test_load = load i8* %test_addr, align 16" [rng.c:177]   --->   Operation 110 'load' 'test_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_13 : Operation 111 [1/1] (1.75ns)   --->   "store i8 %test_load, i8* %buffer_addr, align 1" [rng.c:177]   --->   Operation 111 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_13 : Operation 112 [1/2] (1.75ns)   --->   "%test_load_1 = load i8* %test_addr_1, align 1" [rng.c:178]   --->   Operation 112 'load' 'test_load_1' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_13 : Operation 113 [1/1] (0.00ns)   --->   "%buffer_addr_1 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 1" [rng.c:178]   --->   Operation 113 'getelementptr' 'buffer_addr_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 114 [1/1] (1.75ns)   --->   "store i8 %test_load_1, i8* %buffer_addr_1, align 1" [rng.c:178]   --->   Operation 114 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_13 : Operation 115 [2/2] (1.75ns)   --->   "%test_load_2 = load i8* %test_addr_2, align 2" [rng.c:179]   --->   Operation 115 'load' 'test_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_13 : Operation 116 [2/2] (1.75ns)   --->   "%test_load_3 = load i8* %test_addr_3, align 1" [rng.c:180]   --->   Operation 116 'load' 'test_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 14 <SV = 13> <Delay = 3.51>
+ST_14 : Operation 117 [1/2] (1.75ns)   --->   "%test_load_2 = load i8* %test_addr_2, align 2" [rng.c:179]   --->   Operation 117 'load' 'test_load_2' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_14 : Operation 118 [1/1] (0.00ns)   --->   "%buffer_addr_2 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 2" [rng.c:179]   --->   Operation 118 'getelementptr' 'buffer_addr_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 119 [1/1] (1.75ns)   --->   "store i8 %test_load_2, i8* %buffer_addr_2, align 1" [rng.c:179]   --->   Operation 119 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_14 : Operation 120 [1/2] (1.75ns)   --->   "%test_load_3 = load i8* %test_addr_3, align 1" [rng.c:180]   --->   Operation 120 'load' 'test_load_3' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_14 : Operation 121 [1/1] (0.00ns)   --->   "%buffer_addr_3 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 3" [rng.c:180]   --->   Operation 121 'getelementptr' 'buffer_addr_3' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 122 [1/1] (1.75ns)   --->   "store i8 %test_load_3, i8* %buffer_addr_3, align 1" [rng.c:180]   --->   Operation 122 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_14 : Operation 123 [2/2] (1.75ns)   --->   "%test_load_4 = load i8* %test_addr_4, align 4" [rng.c:181]   --->   Operation 123 'load' 'test_load_4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_14 : Operation 124 [2/2] (1.75ns)   --->   "%test_load_5 = load i8* %test_addr_5, align 1" [rng.c:182]   --->   Operation 124 'load' 'test_load_5' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 15 <SV = 14> <Delay = 3.51>
+ST_15 : Operation 125 [1/2] (1.75ns)   --->   "%test_load_4 = load i8* %test_addr_4, align 4" [rng.c:181]   --->   Operation 125 'load' 'test_load_4' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_15 : Operation 126 [1/1] (0.00ns)   --->   "%buffer_addr_4 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 4" [rng.c:181]   --->   Operation 126 'getelementptr' 'buffer_addr_4' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 127 [1/1] (1.75ns)   --->   "store i8 %test_load_4, i8* %buffer_addr_4, align 1" [rng.c:181]   --->   Operation 127 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_15 : Operation 128 [1/2] (1.75ns)   --->   "%test_load_5 = load i8* %test_addr_5, align 1" [rng.c:182]   --->   Operation 128 'load' 'test_load_5' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_15 : Operation 129 [1/1] (0.00ns)   --->   "%buffer_addr_5 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 5" [rng.c:182]   --->   Operation 129 'getelementptr' 'buffer_addr_5' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 130 [1/1] (1.75ns)   --->   "store i8 %test_load_5, i8* %buffer_addr_5, align 1" [rng.c:182]   --->   Operation 130 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_15 : Operation 131 [2/2] (1.75ns)   --->   "%test_load_6 = load i8* %test_addr_6, align 2" [rng.c:183]   --->   Operation 131 'load' 'test_load_6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_15 : Operation 132 [2/2] (1.75ns)   --->   "%test_load_7 = load i8* %test_addr_7, align 1" [rng.c:184]   --->   Operation 132 'load' 'test_load_7' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 16 <SV = 15> <Delay = 3.51>
+ST_16 : Operation 133 [1/2] (1.75ns)   --->   "%test_load_6 = load i8* %test_addr_6, align 2" [rng.c:183]   --->   Operation 133 'load' 'test_load_6' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_16 : Operation 134 [1/1] (0.00ns)   --->   "%buffer_addr_6 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 6" [rng.c:183]   --->   Operation 134 'getelementptr' 'buffer_addr_6' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 135 [1/1] (1.75ns)   --->   "store i8 %test_load_6, i8* %buffer_addr_6, align 1" [rng.c:183]   --->   Operation 135 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_16 : Operation 136 [1/2] (1.75ns)   --->   "%test_load_7 = load i8* %test_addr_7, align 1" [rng.c:184]   --->   Operation 136 'load' 'test_load_7' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_16 : Operation 137 [1/1] (0.00ns)   --->   "%buffer_addr_7 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 7" [rng.c:184]   --->   Operation 137 'getelementptr' 'buffer_addr_7' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 138 [1/1] (1.75ns)   --->   "store i8 %test_load_7, i8* %buffer_addr_7, align 1" [rng.c:184]   --->   Operation 138 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_16 : Operation 139 [2/2] (1.75ns)   --->   "%test_load_8 = load i8* %test_addr_8, align 8" [rng.c:185]   --->   Operation 139 'load' 'test_load_8' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_16 : Operation 140 [2/2] (1.75ns)   --->   "%test_load_9 = load i8* %test_addr_9, align 1" [rng.c:186]   --->   Operation 140 'load' 'test_load_9' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 17 <SV = 16> <Delay = 3.51>
+ST_17 : Operation 141 [1/2] (1.75ns)   --->   "%test_load_8 = load i8* %test_addr_8, align 8" [rng.c:185]   --->   Operation 141 'load' 'test_load_8' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_17 : Operation 142 [1/1] (0.00ns)   --->   "%buffer_addr_8 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 8" [rng.c:185]   --->   Operation 142 'getelementptr' 'buffer_addr_8' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 143 [1/1] (1.75ns)   --->   "store i8 %test_load_8, i8* %buffer_addr_8, align 1" [rng.c:185]   --->   Operation 143 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_17 : Operation 144 [1/2] (1.75ns)   --->   "%test_load_9 = load i8* %test_addr_9, align 1" [rng.c:186]   --->   Operation 144 'load' 'test_load_9' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_17 : Operation 145 [1/1] (0.00ns)   --->   "%buffer_addr_9 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 9" [rng.c:186]   --->   Operation 145 'getelementptr' 'buffer_addr_9' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 146 [1/1] (1.75ns)   --->   "store i8 %test_load_9, i8* %buffer_addr_9, align 1" [rng.c:186]   --->   Operation 146 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_17 : Operation 147 [2/2] (1.75ns)   --->   "%test_load_10 = load i8* %test_addr_10, align 2" [rng.c:187]   --->   Operation 147 'load' 'test_load_10' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_17 : Operation 148 [2/2] (1.75ns)   --->   "%test_load_11 = load i8* %test_addr_11, align 1" [rng.c:188]   --->   Operation 148 'load' 'test_load_11' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 18 <SV = 17> <Delay = 3.51>
+ST_18 : Operation 149 [1/2] (1.75ns)   --->   "%test_load_10 = load i8* %test_addr_10, align 2" [rng.c:187]   --->   Operation 149 'load' 'test_load_10' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_18 : Operation 150 [1/1] (0.00ns)   --->   "%buffer_addr_10 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 10" [rng.c:187]   --->   Operation 150 'getelementptr' 'buffer_addr_10' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 151 [1/1] (1.75ns)   --->   "store i8 %test_load_10, i8* %buffer_addr_10, align 1" [rng.c:187]   --->   Operation 151 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_18 : Operation 152 [1/2] (1.75ns)   --->   "%test_load_11 = load i8* %test_addr_11, align 1" [rng.c:188]   --->   Operation 152 'load' 'test_load_11' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_18 : Operation 153 [1/1] (0.00ns)   --->   "%buffer_addr_11 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 11" [rng.c:188]   --->   Operation 153 'getelementptr' 'buffer_addr_11' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 154 [1/1] (1.75ns)   --->   "store i8 %test_load_11, i8* %buffer_addr_11, align 1" [rng.c:188]   --->   Operation 154 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_18 : Operation 155 [2/2] (1.75ns)   --->   "%test_load_12 = load i8* %test_addr_12, align 4" [rng.c:189]   --->   Operation 155 'load' 'test_load_12' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_18 : Operation 156 [2/2] (1.75ns)   --->   "%test_load_13 = load i8* %test_addr_13, align 1" [rng.c:190]   --->   Operation 156 'load' 'test_load_13' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 19 <SV = 18> <Delay = 3.51>
+ST_19 : Operation 157 [1/2] (1.75ns)   --->   "%test_load_12 = load i8* %test_addr_12, align 4" [rng.c:189]   --->   Operation 157 'load' 'test_load_12' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_19 : Operation 158 [1/1] (0.00ns)   --->   "%buffer_addr_12 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 12" [rng.c:189]   --->   Operation 158 'getelementptr' 'buffer_addr_12' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 159 [1/1] (1.75ns)   --->   "store i8 %test_load_12, i8* %buffer_addr_12, align 1" [rng.c:189]   --->   Operation 159 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_19 : Operation 160 [1/2] (1.75ns)   --->   "%test_load_13 = load i8* %test_addr_13, align 1" [rng.c:190]   --->   Operation 160 'load' 'test_load_13' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_19 : Operation 161 [1/1] (0.00ns)   --->   "%buffer_addr_13 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 13" [rng.c:190]   --->   Operation 161 'getelementptr' 'buffer_addr_13' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 162 [1/1] (1.75ns)   --->   "store i8 %test_load_13, i8* %buffer_addr_13, align 1" [rng.c:190]   --->   Operation 162 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_19 : Operation 163 [2/2] (1.75ns)   --->   "%test_load_14 = load i8* %test_addr_14, align 2" [rng.c:191]   --->   Operation 163 'load' 'test_load_14' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_19 : Operation 164 [2/2] (1.75ns)   --->   "%test_load_15 = load i8* %test_addr_15, align 1" [rng.c:192]   --->   Operation 164 'load' 'test_load_15' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+
+State 20 <SV = 19> <Delay = 3.51>
+ST_20 : Operation 165 [1/2] (1.75ns)   --->   "%test_load_14 = load i8* %test_addr_14, align 2" [rng.c:191]   --->   Operation 165 'load' 'test_load_14' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_20 : Operation 166 [1/1] (0.00ns)   --->   "%buffer_addr_14 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 14" [rng.c:191]   --->   Operation 166 'getelementptr' 'buffer_addr_14' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 167 [1/1] (1.75ns)   --->   "store i8 %test_load_14, i8* %buffer_addr_14, align 1" [rng.c:191]   --->   Operation 167 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_20 : Operation 168 [1/2] (1.75ns)   --->   "%test_load_15 = load i8* %test_addr_15, align 1" [rng.c:192]   --->   Operation 168 'load' 'test_load_15' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_20 : Operation 169 [1/1] (0.00ns)   --->   "%buffer_addr_15 = getelementptr [16 x i8]* %buffer_r, i64 0, i64 15" [rng.c:192]   --->   Operation 169 'getelementptr' 'buffer_addr_15' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 170 [1/1] (1.75ns)   --->   "store i8 %test_load_15, i8* %buffer_addr_15, align 1" [rng.c:192]   --->   Operation 170 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_20 : Operation 171 [1/1] (0.00ns)   --->   "ret void" [rng.c:197]   --->   Operation 171 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('ctr_addr', rng.c:136) [7]  (0 ns)
+	'load' operation ('ctr_load', rng.c:157) on array 'ctr' [27]  (1.75 ns)
+
+ <State 2>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('ctr_load', rng.c:157) on array 'ctr' [27]  (1.75 ns)
+	'store' operation (rng.c:157) of variable 'ctr_load', rng.c:157 on array 'test', rng.c:155 [28]  (1.75 ns)
+
+ <State 3>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('ctr_load_2', rng.c:159) on array 'ctr' [33]  (1.75 ns)
+	'store' operation (rng.c:159) of variable 'ctr_load_2', rng.c:159 on array 'test', rng.c:155 [34]  (1.75 ns)
+
+ <State 4>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('ctr_load_4', rng.c:161) on array 'ctr' [39]  (1.75 ns)
+	'store' operation (rng.c:161) of variable 'ctr_load_4', rng.c:161 on array 'test', rng.c:155 [40]  (1.75 ns)
+
+ <State 5>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('ctr_load_6', rng.c:163) on array 'ctr' [45]  (1.75 ns)
+	'store' operation (rng.c:163) of variable 'ctr_load_6', rng.c:163 on array 'test', rng.c:155 [46]  (1.75 ns)
+
+ <State 6>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('ctr_load_8', rng.c:165) on array 'ctr' [51]  (1.75 ns)
+	'store' operation (rng.c:165) of variable 'ctr_load_8', rng.c:165 on array 'test', rng.c:155 [52]  (1.75 ns)
+
+ <State 7>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('ctr_load_10', rng.c:167) on array 'ctr' [57]  (1.75 ns)
+	'store' operation (rng.c:167) of variable 'ctr_load_10', rng.c:167 on array 'test', rng.c:155 [58]  (1.75 ns)
+
+ <State 8>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('ctr_load_12', rng.c:169) on array 'ctr' [63]  (1.75 ns)
+	'store' operation (rng.c:169) of variable 'ctr_load_12', rng.c:169 on array 'test', rng.c:155 [64]  (1.75 ns)
+
+ <State 9>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('ctr_load_14', rng.c:171) on array 'ctr' [69]  (1.75 ns)
+	'store' operation (rng.c:171) of variable 'ctr_load_14', rng.c:171 on array 'test', rng.c:155 [70]  (1.75 ns)
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 1.75ns
+The critical path consists of the following:
+	'load' operation ('test_load', rng.c:177) on array 'test', rng.c:155 [75]  (1.75 ns)
+
+ <State 13>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('test_load', rng.c:177) on array 'test', rng.c:155 [75]  (1.75 ns)
+	'store' operation (rng.c:177) of variable 'test_load', rng.c:177 on array 'buffer_r' [76]  (1.75 ns)
+
+ <State 14>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('test_load_2', rng.c:179) on array 'test', rng.c:155 [80]  (1.75 ns)
+	'store' operation (rng.c:179) of variable 'test_load_2', rng.c:179 on array 'buffer_r' [82]  (1.75 ns)
+
+ <State 15>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('test_load_4', rng.c:181) on array 'test', rng.c:155 [86]  (1.75 ns)
+	'store' operation (rng.c:181) of variable 'test_load_4', rng.c:181 on array 'buffer_r' [88]  (1.75 ns)
+
+ <State 16>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('test_load_6', rng.c:183) on array 'test', rng.c:155 [92]  (1.75 ns)
+	'store' operation (rng.c:183) of variable 'test_load_6', rng.c:183 on array 'buffer_r' [94]  (1.75 ns)
+
+ <State 17>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('test_load_8', rng.c:185) on array 'test', rng.c:155 [98]  (1.75 ns)
+	'store' operation (rng.c:185) of variable 'test_load_8', rng.c:185 on array 'buffer_r' [100]  (1.75 ns)
+
+ <State 18>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('test_load_10', rng.c:187) on array 'test', rng.c:155 [104]  (1.75 ns)
+	'store' operation (rng.c:187) of variable 'test_load_10', rng.c:187 on array 'buffer_r' [106]  (1.75 ns)
+
+ <State 19>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('test_load_12', rng.c:189) on array 'test', rng.c:155 [110]  (1.75 ns)
+	'store' operation (rng.c:189) of variable 'test_load_12', rng.c:189 on array 'buffer_r' [112]  (1.75 ns)
+
+ <State 20>: 3.51ns
+The critical path consists of the following:
+	'load' operation ('test_load_14', rng.c:191) on array 'test', rng.c:155 [116]  (1.75 ns)
+	'store' operation (rng.c:191) of variable 'test_load_14', rng.c:191 on array 'buffer_r' [118]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

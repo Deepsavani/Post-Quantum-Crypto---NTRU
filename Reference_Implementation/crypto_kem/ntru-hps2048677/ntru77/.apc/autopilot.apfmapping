@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="verify.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/verify.c"/>
+    <originFiles name="sample.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/sample.c"/>
+    <originFiles name="rng.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/rng.c"/>
+    <originFiles name="poly.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/poly.c"/>
+    <originFiles name="packq.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/packq.c"/>
+    <originFiles name="pack3.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/pack3.c"/>
+    <originFiles name="owcpa.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/owcpa.c"/>
+    <originFiles name="kem.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/kem.c"/>
+    <originFiles name="fips202.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/fips202.c"/>
+    <originFiles name="crypto_sort.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/crypto_sort.c"/>
+    <originFiles name="aes.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/aes.c"/>
+  </source>
+  <testbench>
+    <originFiles name="PQCgenKAT_kem.c" path="/home/dss545/KEM/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/PQCgenKAT_kem.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,182 @@
+
+
+================================================================
+== Vivado HLS Report for 'SubBytes'
+================================================================
+* Date:           Tue Aug 25 19:03:45 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru21
+* Solution:       enc
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     4.527|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   57|   57|   57|   57|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |   56|   56|        14|          -|          -|     4|    no    |
+        | + Loop 1.1  |   12|   12|         3|          -|          -|     4|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!tmp)
+3 --> 
+	4  / (!tmp_s)
+	2  / (tmp_s)
+4 --> 
+	5  / true
+5 --> 
+	3  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.35>
+ST_1 : Operation 6 [1/1] (1.35ns)   --->   "br label %.loopexit" [aes.c:260]   --->   Operation 6 'br' <Predicate = true> <Delay = 1.35>
+
+State 2 <SV = 1> <Delay = 1.35>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%i = phi i3 [ 0, %0 ], [ %i_27, %.loopexit.loopexit ]"   --->   Operation 7 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (1.00ns)   --->   "%tmp = icmp eq i3 %i, -4" [aes.c:260]   --->   Operation 8 'icmp' 'tmp' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 9 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (1.34ns)   --->   "%i_27 = add i3 %i, 1" [aes.c:260]   --->   Operation 10 'add' 'i_27' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "br i1 %tmp, label %2, label %.preheader.preheader" [aes.c:260]   --->   Operation 11 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%tmp_cast = zext i3 %i to i6" [aes.c:262]   --->   Operation 12 'zext' 'tmp_cast' <Predicate = (!tmp)> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (1.35ns)   --->   "br label %.preheader" [aes.c:262]   --->   Operation 13 'br' <Predicate = (!tmp)> <Delay = 1.35>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "ret void" [aes.c:267]   --->   Operation 14 'ret' <Predicate = (tmp)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.30>
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "%j = phi i3 [ %j_2, %1 ], [ 0, %.preheader.preheader ]"   --->   Operation 15 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 16 [1/1] (1.00ns)   --->   "%tmp_s = icmp eq i3 %j, -4" [aes.c:262]   --->   Operation 16 'icmp' 'tmp_s' <Predicate = true> <Delay = 1.00> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%empty_291 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 4, i64 4, i64 4) nounwind"   --->   Operation 17 'speclooptripcount' 'empty_291' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (1.34ns)   --->   "%j_2 = add i3 %j, 1" [aes.c:262]   --->   Operation 18 'add' 'j_2' <Predicate = true> <Delay = 1.34> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "br i1 %tmp_s, label %.loopexit.loopexit, label %1" [aes.c:262]   --->   Operation 19 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_36 = call i5 @_ssdm_op_BitConcatenate.i5.i3.i2(i3 %j, i2 0)" [aes.c:262]   --->   Operation 20 'bitconcatenate' 'tmp_36' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%tmp_37_cast = zext i5 %tmp_36 to i6" [aes.c:264]   --->   Operation 21 'zext' 'tmp_37_cast' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (1.54ns)   --->   "%tmp_38 = add i6 %tmp_cast, %tmp_37_cast" [aes.c:264]   --->   Operation 22 'add' 'tmp_38' <Predicate = (!tmp_s)> <Delay = 1.54> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_38_cast = zext i6 %tmp_38 to i64" [aes.c:264]   --->   Operation 23 'zext' 'tmp_38_cast' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%state_addr = getelementptr [16 x i8]* %state, i64 0, i64 %tmp_38_cast" [aes.c:264]   --->   Operation 24 'getelementptr' 'state_addr' <Predicate = (!tmp_s)> <Delay = 0.00>
+ST_3 : Operation 25 [2/2] (1.75ns)   --->   "%state_load = load i8* %state_addr, align 1" [aes.c:264]   --->   Operation 25 'load' 'state_load' <Predicate = (!tmp_s)> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 26 'br' <Predicate = (tmp_s)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.52>
+ST_4 : Operation 27 [1/2] (1.75ns)   --->   "%state_load = load i8* %state_addr, align 1" [aes.c:264]   --->   Operation 27 'load' 'state_load' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_110 = zext i8 %state_load to i64" [aes.c:264]   --->   Operation 28 'zext' 'tmp_110' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%sbox_addr = getelementptr inbounds [256 x i8]* @sbox, i64 0, i64 %tmp_110" [aes.c:264]   --->   Operation 29 'getelementptr' 'sbox_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [2/2] (2.77ns)   --->   "%sbox_load = load i8* %sbox_addr, align 1" [aes.c:264]   --->   Operation 30 'load' 'sbox_load' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+
+State 5 <SV = 4> <Delay = 4.52>
+ST_5 : Operation 31 [1/2] (2.77ns)   --->   "%sbox_load = load i8* %sbox_addr, align 1" [aes.c:264]   --->   Operation 31 'load' 'sbox_load' <Predicate = true> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 256> <ROM>
+ST_5 : Operation 32 [1/1] (1.75ns)   --->   "store i8 %sbox_load, i8* %state_addr, align 1" [aes.c:264]   --->   Operation 32 'store' <Predicate = true> <Delay = 1.75> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "br label %.preheader" [aes.c:262]   --->   Operation 33 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', aes.c:260) [5]  (1.35 ns)
+
+ <State 2>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', aes.c:262) [14]  (1.35 ns)
+
+ <State 3>: 3.3ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', aes.c:262) [14]  (0 ns)
+	'add' operation ('tmp_38', aes.c:264) [22]  (1.55 ns)
+	'getelementptr' operation ('state_addr', aes.c:264) [24]  (0 ns)
+	'load' operation ('state_load', aes.c:264) on array 'state' [25]  (1.75 ns)
+
+ <State 4>: 4.53ns
+The critical path consists of the following:
+	'load' operation ('state_load', aes.c:264) on array 'state' [25]  (1.75 ns)
+	'getelementptr' operation ('sbox_addr', aes.c:264) [27]  (0 ns)
+	'load' operation ('sbox_load', aes.c:264) on array 'sbox' [28]  (2.77 ns)
+
+ <State 5>: 4.53ns
+The critical path consists of the following:
+	'load' operation ('sbox_load', aes.c:264) on array 'sbox' [28]  (2.77 ns)
+	'store' operation (aes.c:264) of variable 'sbox_load', aes.c:264 on array 'state' [29]  (1.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

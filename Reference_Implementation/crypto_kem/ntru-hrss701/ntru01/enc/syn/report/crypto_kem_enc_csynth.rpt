@@ -1,0 +1,212 @@
+
+
+================================================================
+== Vivado HLS Report for 'crypto_kem_enc'
+================================================================
+* Date:           Sun Aug 23 21:46:45 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru01
+* Solution:       enc
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.122|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+-----------------+-------+---------+-------+---------+---------+
+        |                           |                 |     Latency     |     Interval    | Pipeline|
+        |          Instance         |      Module     |  min  |   max   |  min  |   max   |   Type  |
+        +---------------------------+-----------------+-------+---------+-------+---------+---------+
+        |grp_sha3_256_fu_62         |sha3_256         |   1564|     1564|   1564|     1564|   none  |
+        |grp_randombytes_fu_71      |randombytes      |      ?|        ?|      ?|        ?|   none  |
+        |grp_owcpa_enc_fu_87        |owcpa_enc        |  24200|  2968400|  24200|  2968400|   none  |
+        |grp_poly_S3_tobytes_fu_96  |poly_S3_tobytes  |    701|      701|    701|      701|   none  |
+        |grp_sample_iid_fu_105      |sample_iid       |   2101|     2101|   2101|     2101|   none  |
+        +---------------------------+-----------------+-------+---------+-------+---------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|       2|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |       27|      7|    8770|   45829|
+|Memory           |        4|      -|       0|       0|
+|Multiplexer      |        -|      -|       -|     311|
+|Register         |        -|      -|      17|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |       31|      7|    8787|   46142|
++-----------------+---------+-------+--------+--------+
+|Available        |      730|    740|  269200|  129000|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        4|   ~0  |       3|      35|
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+-----------------+---------+-------+------+-------+
+    |          Instance         |      Module     | BRAM_18K| DSP48E|  FF  |  LUT  |
+    +---------------------------+-----------------+---------+-------+------+-------+
+    |grp_owcpa_enc_fu_87        |owcpa_enc        |        5|      7|  1036|   4342|
+    |grp_poly_S3_tobytes_fu_96  |poly_S3_tobytes  |        0|      0|    82|    226|
+    |grp_randombytes_fu_71      |randombytes      |       12|      0|  1019|   5703|
+    |grp_sample_iid_fu_105      |sample_iid       |        0|      0|    38|    227|
+    |grp_sha3_256_fu_62         |sha3_256         |       10|      0|  6595|  35331|
+    +---------------------------+-----------------+---------+-------+------+-------+
+    |Total                      |                 |       27|      7|  8770|  45829|
+    +---------------------------+-----------------+---------+-------+------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +------------+-------------------------+---------+---+----+------+-----+------+-------------+
+    |   Memory   |          Module         | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +------------+-------------------------+---------+---+----+------+-----+------+-------------+
+    |r_coeffs_U  |crypto_kem_enc_r_coeffs  |        1|  0|   0|   701|   16|     1|        11216|
+    |m_coeffs_U  |crypto_kem_enc_r_coeffs  |        1|  0|   0|   701|   16|     1|        11216|
+    |rm_U        |crypto_kem_enc_rm        |        1|  0|   0|   280|    8|     1|         2240|
+    |rm_seed_U   |crypto_kem_enc_rm_seed   |        1|  0|   0|  1400|    8|     1|        11200|
+    +------------+-------------------------+---------+---+----+------+-----+------+-------------+
+    |Total       |                         |        4|  0|   0|  3082|   48|     4|        35872|
+    +------------+-------------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state6_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+    |Total                            |          |      0|  0|   2|           1|           1|
+    +---------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                   | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |DRBG_ctx_reseed_counter_o                  |   9|          2|   32|         64|
+    |ap_NS_fsm                                  |  56|         13|    1|         13|
+    |grp_poly_S3_tobytes_fu_96_a_coeffs_q0      |  15|          3|   16|         48|
+    |grp_poly_S3_tobytes_fu_96_a_coeffs_q1      |  15|          3|   16|         48|
+    |grp_poly_S3_tobytes_fu_96_msg_offset       |  15|          3|   10|         30|
+    |grp_sample_iid_fu_105_uniformbytes_offset  |  15|          3|   12|         36|
+    |m_coeffs_address0                          |  15|          3|   10|         30|
+    |m_coeffs_ce0                               |  15|          3|    1|          3|
+    |m_coeffs_ce1                               |   9|          2|    1|          2|
+    |m_coeffs_we0                               |   9|          2|    1|          2|
+    |r_coeffs_address0                          |  15|          3|   10|         30|
+    |r_coeffs_ce0                               |  15|          3|    1|          3|
+    |r_coeffs_ce1                               |   9|          2|    1|          2|
+    |r_coeffs_we0                               |   9|          2|    1|          2|
+    |rm_address0                                |  21|          4|    9|         36|
+    |rm_ce0                                     |  21|          4|    1|          4|
+    |rm_seed_address0                           |  15|          3|   11|         33|
+    |rm_seed_ce0                                |  15|          3|    1|          3|
+    |rm_seed_we0                                |   9|          2|    1|          2|
+    |rm_we0                                     |   9|          2|    1|          2|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |Total                                      | 311|         65|  137|        393|
+    +-------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+----+----+-----+-----------+
+    |                  Name                  | FF | LUT| Bits| Const Bits|
+    +----------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                               |  12|   0|   12|          0|
+    |grp_owcpa_enc_fu_87_ap_start_reg        |   1|   0|    1|          0|
+    |grp_poly_S3_tobytes_fu_96_ap_start_reg  |   1|   0|    1|          0|
+    |grp_randombytes_fu_71_ap_start_reg      |   1|   0|    1|          0|
+    |grp_sample_iid_fu_105_ap_start_reg      |   1|   0|    1|          0|
+    |grp_sha3_256_fu_62_ap_start_reg         |   1|   0|    1|          0|
+    +----------------------------------------+----+----+-----+-----------+
+    |Total                                   |  17|   0|   17|          0|
+    +----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------------------+-----+-----+------------+-------------------------+--------------+
+|             RTL Ports            | Dir | Bits|  Protocol  |      Source Object      |    C Type    |
++----------------------------------+-----+-----+------------+-------------------------+--------------+
+|ap_clk                            |  in |    1| ap_ctrl_hs |      crypto_kem_enc     | return value |
+|ap_rst                            |  in |    1| ap_ctrl_hs |      crypto_kem_enc     | return value |
+|ap_start                          |  in |    1| ap_ctrl_hs |      crypto_kem_enc     | return value |
+|ap_done                           | out |    1| ap_ctrl_hs |      crypto_kem_enc     | return value |
+|ap_idle                           | out |    1| ap_ctrl_hs |      crypto_kem_enc     | return value |
+|ap_ready                          | out |    1| ap_ctrl_hs |      crypto_kem_enc     | return value |
+|ap_return                         | out |   32| ap_ctrl_hs |      crypto_kem_enc     | return value |
+|c_address0                        | out |   11|  ap_memory |            c            |     array    |
+|c_ce0                             | out |    1|  ap_memory |            c            |     array    |
+|c_we0                             | out |    1|  ap_memory |            c            |     array    |
+|c_d0                              | out |    8|  ap_memory |            c            |     array    |
+|c_address1                        | out |   11|  ap_memory |            c            |     array    |
+|c_ce1                             | out |    1|  ap_memory |            c            |     array    |
+|c_we1                             | out |    1|  ap_memory |            c            |     array    |
+|c_d1                              | out |    8|  ap_memory |            c            |     array    |
+|k_address0                        | out |    5|  ap_memory |            k            |     array    |
+|k_ce0                             | out |    1|  ap_memory |            k            |     array    |
+|k_we0                             | out |    1|  ap_memory |            k            |     array    |
+|k_d0                              | out |    8|  ap_memory |            k            |     array    |
+|pk_address0                       | out |   11|  ap_memory |            pk           |     array    |
+|pk_ce0                            | out |    1|  ap_memory |            pk           |     array    |
+|pk_q0                             |  in |    8|  ap_memory |            pk           |     array    |
+|pk_address1                       | out |   11|  ap_memory |            pk           |     array    |
+|pk_ce1                            | out |    1|  ap_memory |            pk           |     array    |
+|pk_q1                             |  in |    8|  ap_memory |            pk           |     array    |
+|DRBG_ctx_V_address0               | out |    4|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_ce0                    | out |    1|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_we0                    | out |    1|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_d0                     | out |    8|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_q0                     |  in |    8|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_address1               | out |    4|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_ce1                    | out |    1|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_V_q1                     |  in |    8|  ap_memory |        DRBG_ctx_V       |     array    |
+|DRBG_ctx_Key_address0             | out |    5|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_ce0                  | out |    1|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_we0                  | out |    1|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_d0                   | out |    8|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_q0                   |  in |    8|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_address1             | out |    5|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_ce1                  | out |    1|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_Key_q1                   |  in |    8|  ap_memory |       DRBG_ctx_Key      |     array    |
+|DRBG_ctx_reseed_counter_i         |  in |   32|   ap_ovld  | DRBG_ctx_reseed_counter |    pointer   |
+|DRBG_ctx_reseed_counter_o         | out |   32|   ap_ovld  | DRBG_ctx_reseed_counter |    pointer   |
+|DRBG_ctx_reseed_counter_o_ap_vld  | out |    1|   ap_ovld  | DRBG_ctx_reseed_counter |    pointer   |
++----------------------------------+-----+-----+------------+-------------------------+--------------+
+

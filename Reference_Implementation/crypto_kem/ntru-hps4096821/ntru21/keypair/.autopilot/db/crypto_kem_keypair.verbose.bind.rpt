@@ -1,0 +1,474 @@
+
+
+================================================================
+== Vivado HLS Report for 'crypto_kem_keypair'
+================================================================
+* Date:           Tue Aug 25 23:03:41 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru21
+* Solution:       keypair
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.122|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+---------------+-----+-----+-----+-----+---------+
+        |                         |               |  Latency  |  Interval | Pipeline|
+        |         Instance        |     Module    | min | max | min | max |   Type  |
+        +-------------------------+---------------+-----+-----+-----+-----+---------+
+        |grp_owcpa_keypair_fu_34  |owcpa_keypair  |    ?|    ?|    ?|    ?|   none  |
+        |grp_randombytes_fu_43    |randombytes    |    ?|    ?|    ?|    ?|   none  |
+        |grp_randombytes_1_fu_59  |randombytes_1  |    ?|    ?|    ?|    ?|   none  |
+        +-------------------------+---------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.77>
+ST_1 : Operation 7 [1/1] (2.77ns)   --->   "%seed = alloca [3895 x i8], align 16" [kem.c:11]   --->   Operation 7 'alloca' 'seed' <Predicate = true> <Delay = 2.77>
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "call fastcc void @randombytes([3895 x i8]* %seed) nounwind" [kem.c:13]   --->   Operation 8 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 9 [1/2] (0.00ns)   --->   "call fastcc void @randombytes([3895 x i8]* %seed) nounwind" [kem.c:13]   --->   Operation 9 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 10 [2/2] (0.00ns)   --->   "call fastcc void @owcpa_keypair([1230 x i8]* %pk, [1590 x i8]* %sk, [3895 x i8]* %seed) nounwind" [kem.c:14]   --->   Operation 10 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 11 [1/2] (0.00ns)   --->   "call fastcc void @owcpa_keypair([1230 x i8]* %pk, [1590 x i8]* %sk, [3895 x i8]* %seed) nounwind" [kem.c:14]   --->   Operation 11 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 12 [2/2] (0.00ns)   --->   "call fastcc void @randombytes.1([1590 x i8]* %sk) nounwind" [kem.c:16]   --->   Operation 12 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1230 x i8]* %pk) nounwind, !map !199"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1590 x i8]* %sk) nounwind, !map !205"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 0) nounwind, !map !211"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([19 x i8]* @crypto_kem_keypair_s) nounwind"   --->   Operation 16 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 17 [1/2] (0.00ns)   --->   "call fastcc void @randombytes.1([1590 x i8]* %sk) nounwind" [kem.c:16]   --->   Operation 17 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 18 [1/1] (0.00ns)   --->   "ret i32 0" [kem.c:18]   --->   Operation 18 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ pk]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[00]; IO mode=ap_memory:ce=0
+Port [ sk]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[00]; IO mode=ap_memory:ce=0
+Port [ DRBG_ctx_V]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=15; visibility=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ sbox]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[1111]; IO mode=ap_memory:ce=0
+Port [ Rcon]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=1; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ DRBG_ctx_Key]:  wired=0; compound=1; hidden=1; nouse=0; global=1; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=1; linkage=15; visibility=0; MemPort=[21]; IO mode=ap_memory:ce=0
+Port [ DRBG_ctx_reseed_coun]:  wired=0; compound=0; hidden=1; nouse=0; global=1; static=1; extern=0; dir=2; type=0; pingpong=0; private_global=1; linkage=7; visibility=0; IO mode=ap_ovld:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+seed        (alloca       ) [ 0011100]
+StgValue_9  (call         ) [ 0000000]
+StgValue_11 (call         ) [ 0000000]
+StgValue_13 (specbitsmap  ) [ 0000000]
+StgValue_14 (specbitsmap  ) [ 0000000]
+StgValue_15 (specbitsmap  ) [ 0000000]
+StgValue_16 (spectopmodule) [ 0000000]
+StgValue_17 (call         ) [ 0000000]
+StgValue_18 (ret          ) [ 0000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="pk">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="pk"/><MemPortTyVec>0 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="sk">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sk"/><MemPortTyVec>0 0 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="DRBG_ctx_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="DRBG_ctx_V"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="sbox">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sbox"/><MemPortTyVec>1 1 1 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="Rcon">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Rcon"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="DRBG_ctx_Key">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="DRBG_ctx_Key"/><MemPortTyVec>2 1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="DRBG_ctx_reseed_coun">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="DRBG_ctx_reseed_coun"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="randombytes"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="owcpa_keypair"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="randombytes.1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="crypto_kem_keypair_s"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1004" name="seed_alloca_fu_30">
+<pin_list>
+<pin id="31" dir="0" index="0" bw="1" slack="0"/>
+<pin id="32" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="seed/1 "/>
+</bind>
+</comp>
+
+<comp id="34" class="1004" name="grp_owcpa_keypair_fu_34">
+<pin_list>
+<pin id="35" dir="0" index="0" bw="0" slack="0"/>
+<pin id="36" dir="0" index="1" bw="8" slack="0"/>
+<pin id="37" dir="0" index="2" bw="8" slack="0"/>
+<pin id="38" dir="0" index="3" bw="8" slack="2147483647"/>
+<pin id="39" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_10/3 "/>
+</bind>
+</comp>
+
+<comp id="43" class="1004" name="grp_randombytes_fu_43">
+<pin_list>
+<pin id="44" dir="0" index="0" bw="0" slack="0"/>
+<pin id="45" dir="0" index="1" bw="8" slack="0"/>
+<pin id="46" dir="0" index="2" bw="8" slack="0"/>
+<pin id="47" dir="0" index="3" bw="8" slack="0"/>
+<pin id="48" dir="0" index="4" bw="8" slack="0"/>
+<pin id="49" dir="0" index="5" bw="8" slack="0"/>
+<pin id="50" dir="0" index="6" bw="32" slack="0"/>
+<pin id="51" dir="1" index="7" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_8/1 "/>
+</bind>
+</comp>
+
+<comp id="59" class="1004" name="grp_randombytes_1_fu_59">
+<pin_list>
+<pin id="60" dir="0" index="0" bw="0" slack="0"/>
+<pin id="61" dir="0" index="1" bw="8" slack="0"/>
+<pin id="62" dir="0" index="2" bw="8" slack="0"/>
+<pin id="63" dir="0" index="3" bw="8" slack="0"/>
+<pin id="64" dir="0" index="4" bw="8" slack="0"/>
+<pin id="65" dir="0" index="5" bw="8" slack="0"/>
+<pin id="66" dir="0" index="6" bw="32" slack="0"/>
+<pin id="67" dir="1" index="7" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_12/5 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="33"><net_src comp="14" pin="0"/><net_sink comp="30" pin=0"/></net>
+
+<net id="40"><net_src comp="18" pin="0"/><net_sink comp="34" pin=0"/></net>
+
+<net id="41"><net_src comp="0" pin="0"/><net_sink comp="34" pin=1"/></net>
+
+<net id="42"><net_src comp="2" pin="0"/><net_sink comp="34" pin=2"/></net>
+
+<net id="52"><net_src comp="16" pin="0"/><net_sink comp="43" pin=0"/></net>
+
+<net id="53"><net_src comp="30" pin="1"/><net_sink comp="43" pin=1"/></net>
+
+<net id="54"><net_src comp="4" pin="0"/><net_sink comp="43" pin=2"/></net>
+
+<net id="55"><net_src comp="6" pin="0"/><net_sink comp="43" pin=3"/></net>
+
+<net id="56"><net_src comp="8" pin="0"/><net_sink comp="43" pin=4"/></net>
+
+<net id="57"><net_src comp="10" pin="0"/><net_sink comp="43" pin=5"/></net>
+
+<net id="58"><net_src comp="12" pin="0"/><net_sink comp="43" pin=6"/></net>
+
+<net id="68"><net_src comp="20" pin="0"/><net_sink comp="59" pin=0"/></net>
+
+<net id="69"><net_src comp="2" pin="0"/><net_sink comp="59" pin=1"/></net>
+
+<net id="70"><net_src comp="4" pin="0"/><net_sink comp="59" pin=2"/></net>
+
+<net id="71"><net_src comp="6" pin="0"/><net_sink comp="59" pin=3"/></net>
+
+<net id="72"><net_src comp="8" pin="0"/><net_sink comp="59" pin=4"/></net>
+
+<net id="73"><net_src comp="10" pin="0"/><net_sink comp="59" pin=5"/></net>
+
+<net id="74"><net_src comp="12" pin="0"/><net_sink comp="59" pin=6"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: pk | {3 4 }
+	Port: sk | {3 4 5 6 }
+	Port: DRBG_ctx_V | {1 2 5 6 }
+	Port: DRBG_ctx_Key | {1 2 5 6 }
+	Port: DRBG_ctx_reseed_coun | {1 2 5 6 }
+ - Input state : 
+	Port: crypto_kem_keypair : DRBG_ctx_V | {1 2 5 6 }
+	Port: crypto_kem_keypair : sbox | {1 2 5 6 }
+	Port: crypto_kem_keypair : Rcon | {1 2 5 6 }
+	Port: crypto_kem_keypair : DRBG_ctx_Key | {1 2 5 6 }
+	Port: crypto_kem_keypair : DRBG_ctx_reseed_coun | {1 2 5 6 }
+  - Chain level:
+	State 1
+		StgValue_8 : 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------|---------|---------|---------|---------|---------|
+| Operation|     Functional Unit     |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |
+|----------|-------------------------|---------|---------|---------|---------|---------|
+|          | grp_owcpa_keypair_fu_34 |    18   |    8    | 106.072 |   4944  |   7504  |
+|   call   |  grp_randombytes_fu_43  |    6    |    0    | 113.786 |   2211  |   3882  |
+|          | grp_randombytes_1_fu_59 |    6    |    0    | 116.486 |   2159  |   3870  |
+|----------|-------------------------|---------|---------|---------|---------|---------|
+|   Total  |                         |    30   |    8    | 336.343 |   9314  |  15256  |
+|----------|-------------------------|---------|---------|---------|---------|---------|
+
+Memories:
++------------+--------+--------+--------+
+|            |  BRAM  |   FF   |   LUT  |
++------------+--------+--------+--------+
+|DRBG_ctx_Key|    0   |   16   |    4   |
+| DRBG_ctx_V |    0   |   16   |    2   |
+|    Rcon    |    0   |    8   |    2   |
+|    sbox    |    2   |    0   |    0   |
+|    seed    |    2   |    0   |    0   |
++------------+--------+--------+--------+
+|    Total   |    4   |   40   |    8   |
++------------+--------+--------+--------+
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+
+|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+--------+
+|  Function |   30   |    8   |   336  |  9314  |  15256 |
+|   Memory  |    4   |    -   |    -   |   40   |    8   |
+|Multiplexer|    -   |    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+
+|   Total   |   34   |    8   |   336  |  9354  |  15264 |
++-----------+--------+--------+--------+--------+--------+

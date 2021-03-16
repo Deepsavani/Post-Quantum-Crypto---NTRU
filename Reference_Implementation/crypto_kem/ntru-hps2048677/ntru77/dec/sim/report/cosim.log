@@ -1,0 +1,107 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "D:/xilinx/Vivado/2019.1/msys64/mingw64/bin/g++"
+   Compiling apatb_crypto_kem_dec.cpp
+   Compiling (apcc) packq.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:21:45 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) pack3.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:21:51 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) aes.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:21:55 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) sample.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:21:59 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) crypto_sort.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:22:04 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) kem.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:22:08 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) owcpa.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:22:12 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) poly.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:22:16 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) rng.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:22:20 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) PQCgenKAT_kem.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:22:24 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) verify.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:22:29 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Compiling (apcc) fips202.c_pre.c.tb.c
+INFO: [HLS 200-10] Running 'D:/xilinx/Vivado/2019.1/bin/unwrapped/win64.o/apcc.exe'
+INFO: [HLS 200-10] For user 'deeps' on host 'desktop-uhjofhj' (Windows NT_amd64 version 6.2) on Fri Aug 21 15:22:33 -0400 2020
+INFO: [HLS 200-10] In directory 'C:/Users/deeps/OneDrive/Desktop/NTRU/NTRU/Reference_Implementation/crypto_kem/ntru-hps2048677/ntru77/dec/sim/wrapc'
+clang: warning: argument unused during compilation: '-fno-builtin-isinf'
+clang: warning: argument unused during compilation: '-fno-builtin-isnan'
+INFO: [APCC 202-3] Tmp directory is apcc_db
+INFO: [APCC 202-1] APCC is done.
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...

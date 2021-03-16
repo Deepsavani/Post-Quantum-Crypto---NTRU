@@ -1,0 +1,395 @@
+
+
+================================================================
+== Vivado HLS Report for 'owcpa_enc'
+================================================================
+* Date:           Tue Aug 25 11:15:10 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        ntru77
+* Solution:       enc
+* Product family: artix7
+* Target device:  xc7a200tfbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.122|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+---------+-------+---------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |  min  |   max   |  min  |   max   |   Type  |
+    +-------+---------+-------+---------+---------+
+    |  15775|  2761687|  15775|  2761687|   none  |
+    +-------+---------+-------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  1352|  1352|         2|          -|          -|   676|    no    |
+        |- Loop 2  |  1354|  1354|         2|          -|          -|   677|    no    |
+        |- Loop 3  |  1354|  1354|         2|          -|          -|   677|    no    |
+        |- Loop 4  |  1354|  1354|         2|          -|          -|   677|    no    |
+        |- Loop 5  |  1354|  1354|         2|          -|          -|   677|    no    |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 18
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / (!exitcond_i)
+	6  / (exitcond_i)
+5 --> 
+	4  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / (!exitcond_i5)
+	9  / (exitcond_i5)
+8 --> 
+	7  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / (!exitcond_i1)
+	14  / (exitcond_i1)
+13 --> 
+	12  / true
+14 --> 
+	15  / (!exitcond_i_i)
+	16  / (exitcond_i_i)
+15 --> 
+	14  / true
+16 --> 
+	17  / (!exitcond)
+	18  / (exitcond)
+17 --> 
+	16  / true
+18 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%x1_coeffs = alloca [677 x i16], align 2" [owcpa.c:111]   --->   Operation 19 'alloca' 'x1_coeffs' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%x2_coeffs = alloca [677 x i16], align 2" [owcpa.c:111]   --->   Operation 20 'alloca' 'x2_coeffs' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%x3_coeffs = alloca [677 x i16], align 2" [owcpa.c:111]   --->   Operation 21 'alloca' 'x3_coeffs' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_1 : Operation 22 [2/2] (0.00ns)   --->   "call fastcc void @poly_Sq_frombytes([677 x i16]* %x1_coeffs, [930 x i8]* %pk)" [packq.c:88->owcpa.c:116]   --->   Operation 22 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 23 [1/2] (0.00ns)   --->   "call fastcc void @poly_Sq_frombytes([677 x i16]* %x1_coeffs, [930 x i8]* %pk)" [packq.c:88->owcpa.c:116]   --->   Operation 23 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 2.77>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%liftm_coeffs_addr = getelementptr [677 x i16]* %x1_coeffs, i64 0, i64 676" [packq.c:91->owcpa.c:116]   --->   Operation 24 'getelementptr' 'liftm_coeffs_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (2.77ns)   --->   "store i16 0, i16* %liftm_coeffs_addr, align 2" [packq.c:91->owcpa.c:116]   --->   Operation 25 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_3 : Operation 26 [1/1] (1.35ns)   --->   "br label %1" [packq.c:92->owcpa.c:116]   --->   Operation 26 'br' <Predicate = true> <Delay = 1.35>
+
+State 4 <SV = 3> <Delay = 4.53>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_i = phi i11 [ 0, %0 ], [ %phitmp, %2 ]" [packq.c:96->owcpa.c:116]   --->   Operation 27 'phi' 'tmp_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%i_i = phi i10 [ 0, %0 ], [ %i_13, %2 ]"   --->   Operation 28 'phi' 'i_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (1.43ns)   --->   "%exitcond_i = icmp eq i10 %i_i, -348" [packq.c:92->owcpa.c:116]   --->   Operation 29 'icmp' 'exitcond_i' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 676, i64 676, i64 676)"   --->   Operation 30 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (1.74ns)   --->   "%i_13 = add i10 %i_i, 1" [packq.c:92->owcpa.c:116]   --->   Operation 31 'add' 'i_13' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %poly_Rq_sum_zero_frombytes.exit, label %2" [packq.c:92->owcpa.c:116]   --->   Operation 32 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_320_i = zext i10 %i_i to i64" [packq.c:94->owcpa.c:116]   --->   Operation 33 'zext' 'tmp_320_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%liftm_coeffs_addr_1 = getelementptr [677 x i16]* %x1_coeffs, i64 0, i64 %tmp_320_i" [packq.c:94->owcpa.c:116]   --->   Operation 34 'getelementptr' 'liftm_coeffs_addr_1' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 35 [2/2] (2.77ns)   --->   "%liftm_coeffs_load = load i16* %liftm_coeffs_addr_1, align 2" [packq.c:94->owcpa.c:116]   --->   Operation 35 'load' 'liftm_coeffs_load' <Predicate = (!exitcond_i)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_4 : Operation 36 [2/2] (2.77ns)   --->   "%liftm_coeffs_load_1 = load i16* %liftm_coeffs_addr, align 2" [packq.c:94->owcpa.c:116]   --->   Operation 36 'load' 'liftm_coeffs_load_1' <Predicate = (!exitcond_i)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_4 : Operation 37 [1/1] (1.76ns)   --->   "%tmp_i_cast = sub i11 0, %tmp_i" [packq.c:96->owcpa.c:116]   --->   Operation 37 'sub' 'tmp_i_cast' <Predicate = (exitcond_i)> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_319_i_cast = zext i11 %tmp_i_cast to i16" [packq.c:96->owcpa.c:116]   --->   Operation 38 'zext' 'tmp_319_i_cast' <Predicate = (exitcond_i)> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (2.77ns)   --->   "store i16 %tmp_319_i_cast, i16* %liftm_coeffs_addr, align 2" [packq.c:96->owcpa.c:116]   --->   Operation 39 'store' <Predicate = (exitcond_i)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_4 : Operation 40 [2/2] (1.35ns)   --->   "call fastcc void @poly_S3_frombytes([677 x i16]* %x2_coeffs, [272 x i8]* %rm, i10 0)" [owcpa.c:118]   --->   Operation 40 'call' <Predicate = (exitcond_i)> <Delay = 1.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 7.38>
+ST_5 : Operation 41 [1/2] (2.77ns)   --->   "%liftm_coeffs_load = load i16* %liftm_coeffs_addr_1, align 2" [packq.c:94->owcpa.c:116]   --->   Operation 41 'load' 'liftm_coeffs_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_5 : Operation 42 [1/2] (2.77ns)   --->   "%liftm_coeffs_load_1 = load i16* %liftm_coeffs_addr, align 2" [packq.c:94->owcpa.c:116]   --->   Operation 42 'load' 'liftm_coeffs_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_201 = trunc i16 %liftm_coeffs_load_1 to i11" [packq.c:94->owcpa.c:116]   --->   Operation 43 'trunc' 'tmp_201' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "%tmp_202 = trunc i16 %liftm_coeffs_load to i11" [packq.c:94->owcpa.c:116]   --->   Operation 44 'trunc' 'tmp_202' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 45 [1/1] (1.84ns)   --->   "%tmp_321_i = add i16 %liftm_coeffs_load_1, %liftm_coeffs_load" [packq.c:94->owcpa.c:116]   --->   Operation 45 'add' 'tmp_321_i' <Predicate = true> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 46 [1/1] (2.77ns)   --->   "store i16 %tmp_321_i, i16* %liftm_coeffs_addr, align 2" [packq.c:94->owcpa.c:116]   --->   Operation 46 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_5 : Operation 47 [1/1] (1.76ns)   --->   "%phitmp = add i11 %tmp_202, %tmp_201" [packq.c:92->owcpa.c:116]   --->   Operation 47 'add' 'phitmp' <Predicate = true> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "br label %1" [packq.c:92->owcpa.c:116]   --->   Operation 48 'br' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 1.35>
+ST_6 : Operation 49 [1/2] (0.00ns)   --->   "call fastcc void @poly_S3_frombytes([677 x i16]* %x2_coeffs, [272 x i8]* %rm, i10 0)" [owcpa.c:118]   --->   Operation 49 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 50 [1/1] (1.35ns)   --->   "br label %3" [poly.c:25->owcpa.c:119]   --->   Operation 50 'br' <Predicate = true> <Delay = 1.35>
+
+State 7 <SV = 5> <Delay = 2.77>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%i_i4 = phi i10 [ 0, %poly_Rq_sum_zero_frombytes.exit ], [ %i_14, %4 ]"   --->   Operation 51 'phi' 'i_i4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (1.43ns)   --->   "%exitcond_i5 = icmp eq i10 %i_i4, -347" [poly.c:25->owcpa.c:119]   --->   Operation 52 'icmp' 'exitcond_i5' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%empty_36 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677) nounwind"   --->   Operation 53 'speclooptripcount' 'empty_36' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 54 [1/1] (1.74ns)   --->   "%i_14 = add i10 %i_i4, 1" [poly.c:25->owcpa.c:119]   --->   Operation 54 'add' 'i_14' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 55 [1/1] (0.00ns)   --->   "br i1 %exitcond_i5, label %poly_Z3_to_Zq.exit, label %4" [poly.c:25->owcpa.c:119]   --->   Operation 55 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_i6 = zext i10 %i_i4 to i64" [poly.c:26->owcpa.c:119]   --->   Operation 56 'zext' 'tmp_i6' <Predicate = (!exitcond_i5)> <Delay = 0.00>
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "%m_coeffs_addr = getelementptr [677 x i16]* %x2_coeffs, i64 0, i64 %tmp_i6" [poly.c:26->owcpa.c:119]   --->   Operation 57 'getelementptr' 'm_coeffs_addr' <Predicate = (!exitcond_i5)> <Delay = 0.00>
+ST_7 : Operation 58 [2/2] (2.77ns)   --->   "%m_coeffs_load = load i16* %m_coeffs_addr, align 2" [poly.c:26->owcpa.c:119]   --->   Operation 58 'load' 'm_coeffs_load' <Predicate = (!exitcond_i5)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_7 : Operation 59 [2/2] (0.00ns)   --->   "call fastcc void @poly_Rq_mul([677 x i16]* %x3_coeffs, [677 x i16]* %x2_coeffs, [677 x i16]* %x1_coeffs) nounwind" [owcpa.c:121]   --->   Operation 59 'call' <Predicate = (exitcond_i5)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 6> <Delay = 8.14>
+ST_8 : Operation 60 [1/2] (2.77ns)   --->   "%m_coeffs_load = load i16* %m_coeffs_addr, align 2" [poly.c:26->owcpa.c:119]   --->   Operation 60 'load' 'm_coeffs_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_8 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_52 = call i11 @_ssdm_op_PartSelect.i11.i16.i32.i32(i16 %m_coeffs_load, i32 1, i32 11)" [poly.c:26->owcpa.c:119]   --->   Operation 61 'partselect' 'tmp_52' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 62 [1/1] (1.76ns)   --->   "%tmp_105_i_cast = sub i11 0, %tmp_52" [poly.c:26->owcpa.c:119]   --->   Operation 62 'sub' 'tmp_105_i_cast' <Predicate = true> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_203 = trunc i16 %m_coeffs_load to i11" [poly.c:26->owcpa.c:119]   --->   Operation 63 'trunc' 'tmp_203' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 64 [1/1] (0.83ns)   --->   "%tmp_54 = or i11 %tmp_203, %tmp_105_i_cast" [poly.c:26->owcpa.c:119]   --->   Operation 64 'or' 'tmp_54' <Predicate = true> <Delay = 0.83> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 65 [1/1] (0.00ns)   --->   "%tmp_55 = call i5 @_ssdm_op_PartSelect.i5.i16.i32.i32(i16 %m_coeffs_load, i32 11, i32 15)" [poly.c:26->owcpa.c:119]   --->   Operation 65 'partselect' 'tmp_55' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_107_i = call i16 @_ssdm_op_BitConcatenate.i16.i5.i11(i5 %tmp_55, i11 %tmp_54)" [poly.c:26->owcpa.c:119]   --->   Operation 66 'bitconcatenate' 'tmp_107_i' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 67 [1/1] (2.77ns)   --->   "store i16 %tmp_107_i, i16* %m_coeffs_addr, align 2" [poly.c:26->owcpa.c:119]   --->   Operation 67 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_8 : Operation 68 [1/1] (0.00ns)   --->   "br label %3" [poly.c:25->owcpa.c:119]   --->   Operation 68 'br' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 6> <Delay = 0.00>
+ST_9 : Operation 69 [1/2] (0.00ns)   --->   "call fastcc void @poly_Rq_mul([677 x i16]* %x3_coeffs, [677 x i16]* %x2_coeffs, [677 x i16]* %x1_coeffs) nounwind" [owcpa.c:121]   --->   Operation 69 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 7> <Delay = 1.35>
+ST_10 : Operation 70 [2/2] (1.35ns)   --->   "call fastcc void @poly_S3_frombytes([677 x i16]* %x2_coeffs, [272 x i8]* %rm, i10 136)" [owcpa.c:123]   --->   Operation 70 'call' <Predicate = true> <Delay = 1.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 8> <Delay = 1.35>
+ST_11 : Operation 71 [1/2] (0.00ns)   --->   "call fastcc void @poly_S3_frombytes([677 x i16]* %x2_coeffs, [272 x i8]* %rm, i10 136)" [owcpa.c:123]   --->   Operation 71 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 72 [1/1] (1.35ns)   --->   "br label %5" [poly.c:91->owcpa.c:124]   --->   Operation 72 'br' <Predicate = true> <Delay = 1.35>
+
+State 12 <SV = 9> <Delay = 2.77>
+ST_12 : Operation 73 [1/1] (0.00ns)   --->   "%i_i1 = phi i10 [ 0, %poly_Z3_to_Zq.exit ], [ %i_15, %6 ]"   --->   Operation 73 'phi' 'i_i1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 74 [1/1] (1.43ns)   --->   "%exitcond_i1 = icmp eq i10 %i_i1, -347" [poly.c:91->owcpa.c:124]   --->   Operation 74 'icmp' 'exitcond_i1' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 75 [1/1] (0.00ns)   --->   "%empty_37 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677) nounwind"   --->   Operation 75 'speclooptripcount' 'empty_37' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 76 [1/1] (1.74ns)   --->   "%i_15 = add i10 %i_i1, 1" [poly.c:91->owcpa.c:124]   --->   Operation 76 'add' 'i_15' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 77 [1/1] (0.00ns)   --->   "br i1 %exitcond_i1, label %.preheader.preheader, label %6" [poly.c:91->owcpa.c:124]   --->   Operation 77 'br' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_i1 = zext i10 %i_i1 to i64" [poly.c:92->owcpa.c:124]   --->   Operation 78 'zext' 'tmp_i1' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_12 : Operation 79 [1/1] (0.00ns)   --->   "%m_coeffs_addr_1 = getelementptr [677 x i16]* %x2_coeffs, i64 0, i64 %tmp_i1" [poly.c:92->owcpa.c:124]   --->   Operation 79 'getelementptr' 'm_coeffs_addr_1' <Predicate = (!exitcond_i1)> <Delay = 0.00>
+ST_12 : Operation 80 [2/2] (2.77ns)   --->   "%m_coeffs_load_1 = load i16* %m_coeffs_addr_1, align 2" [poly.c:92->owcpa.c:124]   --->   Operation 80 'load' 'm_coeffs_load_1' <Predicate = (!exitcond_i1)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_12 : Operation 81 [1/1] (1.35ns)   --->   "br label %.preheader" [poly.c:25->poly.c:93->owcpa.c:124]   --->   Operation 81 'br' <Predicate = (exitcond_i1)> <Delay = 1.35>
+
+State 13 <SV = 10> <Delay = 5.54>
+ST_13 : Operation 82 [1/2] (2.77ns)   --->   "%m_coeffs_load_1 = load i16* %m_coeffs_addr_1, align 2" [poly.c:92->owcpa.c:124]   --->   Operation 82 'load' 'm_coeffs_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_13 : Operation 83 [1/1] (0.00ns)   --->   "%liftm_coeffs_addr_2 = getelementptr [677 x i16]* %x1_coeffs, i64 0, i64 %tmp_i1" [poly.c:92->owcpa.c:124]   --->   Operation 83 'getelementptr' 'liftm_coeffs_addr_2' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 84 [1/1] (2.77ns)   --->   "store i16 %m_coeffs_load_1, i16* %liftm_coeffs_addr_2, align 2" [poly.c:92->owcpa.c:124]   --->   Operation 84 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_13 : Operation 85 [1/1] (0.00ns)   --->   "br label %5" [poly.c:91->owcpa.c:124]   --->   Operation 85 'br' <Predicate = true> <Delay = 0.00>
+
+State 14 <SV = 10> <Delay = 2.77>
+ST_14 : Operation 86 [1/1] (0.00ns)   --->   "%i_i_i = phi i10 [ %i_16, %7 ], [ 0, %.preheader.preheader ]"   --->   Operation 86 'phi' 'i_i_i' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 87 [1/1] (1.43ns)   --->   "%exitcond_i_i = icmp eq i10 %i_i_i, -347" [poly.c:25->poly.c:93->owcpa.c:124]   --->   Operation 87 'icmp' 'exitcond_i_i' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 88 [1/1] (0.00ns)   --->   "%empty_38 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677) nounwind"   --->   Operation 88 'speclooptripcount' 'empty_38' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 89 [1/1] (1.74ns)   --->   "%i_16 = add i10 %i_i_i, 1" [poly.c:25->poly.c:93->owcpa.c:124]   --->   Operation 89 'add' 'i_16' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 90 [1/1] (0.00ns)   --->   "br i1 %exitcond_i_i, label %poly_lift.exit.preheader, label %7" [poly.c:25->poly.c:93->owcpa.c:124]   --->   Operation 90 'br' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_i_i = zext i10 %i_i_i to i64" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 91 'zext' 'tmp_i_i' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_14 : Operation 92 [1/1] (0.00ns)   --->   "%liftm_coeffs_addr_3 = getelementptr [677 x i16]* %x1_coeffs, i64 0, i64 %tmp_i_i" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 92 'getelementptr' 'liftm_coeffs_addr_3' <Predicate = (!exitcond_i_i)> <Delay = 0.00>
+ST_14 : Operation 93 [2/2] (2.77ns)   --->   "%liftm_coeffs_load_2 = load i16* %liftm_coeffs_addr_3, align 2" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 93 'load' 'liftm_coeffs_load_2' <Predicate = (!exitcond_i_i)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_14 : Operation 94 [1/1] (1.35ns)   --->   "br label %poly_lift.exit" [owcpa.c:125]   --->   Operation 94 'br' <Predicate = (exitcond_i_i)> <Delay = 1.35>
+
+State 15 <SV = 11> <Delay = 8.14>
+ST_15 : Operation 95 [1/2] (2.77ns)   --->   "%liftm_coeffs_load_2 = load i16* %liftm_coeffs_addr_3, align 2" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 95 'load' 'liftm_coeffs_load_2' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_15 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_56 = call i11 @_ssdm_op_PartSelect.i11.i16.i32.i32(i16 %liftm_coeffs_load_2, i32 1, i32 11)" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 96 'partselect' 'tmp_56' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 97 [1/1] (1.76ns)   --->   "%tmp_105_i_i_cast = sub i11 0, %tmp_56" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 97 'sub' 'tmp_105_i_i_cast' <Predicate = true> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 98 [1/1] (0.00ns)   --->   "%tmp_204 = trunc i16 %liftm_coeffs_load_2 to i11" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 98 'trunc' 'tmp_204' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 99 [1/1] (0.83ns)   --->   "%tmp_58 = or i11 %tmp_204, %tmp_105_i_i_cast" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 99 'or' 'tmp_58' <Predicate = true> <Delay = 0.83> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 100 [1/1] (0.00ns)   --->   "%tmp_59 = call i5 @_ssdm_op_PartSelect.i5.i16.i32.i32(i16 %liftm_coeffs_load_2, i32 11, i32 15)" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 100 'partselect' 'tmp_59' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_107_i_i = call i16 @_ssdm_op_BitConcatenate.i16.i5.i11(i5 %tmp_59, i11 %tmp_58)" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 101 'bitconcatenate' 'tmp_107_i_i' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 102 [1/1] (2.77ns)   --->   "store i16 %tmp_107_i_i, i16* %liftm_coeffs_addr_3, align 2" [poly.c:26->poly.c:93->owcpa.c:124]   --->   Operation 102 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_15 : Operation 103 [1/1] (0.00ns)   --->   "br label %.preheader" [poly.c:25->poly.c:93->owcpa.c:124]   --->   Operation 103 'br' <Predicate = true> <Delay = 0.00>
+
+State 16 <SV = 11> <Delay = 2.77>
+ST_16 : Operation 104 [1/1] (0.00ns)   --->   "%i = phi i10 [ %i_17, %8 ], [ 0, %poly_lift.exit.preheader ]"   --->   Operation 104 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 105 [1/1] (1.43ns)   --->   "%exitcond = icmp eq i10 %i, -347" [owcpa.c:125]   --->   Operation 105 'icmp' 'exitcond' <Predicate = true> <Delay = 1.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.43> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 106 [1/1] (0.00ns)   --->   "%empty_39 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 677, i64 677, i64 677)"   --->   Operation 106 'speclooptripcount' 'empty_39' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 107 [1/1] (1.74ns)   --->   "%i_17 = add i10 %i, 1" [owcpa.c:125]   --->   Operation 107 'add' 'i_17' <Predicate = true> <Delay = 1.74> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 108 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %9, label %8" [owcpa.c:125]   --->   Operation 108 'br' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 109 [1/1] (0.00ns)   --->   "%tmp = zext i10 %i to i64" [owcpa.c:126]   --->   Operation 109 'zext' 'tmp' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_16 : Operation 110 [1/1] (0.00ns)   --->   "%ct_coeffs_addr = getelementptr [677 x i16]* %x3_coeffs, i64 0, i64 %tmp" [owcpa.c:126]   --->   Operation 110 'getelementptr' 'ct_coeffs_addr' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_16 : Operation 111 [2/2] (2.77ns)   --->   "%ct_coeffs_load = load i16* %ct_coeffs_addr, align 2" [owcpa.c:126]   --->   Operation 111 'load' 'ct_coeffs_load' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_16 : Operation 112 [1/1] (0.00ns)   --->   "%liftm_coeffs_addr_4 = getelementptr [677 x i16]* %x1_coeffs, i64 0, i64 %tmp" [owcpa.c:126]   --->   Operation 112 'getelementptr' 'liftm_coeffs_addr_4' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_16 : Operation 113 [2/2] (2.77ns)   --->   "%liftm_coeffs_load_3 = load i16* %liftm_coeffs_addr_4, align 2" [owcpa.c:126]   --->   Operation 113 'load' 'liftm_coeffs_load_3' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_16 : Operation 114 [2/2] (0.00ns)   --->   "call fastcc void @poly_Sq_tobytes([930 x i8]* %c, [677 x i16]* %x3_coeffs)" [packq.c:82->owcpa.c:128]   --->   Operation 114 'call' <Predicate = (exitcond)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 12> <Delay = 7.30>
+ST_17 : Operation 115 [1/2] (2.77ns)   --->   "%ct_coeffs_load = load i16* %ct_coeffs_addr, align 2" [owcpa.c:126]   --->   Operation 115 'load' 'ct_coeffs_load' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_17 : Operation 116 [1/2] (2.77ns)   --->   "%liftm_coeffs_load_3 = load i16* %liftm_coeffs_addr_4, align 2" [owcpa.c:126]   --->   Operation 116 'load' 'liftm_coeffs_load_3' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_17 : Operation 117 [1/1] (0.00ns)   --->   "%tmp_205 = trunc i16 %liftm_coeffs_load_3 to i11" [owcpa.c:126]   --->   Operation 117 'trunc' 'tmp_205' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_206 = trunc i16 %ct_coeffs_load to i11" [owcpa.c:126]   --->   Operation 118 'trunc' 'tmp_206' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 119 [1/1] (1.76ns)   --->   "%tmp_cast = add i11 %tmp_206, %tmp_205" [owcpa.c:126]   --->   Operation 119 'add' 'tmp_cast' <Predicate = true> <Delay = 1.76> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.76> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_332_cast = zext i11 %tmp_cast to i16" [owcpa.c:126]   --->   Operation 120 'zext' 'tmp_332_cast' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 121 [1/1] (2.77ns)   --->   "store i16 %tmp_332_cast, i16* %ct_coeffs_addr, align 2" [owcpa.c:126]   --->   Operation 121 'store' <Predicate = true> <Delay = 2.77> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 677> <RAM>
+ST_17 : Operation 122 [1/1] (0.00ns)   --->   "br label %poly_lift.exit" [owcpa.c:125]   --->   Operation 122 'br' <Predicate = true> <Delay = 0.00>
+
+State 18 <SV = 12> <Delay = 0.00>
+ST_18 : Operation 123 [1/2] (0.00ns)   --->   "call fastcc void @poly_Sq_tobytes([930 x i8]* %c, [677 x i16]* %x3_coeffs)" [packq.c:82->owcpa.c:128]   --->   Operation 123 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 124 [1/1] (0.00ns)   --->   "ret void" [owcpa.c:129]   --->   Operation 124 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('liftm_coeffs_addr', packq.c:91->owcpa.c:116) [8]  (0 ns)
+	'store' operation (packq.c:91->owcpa.c:116) of constant 0 on array 'r.coeffs', owcpa.c:111 [9]  (2.77 ns)
+
+ <State 4>: 4.54ns
+The critical path consists of the following:
+	'phi' operation ('tmp_i', packq.c:96->owcpa.c:116) with incoming values : ('phitmp', packq.c:92->owcpa.c:116) [12]  (0 ns)
+	'sub' operation ('tmp_i_cast', packq.c:96->owcpa.c:116) [30]  (1.76 ns)
+	'store' operation (packq.c:96->owcpa.c:116) of variable 'tmp_319_i_cast', packq.c:96->owcpa.c:116 on array 'r.coeffs', owcpa.c:111 [32]  (2.77 ns)
+
+ <State 5>: 7.38ns
+The critical path consists of the following:
+	'load' operation ('liftm_coeffs_load', packq.c:94->owcpa.c:116) on array 'r.coeffs', owcpa.c:111 [21]  (2.77 ns)
+	'add' operation ('tmp_321_i', packq.c:94->owcpa.c:116) [25]  (1.84 ns)
+	'store' operation (packq.c:94->owcpa.c:116) of variable 'tmp_321_i', packq.c:94->owcpa.c:116 on array 'r.coeffs', owcpa.c:111 [26]  (2.77 ns)
+
+ <State 6>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', poly.c:25->owcpa.c:119) [36]  (1.35 ns)
+
+ <State 7>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:25->owcpa.c:119) [36]  (0 ns)
+	'getelementptr' operation ('m_coeffs_addr', poly.c:26->owcpa.c:119) [43]  (0 ns)
+	'load' operation ('m_coeffs_load', poly.c:26->owcpa.c:119) on array 'x2.coeffs', owcpa.c:111 [44]  (2.77 ns)
+
+ <State 8>: 8.14ns
+The critical path consists of the following:
+	'load' operation ('m_coeffs_load', poly.c:26->owcpa.c:119) on array 'x2.coeffs', owcpa.c:111 [44]  (2.77 ns)
+	'sub' operation ('tmp_105_i_cast', poly.c:26->owcpa.c:119) [46]  (1.76 ns)
+	'or' operation ('tmp_54', poly.c:26->owcpa.c:119) [48]  (0.837 ns)
+	'store' operation (poly.c:26->owcpa.c:119) of variable 'tmp_107_i', poly.c:26->owcpa.c:119 on array 'x2.coeffs', owcpa.c:111 [51]  (2.77 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 1.35ns
+The critical path consists of the following:
+	'call' operation (owcpa.c:123) to 'poly_S3_frombytes' [55]  (1.35 ns)
+
+ <State 11>: 1.35ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', poly.c:91->owcpa.c:124) [58]  (1.35 ns)
+
+ <State 12>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:91->owcpa.c:124) [58]  (0 ns)
+	'getelementptr' operation ('m_coeffs_addr_1', poly.c:92->owcpa.c:124) [65]  (0 ns)
+	'load' operation ('m_coeffs_load_1', poly.c:92->owcpa.c:124) on array 'x2.coeffs', owcpa.c:111 [66]  (2.77 ns)
+
+ <State 13>: 5.54ns
+The critical path consists of the following:
+	'load' operation ('m_coeffs_load_1', poly.c:92->owcpa.c:124) on array 'x2.coeffs', owcpa.c:111 [66]  (2.77 ns)
+	'store' operation (poly.c:92->owcpa.c:124) of variable 'm_coeffs_load_1', poly.c:92->owcpa.c:124 on array 'r.coeffs', owcpa.c:111 [68]  (2.77 ns)
+
+ <State 14>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', poly.c:25->poly.c:93->owcpa.c:124) [73]  (0 ns)
+	'getelementptr' operation ('liftm_coeffs_addr_3', poly.c:26->poly.c:93->owcpa.c:124) [80]  (0 ns)
+	'load' operation ('liftm_coeffs_load_2', poly.c:26->poly.c:93->owcpa.c:124) on array 'r.coeffs', owcpa.c:111 [81]  (2.77 ns)
+
+ <State 15>: 8.14ns
+The critical path consists of the following:
+	'load' operation ('liftm_coeffs_load_2', poly.c:26->poly.c:93->owcpa.c:124) on array 'r.coeffs', owcpa.c:111 [81]  (2.77 ns)
+	'sub' operation ('tmp_105_i_i_cast', poly.c:26->poly.c:93->owcpa.c:124) [83]  (1.76 ns)
+	'or' operation ('tmp_58', poly.c:26->poly.c:93->owcpa.c:124) [85]  (0.837 ns)
+	'store' operation (poly.c:26->poly.c:93->owcpa.c:124) of variable 'tmp_107_i_i', poly.c:26->poly.c:93->owcpa.c:124 on array 'r.coeffs', owcpa.c:111 [88]  (2.77 ns)
+
+ <State 16>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', owcpa.c:125) [93]  (0 ns)
+	'getelementptr' operation ('ct_coeffs_addr', owcpa.c:126) [100]  (0 ns)
+	'load' operation ('ct_coeffs_load', owcpa.c:126) on array 'x3.coeffs', owcpa.c:111 [101]  (2.77 ns)
+
+ <State 17>: 7.31ns
+The critical path consists of the following:
+	'load' operation ('ct_coeffs_load', owcpa.c:126) on array 'x3.coeffs', owcpa.c:111 [101]  (2.77 ns)
+	'add' operation ('tmp_cast', owcpa.c:126) [106]  (1.76 ns)
+	'store' operation (owcpa.c:126) of variable 'tmp_332_cast', owcpa.c:126 on array 'x3.coeffs', owcpa.c:111 [108]  (2.77 ns)
+
+ <State 18>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
